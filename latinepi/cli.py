@@ -24,27 +24,43 @@ def create_parser():
         description='Extract structured personal data from Roman Latin epigraphic inscriptions',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-Example usage:
-  latinepi --input inscriptions.csv --output structured_data.json
-  latinepi --input batch.json --output results.csv --output-format csv
+Examples:
+  # Process local CSV file to JSON
+  latinepi --input inscriptions.csv --output results.json
+
+  # Process with CSV output and higher confidence threshold
+  latinepi --input data.json --output results.csv --output-format csv \\
+           --confidence-threshold 0.8
+
+  # Include low-confidence entities with ambiguous flag
+  latinepi --input data.csv --output results.json --flag-ambiguous
+
+  # Download inscription from EDH by ID
+  latinepi --download-edh HD000001 --download-dir ./edh_data/
+
+  # Download and process in one command
+  latinepi --download-edh 123 --download-dir ./edh/ \\
+           --input ./edh/HD000123.json --output results.csv
+
+For more information, see: https://github.com/yourrepo/latinitas
         """
     )
 
-    # Input/output arguments
-    parser.add_argument(
+    # Input/Output group
+    io_group = parser.add_argument_group('Input/Output')
+    io_group.add_argument(
         '--input',
-        metavar='<input_file>',
-        help='Path to input file (CSV or JSON)'
+        metavar='<file>',
+        help='Input file containing inscriptions (CSV or JSON format)'
     )
 
-    parser.add_argument(
+    io_group.add_argument(
         '--output',
-        metavar='<output_file>',
-        help='Path to output file'
+        metavar='<file>',
+        help='Output file for extracted entities'
     )
 
-    # Optional arguments
-    parser.add_argument(
+    io_group.add_argument(
         '--output-format',
         choices=['json', 'csv'],
         default='json',
@@ -52,34 +68,80 @@ Example usage:
         help='Output format (default: json)'
     )
 
-    parser.add_argument(
+    # Extraction options group
+    extraction_group = parser.add_argument_group('Entity Extraction Options')
+    extraction_group.add_argument(
         '--confidence-threshold',
         type=float,
         default=0.5,
-        metavar='<threshold>',
-        help='Minimum confidence score for entity extraction (0.0-1.0, default: 0.5)'
+        metavar='<0.0-1.0>',
+        help='Minimum confidence score for entities (default: 0.5)'
     )
 
-    parser.add_argument(
+    extraction_group.add_argument(
         '--flag-ambiguous',
         action='store_true',
-        help='Include low-confidence entities with ambiguous flag instead of omitting them'
+        help='Include low-confidence entities with "ambiguous" flag'
     )
 
-    # EDH download arguments
-    parser.add_argument(
+    # EDH download group
+    edh_group = parser.add_argument_group('EDH API Download')
+    edh_group.add_argument(
         '--download-edh',
-        metavar='<inscription_id>',
-        help='Download inscription from EDH API by ID (e.g., HD000001 or 123)'
+        metavar='<id>',
+        help='Download inscription from EDH (e.g., HD000001 or 123)'
     )
 
-    parser.add_argument(
+    edh_group.add_argument(
         '--download-dir',
         metavar='<directory>',
-        help='Directory to save downloaded EDH inscriptions (required with --download-edh)'
+        help='Directory for downloaded files (required with --download-edh)'
     )
 
     return parser
+
+
+def validate_args(args, parser):
+    """
+    Validate argument combinations and values.
+
+    Args:
+        args: Parsed arguments from argparse
+        parser: ArgumentParser instance for error messages
+
+    Returns:
+        None (exits on validation errors)
+    """
+    # Validate confidence threshold range
+    if not (0.0 <= args.confidence_threshold <= 1.0):
+        print("Error: --confidence-threshold must be between 0.0 and 1.0", file=sys.stderr)
+        print(f"       Got: {args.confidence_threshold}", file=sys.stderr)
+        sys.exit(1)
+
+    # Check for --download-dir without --download-edh
+    if args.download_dir and not args.download_edh:
+        print("Warning: --download-dir specified without --download-edh (will be ignored)", file=sys.stderr)
+
+    # Check for required combinations
+    if args.download_edh and not args.download_dir:
+        print("Error: --download-dir is required when using --download-edh", file=sys.stderr)
+        sys.exit(1)
+
+    # Check if at least one action is specified
+    if not args.download_edh and not args.input:
+        parser.print_help(sys.stderr)
+        print("\nError: Either --download-edh or --input must be specified", file=sys.stderr)
+        sys.exit(1)
+
+    # Check for output when processing inscriptions
+    if args.input and not args.output:
+        print("Error: --output is required when processing inscriptions with --input", file=sys.stderr)
+        sys.exit(1)
+
+    # Check for extraction options without input
+    if not args.input:
+        if args.flag_ambiguous:
+            print("Warning: --flag-ambiguous specified without --input (will be ignored)", file=sys.stderr)
 
 
 def main():
@@ -93,13 +155,13 @@ def main():
         # Re-raise to maintain expected behavior
         raise
 
+    # Validate arguments
+    validate_args(args, parser)
+
     # Handle EDH download if requested
     if args.download_edh:
-        if not args.download_dir:
-            print("Error: --download-dir is required when using --download-edh", file=sys.stderr)
-            sys.exit(1)
-
         try:
+            print(f"Downloading inscription {args.download_edh} from EDH API...", file=sys.stderr)
             output_file = download_edh_inscription(args.download_edh, args.download_dir)
             print(f"Successfully downloaded inscription {args.download_edh} to {output_file}")
 
@@ -113,15 +175,6 @@ def main():
         except Exception as e:
             print(f"Error: Failed to download inscription: {e}", file=sys.stderr)
             sys.exit(1)
-
-    # Validate required arguments for processing mode
-    if not args.input:
-        print("Error: --input is required (unless using --download-edh alone)", file=sys.stderr)
-        sys.exit(1)
-
-    if not args.output:
-        print("Error: --output is required when processing inscriptions", file=sys.stderr)
-        sys.exit(1)
 
     # Read inscriptions from input file
     try:
@@ -193,7 +246,19 @@ def main():
         else:  # csv
             import csv
             if results:
-                fieldnames = results[0].keys()
+                # Collect all unique fieldnames from all records
+                # (different records may have different fields due to threshold filtering)
+                all_fieldnames = set()
+                for result in results:
+                    all_fieldnames.update(result.keys())
+
+                # Sort fieldnames for consistent column ordering
+                # inscription_id first, then alphabetically
+                fieldnames = sorted(all_fieldnames)
+                if 'inscription_id' in fieldnames:
+                    fieldnames.remove('inscription_id')
+                    fieldnames = ['inscription_id'] + fieldnames
+
                 with open(output_path, 'w', encoding='utf-8', newline='') as f:
                     writer = csv.DictWriter(f, fieldnames=fieldnames)
                     writer.writeheader()

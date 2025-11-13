@@ -435,7 +435,7 @@ class TestCLI(unittest.TestCase):
         )
 
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn('--input is required', result.stderr)
+        self.assertIn('Either --download-edh or --input must be specified', result.stderr)
 
     def test_missing_output_with_input(self):
         """Test that --input without --output prints error."""
@@ -451,6 +451,90 @@ class TestCLI(unittest.TestCase):
 
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('--output is required', result.stderr)
+
+    def test_confidence_threshold_out_of_range_high(self):
+        """Test that confidence threshold > 1.0 is rejected."""
+        input_path = self.temp_path / "input.json"
+        input_path.write_text(json.dumps([{"id": 1, "text": "test"}]))
+        output_path = self.temp_path / "output.json"
+
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path),
+             '--output', str(output_path),
+             '--confidence-threshold', '1.5'],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('must be between 0.0 and 1.0', result.stderr)
+        self.assertIn('1.5', result.stderr)
+
+    def test_confidence_threshold_out_of_range_low(self):
+        """Test that confidence threshold < 0.0 is rejected."""
+        input_path = self.temp_path / "input.json"
+        input_path.write_text(json.dumps([{"id": 1, "text": "test"}]))
+        output_path = self.temp_path / "output.json"
+
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path),
+             '--output', str(output_path),
+             '--confidence-threshold', '-0.5'],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('must be between 0.0 and 1.0', result.stderr)
+
+    def test_download_dir_without_download_edh(self):
+        """Test that --download-dir without --download-edh shows warning."""
+        input_path = self.temp_path / "input.json"
+        input_path.write_text(json.dumps([{"id": 1, "text": "test"}]))
+        output_path = self.temp_path / "output.json"
+
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path),
+             '--output', str(output_path),
+             '--download-dir', './somedir/'],
+            capture_output=True,
+            text=True
+        )
+
+        # Should succeed but show warning
+        self.assertEqual(result.returncode, 0)
+        self.assertIn('Warning', result.stderr)
+        self.assertIn('--download-dir', result.stderr)
+
+    def test_help_shows_argument_groups(self):
+        """Test that --help displays organized argument groups."""
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path), '--help'],
+            capture_output=True,
+            text=True
+        )
+
+        # Check for argument group headers
+        self.assertIn('Input/Output', result.stdout)
+        self.assertIn('Entity Extraction Options', result.stdout)
+        self.assertIn('EDH API Download', result.stdout)
+
+    def test_no_arguments_shows_help_and_error(self):
+        """Test that no arguments shows help and error message."""
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path)],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertNotEqual(result.returncode, 0)
+        # Should show help text
+        self.assertIn('usage:', result.stderr.lower())
+        # Should show error message
+        self.assertIn('Either --download-edh or --input must be specified', result.stderr)
 
 
 if __name__ == "__main__":

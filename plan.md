@@ -230,7 +230,7 @@ Implement the EDH download utility in `latinepi/edh_utils.py`.
     - Test CLI invocation with EDH flags, and output file.
 ```
 
-## Prompt 11: CLI Argument Validation, User Guidance, and Error Handling. Complete: [ ]
+## Prompt 11: CLI Argument Validation, User Guidance, and Error Handling. Complete: [x]
 
 ```
 Enhance CLI UX and robustness in `cli.py`:
@@ -249,7 +249,7 @@ Enhance CLI UX and robustness in `cli.py`:
 - Expand and test error conditions (missing args, invalid combos, etc) and correct messages/codes.
 ```
 
-## Prompt 12: End-to-End Integration and Full CLI Test Suite. Complete: [ ]
+## Prompt 12: End-to-End Integration and Full CLI Test Suite. Complete: [x]
 
 ```
 Write an integration test suite covering full workflow scenarios:
@@ -265,7 +265,7 @@ Write an integration test suite covering full workflow scenarios:
 **Tip:** All CLI paths exercised, ensuring no orphan code or broken behavior.
 ```
 
-## Prompt 13: Project Documentation and Usage Examples. Complete: [ ]
+## Prompt 13: Project Documentation and Usage Examples. Complete: [x]
 
 ```
 Write a `README.md` for the project and include documentation in the CLI help text:
@@ -281,7 +281,7 @@ Write a `README.md` for the project and include documentation in the CLI help te
 - (Manual) Confirm that all documented commands function as described in test or dev environment.
 ```
 
-## Prompt 14: Final Wiring and Cleanup. Complete: [ ]
+## Prompt 14: Final Wiring and Cleanup. Complete: [x]
 
 ```
 Review and wire up all modules:

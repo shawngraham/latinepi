@@ -4,8 +4,9 @@ Parsing and entity extraction logic for Latin inscriptions.
 import csv
 import json
 import os
+import sys
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any
 
 # Global model cache to avoid reloading
 _NER_MODEL = None
@@ -149,7 +150,6 @@ def _load_ner_model():
 
         if latin_bert_path and os.path.isdir(latin_bert_path):
             # Load local latin-bert model
-            import sys
             print(f"Loading latin-bert model from {latin_bert_path}...", file=sys.stderr)
             model_name = latin_bert_path
         else:
@@ -157,7 +157,6 @@ def _load_ner_model():
             # Note: This is a generic multilingual model, not optimized for Latin NER
             # For production use, download the actual latin-bert model and set LATIN_BERT_PATH
             model_name = "dbmdz/bert-base-historic-multilingual-cased"
-            import sys
             print(f"Warning: LATIN_BERT_PATH not set. Using generic multilingual model.", file=sys.stderr)
             print(f"For better results, download latin-bert from https://github.com/dbmdz/latin-bert", file=sys.stderr)
 
@@ -185,7 +184,6 @@ def _load_ner_model():
         return None, None
     except Exception as e:
         # Model loading failed, fall back to stub
-        import sys
         print(f"Warning: Could not load NER model: {e}. Using stub implementation.", file=sys.stderr)
         _MODEL_LOADED = True
         return None, None
@@ -236,7 +234,6 @@ def _extract_entities_with_model(text: str, model) -> Dict[str, Dict[str, Any]]:
 
     except Exception as e:
         # If model inference fails, fall back to stub
-        import sys
         print(f"Warning: Model inference failed: {e}. Using stub fallback.", file=sys.stderr)
         return _extract_entities_stub(text)
 
