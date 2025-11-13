@@ -66,7 +66,7 @@ Each chunk is (a) testable, (b) incremental, (c) leaves no orphan code, (d) avoi
 
 # 4. Code Generation Prompts (Final Series)
 
-## Prompt 1: Project Scaffold and First Test. Complete: [ ]
+## Prompt 1: Project Scaffold and First Test. Complete: [x]
 ```
 You are to implement the initial scaffold for a Python project called `latinepi` for extracting structured data from Latin inscriptions. 
 
