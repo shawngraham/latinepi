@@ -307,7 +307,7 @@ def main():
 
     for i, inscription in enumerate(inscriptions, start=1):
         # Get the text field from the inscription
-        text = inscription.get('text', inscription.get('Text', ''))
+        text = inscription.get('text', inscription.get('Text', inscription.get('transcription', '')))
 
         if not text:
             print(f"Warning: Inscription {i} has no 'text' field, skipping", file=sys.stderr)
