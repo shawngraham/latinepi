@@ -60,14 +60,16 @@ The tool recognizes:
 git clone https://github.com/shawngraham/latinepi.git
 cd latinepi
 
-# Install core dependencies (pandas + requests only)
-pip install -r requirements.txt
+# Install the package (includes pandas + requests dependencies)
+pip install -e .
 ```
 
 That's it! No ML dependencies, no model downloads required.
 
 For optional hybrid grammar parser features (morphology and dependency parsing), install CLTK:
 ```bash
+pip install -e ".[grammar]"
+# Or if you already installed the base package:
 pip install cltk
 ```
 
@@ -76,7 +78,7 @@ pip install cltk
 ### Example 1: Process a CSV file (Pattern-Based)
 
 ```bash
-python3 latinepi/cli.py --input inscriptions.csv --output results.json
+latinepi --input inscriptions.csv --output results.json
 ```
 
 ### Example 2: Use Hybrid Grammar Parser
@@ -84,7 +86,7 @@ python3 latinepi/cli.py --input inscriptions.csv --output results.json
 Extract unknown names using grammatical structure:
 
 ```bash
-python3 latinepi/cli.py \
+latinepi \
   --input inscriptions.csv \
   --output results.json \
   --use-grammar
@@ -93,7 +95,7 @@ python3 latinepi/cli.py \
 With optional morphological analysis (requires `pip install cltk`):
 
 ```bash
-python3 latinepi/cli.py \
+latinepi \
   --input inscriptions.csv \
   --output results.json \
   --use-morphology \
@@ -106,16 +108,16 @@ See [GRAMMAR_PARSER.md](GRAMMAR_PARSER.md) for detailed documentation on the hyb
 
 ```bash
 # Download inscription HD000001 from EDH
-python3 latinepi/cli.py --download-edh HD000001 --download-dir ./edh_data/
+latinepi --download-edh HD000001 --download-dir ./edh_data/
 
 # Process the downloaded file
-python3 latinepi/cli.py --input ./edh_data/HD000001.json --output results.json
+latinepi --input ./edh_data/HD000001.json --output results.json
 ```
 
 ### Example 4: CSV output with high confidence threshold
 
 ```bash
-python3 latinepi/cli.py \
+latinepi \
   --input inscriptions.json \
   --output results.csv \
   --output-format csv \
@@ -127,7 +129,7 @@ Only entities with confidence >= 0.9 will be included in the output.
 ### Example 5: Flag ambiguous entities
 
 ```bash
-python3 latinepi/cli.py \
+latinepi \
   --input inscriptions.json \
   --output results.json \
   --confidence-threshold 0.85 \

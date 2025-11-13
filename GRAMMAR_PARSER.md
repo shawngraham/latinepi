@@ -77,7 +77,7 @@ The hybrid parser solves these problems by understanding Latin grammar, not just
 Uses pattern matching + grammatical templates:
 
 ```bash
-python3 latinepi/cli.py \
+latinepi \
   --input inscriptions.csv \
   --output results.json \
   --use-grammar
@@ -90,7 +90,7 @@ Requires `cltk>=1.5.0`:
 ```bash
 pip install cltk
 
-python3 latinepi/cli.py \
+latinepi \
   --input inscriptions.csv \
   --output results.json \
   --use-morphology
@@ -101,7 +101,7 @@ python3 latinepi/cli.py \
 For complex inscriptions:
 
 ```bash
-python3 latinepi/cli.py \
+latinepi \
   --input inscriptions.csv \
   --output results.json \
   --use-grammar \

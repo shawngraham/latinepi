@@ -8,5 +8,5 @@ requests>=2.28.0
 # No ML dependencies required for basic pattern-based parser
 
 # Optional: Hybrid grammar parser with morphological analysis and dependency parsing
-# comment the line below to disable advanced grammatical parsing with CLTK
-cltk>=1.5.0
+# Install with: pip install -e ".[grammar]" or pip install cltk
+# cltk>=1.5.0
