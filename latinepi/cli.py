@@ -11,10 +11,12 @@ from pathlib import Path
 try:
     from latinepi.parser import read_inscriptions, extract_entities
     from latinepi.edh_utils import download_edh_inscription, search_edh_inscriptions
+    from latinepi.hybrid_parser import extract_entities_hybrid
 except ModuleNotFoundError:
     # Running as script, use relative import
     from parser import read_inscriptions, extract_entities
     from edh_utils import download_edh_inscription, search_edh_inscriptions
+    from hybrid_parser import extract_entities_hybrid
 
 
 def create_parser():
@@ -82,6 +84,30 @@ For more information, see: https://github.com/yourrepo/latinitas
         '--flag-ambiguous',
         action='store_true',
         help='Include low-confidence entities with "ambiguous" flag'
+    )
+
+    extraction_group.add_argument(
+        '--use-grammar',
+        action='store_true',
+        help='Use hybrid grammar parser (combines patterns + grammatical templates + morphology)'
+    )
+
+    extraction_group.add_argument(
+        '--use-morphology',
+        action='store_true',
+        help='Enable morphological analysis (requires CLTK, implied by --use-grammar)'
+    )
+
+    extraction_group.add_argument(
+        '--use-dependencies',
+        action='store_true',
+        help='Enable dependency parsing for complex inscriptions (requires CLTK)'
+    )
+
+    extraction_group.add_argument(
+        '--verbose',
+        action='store_true',
+        help='Include extraction metadata showing which phase extracted each entity'
     )
 
     # EDH download group
@@ -303,6 +329,19 @@ def main():
     results = []
     total = len(inscriptions)
 
+    # Determine which parser to use
+    use_hybrid = args.use_grammar or args.use_morphology or args.use_dependencies
+    if use_hybrid:
+        parser_name = "hybrid grammar parser"
+        print(f"Using hybrid grammar parser with:", file=sys.stderr)
+        if args.use_grammar or args.use_morphology:
+            print(f"  - Morphological analysis (CLTK)", file=sys.stderr)
+        if args.use_dependencies:
+            print(f"  - Dependency parsing (CLTK)", file=sys.stderr)
+    else:
+        parser_name = "pattern-based parser"
+        print(f"Using pattern-based parser", file=sys.stderr)
+
     print(f"Processing {total} inscription(s)...")
 
     for i, inscription in enumerate(inscriptions, start=1):
@@ -314,7 +353,20 @@ def main():
             continue
 
         # Extract entities from the text
-        entities = extract_entities(text)
+        if use_hybrid:
+            # Use hybrid parser
+            use_morph = args.use_grammar or args.use_morphology
+            use_deps = args.use_dependencies
+            entities = extract_entities_hybrid(
+                text,
+                use_morphology=use_morph,
+                use_dependencies=use_deps,
+                min_confidence=args.confidence_threshold,
+                verbose=args.verbose
+            )
+        else:
+            # Use original pattern-based parser
+            entities = extract_entities(text)
 
         # Create result record with original ID if available and extracted entities
         result = {}
