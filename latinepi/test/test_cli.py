@@ -435,7 +435,7 @@ class TestCLI(unittest.TestCase):
         )
 
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn('Either --download-edh or --input must be specified', result.stderr)
+        self.assertIn('Either --download-edh, --search-edh, or --input must be specified', result.stderr)
 
     def test_missing_output_with_input(self):
         """Test that --input without --output prints error."""
@@ -534,7 +534,7 @@ class TestCLI(unittest.TestCase):
         # Should show help text
         self.assertIn('usage:', result.stderr.lower())
         # Should show error message
-        self.assertIn('Either --download-edh or --input must be specified', result.stderr)
+        self.assertIn('Either --download-edh, --search-edh, or --input must be specified', result.stderr)
 
 
 if __name__ == "__main__":

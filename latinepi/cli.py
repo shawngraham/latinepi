@@ -10,11 +10,11 @@ from pathlib import Path
 # Support both running as script and as module
 try:
     from latinepi.parser import read_inscriptions, extract_entities
-    from latinepi.edh_utils import download_edh_inscription
+    from latinepi.edh_utils import download_edh_inscription, search_edh_inscriptions
 except ModuleNotFoundError:
     # Running as script, use relative import
     from parser import read_inscriptions, extract_entities
-    from edh_utils import download_edh_inscription
+    from edh_utils import download_edh_inscription, search_edh_inscriptions
 
 
 def create_parser():
@@ -98,6 +98,80 @@ For more information, see: https://github.com/yourrepo/latinitas
         help='Directory for downloaded files (required with --download-edh)'
     )
 
+    # EDH search group
+    search_group = parser.add_argument_group('EDH Search Options')
+    search_group.add_argument(
+        '--search-edh',
+        action='store_true',
+        help='Search and download multiple inscriptions from EDH API'
+    )
+
+    search_group.add_argument(
+        '--search-province',
+        metavar='<province>',
+        help='Roman province (e.g., Dalmatia, "Germania Superior")'
+    )
+
+    search_group.add_argument(
+        '--search-country',
+        metavar='<country>',
+        help='Modern country name (e.g., Italy, Germany)'
+    )
+
+    search_group.add_argument(
+        '--search-findspot-modern',
+        metavar='<location>',
+        help='Modern findspot with wildcards (e.g., rome*, köln*)'
+    )
+
+    search_group.add_argument(
+        '--search-findspot-ancient',
+        metavar='<location>',
+        help='Ancient findspot with wildcards (e.g., aquae*, colonia*)'
+    )
+
+    search_group.add_argument(
+        '--search-bbox',
+        metavar='<minLong,minLat,maxLong,maxLat>',
+        help='Geographic bounding box (e.g., 11,47,12,48 for Alpine region)'
+    )
+
+    search_group.add_argument(
+        '--search-year-from',
+        type=int,
+        metavar='<year>',
+        help='Year not before (use negative for BC, e.g., -50 for 50 BC)'
+    )
+
+    search_group.add_argument(
+        '--search-year-to',
+        type=int,
+        metavar='<year>',
+        help='Year not after (e.g., 200 for 200 AD)'
+    )
+
+    search_group.add_argument(
+        '--search-limit',
+        type=int,
+        default=100,
+        metavar='<n>',
+        help='Maximum inscriptions to download (default: 100)'
+    )
+
+    search_group.add_argument(
+        '--search-workers',
+        type=int,
+        default=10,
+        metavar='<n>',
+        help='Parallel download workers (default: 10, max: 50)'
+    )
+
+    search_group.add_argument(
+        '--no-resume',
+        action='store_true',
+        help='Re-download files that already exist (default: skip existing)'
+    )
+
     return parser
 
 
@@ -118,19 +192,23 @@ def validate_args(args, parser):
         print(f"       Got: {args.confidence_threshold}", file=sys.stderr)
         sys.exit(1)
 
-    # Check for --download-dir without --download-edh
-    if args.download_dir and not args.download_edh:
-        print("Warning: --download-dir specified without --download-edh (will be ignored)", file=sys.stderr)
+    # Check for --download-dir without --download-edh or --search-edh
+    if args.download_dir and not args.download_edh and not args.search_edh:
+        print("Warning: --download-dir specified without --download-edh or --search-edh (will be ignored)", file=sys.stderr)
 
     # Check for required combinations
     if args.download_edh and not args.download_dir:
         print("Error: --download-dir is required when using --download-edh", file=sys.stderr)
         sys.exit(1)
 
+    if args.search_edh and not args.download_dir:
+        print("Error: --download-dir is required when using --search-edh", file=sys.stderr)
+        sys.exit(1)
+
     # Check if at least one action is specified
-    if not args.download_edh and not args.input:
+    if not args.download_edh and not args.search_edh and not args.input:
         parser.print_help(sys.stderr)
-        print("\nError: Either --download-edh or --input must be specified", file=sys.stderr)
+        print("\nError: Either --download-edh, --search-edh, or --input must be specified", file=sys.stderr)
         sys.exit(1)
 
     # Check for output when processing inscriptions
@@ -174,6 +252,38 @@ def main():
             sys.exit(1)
         except Exception as e:
             print(f"Error: Failed to download inscription: {e}", file=sys.stderr)
+            sys.exit(1)
+
+    # Handle EDH search if requested
+    if args.search_edh:
+        # Collect search parameters
+        search_params = {
+            'out_dir': args.download_dir,
+            'province': args.search_province,
+            'country': args.search_country,
+            'fo_modern': args.search_findspot_modern,
+            'fo_antik': args.search_findspot_ancient,
+            'bbox': args.search_bbox,
+            'year_from': args.search_year_from,
+            'year_to': args.search_year_to,
+            'max_results': args.search_limit,
+            'workers': args.search_workers,
+            'resume': not args.no_resume
+        }
+
+        try:
+            downloaded_files = search_edh_inscriptions(**search_params)
+            print(f"Successfully downloaded {len(downloaded_files)} inscriptions to {args.download_dir}")
+
+            # If no input file specified, we're done after search
+            if not args.input:
+                sys.exit(0)
+
+        except ValueError as e:
+            print(f"Error: {e}", file=sys.stderr)
+            sys.exit(1)
+        except Exception as e:
+            print(f"Error: Search failed: {e}", file=sys.stderr)
             sys.exit(1)
 
     # Read inscriptions from input file
