@@ -86,6 +86,8 @@ A Python command-line tool for extracting structured personal data from Roman La
   "status": { "value": "civis Romanus", "confidence": 0.92 }
 }
 
+```
+
 ## Error Handling
 
     All errors, warnings, and progress messages are sent to stderr.
