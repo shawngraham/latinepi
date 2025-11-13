@@ -101,7 +101,7 @@ Extend `latinepi/cli.py` to parse command-line arguments using `argparse`:
   - Test that missing a required argument prints an error to `stderr`.
 ```
 
-## Prompt 3: Basic File Reading and Writing. Complete: [ ]
+## Prompt 3: Basic File Reading and Writing. Complete: [x]
 
 ```
 Expand `latinepi/cli.py` to open the input file specified by `--input` and write a given string to the path in `--output`:
