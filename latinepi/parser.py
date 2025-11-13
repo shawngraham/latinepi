@@ -108,3 +108,80 @@ def _read_json(file_path: Path) -> List[Dict[str, Any]]:
         if isinstance(e, ValueError):
             raise
         raise ValueError(f"Error reading JSON file: {e}")
+
+
+def extract_entities(text: str) -> Dict[str, Dict[str, Any]]:
+    """
+    Extract named entities from Latin inscription text.
+
+    This is a stub implementation that returns hardcoded mock data
+    to simulate NER results. In a future version, this will use the
+    latin-bert model for real entity extraction.
+
+    Args:
+        text: The inscription text to analyze
+
+    Returns:
+        Dictionary of extracted entities with their values and confidence scores.
+        Format: {
+            'entity_name': {
+                'value': str,
+                'confidence': float (0.0-1.0)
+            }
+        }
+
+    Example:
+        >>> extract_entities("D M GAIVS IVLIVS CAESAR")
+        {
+            'praenomen': {'value': 'Gaius', 'confidence': 0.91},
+            'nomen': {'value': 'Iulius', 'confidence': 0.88},
+            'cognomen': {'value': 'Caesar', 'confidence': 0.95}
+        }
+    """
+    # Stub implementation: return mock entity data
+    # This simulates what a real NER model would return
+
+    # Generate mock entities based on text content patterns
+    entities = {}
+
+    text_upper = text.upper()
+
+    # Mock praenomen extraction
+    if 'GAIVS' in text_upper or 'GAIUS' in text_upper:
+        entities['praenomen'] = {'value': 'Gaius', 'confidence': 0.91}
+    elif 'MARCVS' in text_upper or 'MARCUS' in text_upper:
+        entities['praenomen'] = {'value': 'Marcus', 'confidence': 0.89}
+    elif 'LVCIVS' in text_upper or 'LUCIUS' in text_upper:
+        entities['praenomen'] = {'value': 'Lucius', 'confidence': 0.87}
+
+    # Mock nomen extraction
+    if 'IVLIVS' in text_upper or 'IULIUS' in text_upper:
+        entities['nomen'] = {'value': 'Iulius', 'confidence': 0.88}
+    elif 'CORNELIVS' in text_upper or 'CORNELIUS' in text_upper:
+        entities['nomen'] = {'value': 'Cornelius', 'confidence': 0.92}
+    elif 'ANTONIVS' in text_upper or 'ANTONIUS' in text_upper:
+        entities['nomen'] = {'value': 'Antonius', 'confidence': 0.90}
+
+    # Mock cognomen extraction
+    if 'CAESAR' in text_upper:
+        entities['cognomen'] = {'value': 'Caesar', 'confidence': 0.95}
+    elif 'TVRPILIA' in text_upper or 'TURPILIA' in text_upper:
+        entities['cognomen'] = {'value': 'Turpilia', 'confidence': 0.86}
+    elif 'CICERO' in text_upper:
+        entities['cognomen'] = {'value': 'Cicero', 'confidence': 0.93}
+
+    # Mock status/formula extraction
+    if 'D M' in text_upper or 'DIS MANIBVS' in text_upper:
+        entities['status'] = {'value': 'dis manibus', 'confidence': 0.98}
+
+    # Mock location extraction
+    if 'ROM' in text_upper:
+        entities['location'] = {'value': 'Roma', 'confidence': 0.82}
+    elif 'POMPEI' in text_upper:
+        entities['location'] = {'value': 'Pompeii', 'confidence': 0.85}
+
+    # If no entities were found, provide at least a basic extracted text entity
+    if not entities:
+        entities['text'] = {'value': text[:50], 'confidence': 0.50}
+
+    return entities

@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from latinepi.parser import read_inscriptions
+from latinepi.parser import read_inscriptions, extract_entities
 
 
 class TestParser(unittest.TestCase):
@@ -167,6 +167,85 @@ class TestParser(unittest.TestCase):
         self.assertEqual(result[0]['id'], 1)
         self.assertEqual(result[0]['age'], 57)
         self.assertEqual(result[0]['verified'], True)
+
+    def test_extract_entities_returns_dict(self):
+        """Test that extract_entities returns a dictionary."""
+        text = "D M GAIVS IVLIVS CAESAR"
+        result = extract_entities(text)
+
+        self.assertIsInstance(result, dict)
+        self.assertGreater(len(result), 0)
+
+    def test_extract_entities_format(self):
+        """Test that extract_entities returns the correct format."""
+        text = "D M GAIVS IVLIVS CAESAR"
+        result = extract_entities(text)
+
+        # Check that each entity has the expected structure
+        for entity_name, entity_data in result.items():
+            self.assertIsInstance(entity_data, dict)
+            self.assertIn('value', entity_data)
+            self.assertIn('confidence', entity_data)
+            self.assertIsInstance(entity_data['value'], str)
+            self.assertIsInstance(entity_data['confidence'], float)
+            self.assertGreaterEqual(entity_data['confidence'], 0.0)
+            self.assertLessEqual(entity_data['confidence'], 1.0)
+
+    def test_extract_entities_gaius_iulius_caesar(self):
+        """Test extraction from a known inscription pattern."""
+        text = "D M GAIVS IVLIVS CAESAR"
+        result = extract_entities(text)
+
+        # Should extract at least these entities
+        self.assertIn('praenomen', result)
+        self.assertEqual(result['praenomen']['value'], 'Gaius')
+
+        self.assertIn('nomen', result)
+        self.assertEqual(result['nomen']['value'], 'Iulius')
+
+        self.assertIn('cognomen', result)
+        self.assertEqual(result['cognomen']['value'], 'Caesar')
+
+        self.assertIn('status', result)
+        self.assertEqual(result['status']['value'], 'dis manibus')
+
+    def test_extract_entities_marcus_antonius(self):
+        """Test extraction from another name pattern."""
+        text = "MARCVS ANTONIVS"
+        result = extract_entities(text)
+
+        self.assertIn('praenomen', result)
+        self.assertEqual(result['praenomen']['value'], 'Marcus')
+
+        self.assertIn('nomen', result)
+        self.assertEqual(result['nomen']['value'], 'Antonius')
+
+    def test_extract_entities_with_location(self):
+        """Test extraction including location."""
+        text = "GAIVS IVLIVS CAESAR ROMAE"
+        result = extract_entities(text)
+
+        self.assertIn('location', result)
+        self.assertIn('Rom', result['location']['value'])
+
+    def test_extract_entities_empty_text(self):
+        """Test extraction from empty text."""
+        text = ""
+        result = extract_entities(text)
+
+        # Should return at least something (fallback entity)
+        self.assertIsInstance(result, dict)
+        self.assertGreater(len(result), 0)
+
+    def test_extract_entities_unknown_text(self):
+        """Test extraction from text with no recognized patterns."""
+        text = "UNKNOWN TEXT WITH NO NAMES"
+        result = extract_entities(text)
+
+        # Should return fallback entity
+        self.assertIsInstance(result, dict)
+        self.assertGreater(len(result), 0)
+        self.assertIn('text', result)
 
 
 if __name__ == "__main__":

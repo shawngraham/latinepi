@@ -1,6 +1,7 @@
 """
 Tests for the CLI module.
 """
+import json
 import subprocess
 import sys
 import tempfile
@@ -85,14 +86,16 @@ class TestCLI(unittest.TestCase):
             text=True
         )
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn('does not exist', result.stderr)
+        self.assertIn('File not found', result.stderr)
         self.assertIn('nonexistent_file.csv', result.stderr)
 
     def test_successful_file_io(self):
         """Test that valid input and output files work correctly."""
-        # Create a temporary input file
+        # Create a temporary input file with inscription data
         input_path = self.temp_path / "input.csv"
-        input_path.write_text("test data\n")
+        csv_content = """id,text,location
+1,D M GAIVS IVLIVS CAESAR,Rome"""
+        input_path.write_text(csv_content)
 
         output_path = self.temp_path / "output.json"
 
@@ -107,21 +110,36 @@ class TestCLI(unittest.TestCase):
         # Should succeed
         self.assertEqual(result.returncode, 0)
 
-        # Check confirmation message in stdout
+        # Check progress messages in stdout
+        self.assertIn('Processing', result.stdout)
+        self.assertIn('Processed inscription', result.stdout)
         self.assertIn('Successfully processed', result.stdout)
-        self.assertIn(str(input_path), result.stdout)
-        self.assertIn(str(output_path), result.stdout)
 
-        # Check output file contains placeholder string
+        # Check output file exists and contains valid JSON
         self.assertTrue(output_path.exists())
         output_content = output_path.read_text()
-        self.assertEqual(output_content, "latinepi: output placeholder\n")
+        output_data = json.loads(output_content)
+
+        # Should be a list with one result
+        self.assertIsInstance(output_data, list)
+        self.assertEqual(len(output_data), 1)
+
+        # Check that entities were extracted
+        record = output_data[0]
+        self.assertIn('inscription_id', record)
+        self.assertEqual(record['inscription_id'], '1')
+
+        # Check for expected entities from the stub
+        self.assertIn('praenomen', record)
+        self.assertIn('praenomen_confidence', record)
 
     def test_output_format_argument(self):
         """Test that --output-format argument works correctly."""
-        # Create a temporary input file
+        # Create a temporary input file with inscription data
         input_path = self.temp_path / "input.csv"
-        input_path.write_text("test data\n")
+        csv_content = """id,text
+1,D M GAIVS IVLIVS CAESAR"""
+        input_path.write_text(csv_content)
 
         output_path = self.temp_path / "output.csv"
 
@@ -136,9 +154,65 @@ class TestCLI(unittest.TestCase):
         self.assertEqual(result.returncode, 0)
         self.assertIn('Successfully processed', result.stdout)
 
-        # Verify output file was created with placeholder
+        # Verify output file was created with CSV format
         self.assertTrue(output_path.exists())
-        self.assertEqual(output_path.read_text(), "latinepi: output placeholder\n")
+        output_content = output_path.read_text()
+
+        # Should have a CSV header row
+        lines = output_content.strip().split('\n')
+        self.assertGreater(len(lines), 1)
+        # First line is header
+        self.assertIn('inscription_id', lines[0])
+
+    def test_entity_extraction_end_to_end(self):
+        """Test complete entity extraction workflow with multiple inscriptions."""
+        # Create input file with multiple inscriptions
+        input_path = self.temp_path / "inscriptions.json"
+        input_data = [
+            {"id": 1, "text": "D M GAIVS IVLIVS CAESAR", "location": "Rome"},
+            {"id": 2, "text": "MARCVS ANTONIVS", "location": "Alexandria"},
+            {"id": 3, "text": "D M MARCIA TVRPILIA", "location": "Pompeii"}
+        ]
+        input_path.write_text(json.dumps(input_data))
+
+        output_path = self.temp_path / "entities.json"
+
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path),
+             '--output', str(output_path)],
+            capture_output=True,
+            text=True
+        )
+
+        # Should succeed
+        self.assertEqual(result.returncode, 0)
+
+        # Check that all inscriptions were processed
+        self.assertIn('Processing 3 inscription(s)', result.stdout)
+        self.assertIn('Processed inscription 1/3', result.stdout)
+        self.assertIn('Processed inscription 2/3', result.stdout)
+        self.assertIn('Processed inscription 3/3', result.stdout)
+
+        # Read and validate output
+        output_data = json.loads(output_path.read_text())
+        self.assertEqual(len(output_data), 3)
+
+        # Verify first inscription
+        first = output_data[0]
+        self.assertEqual(first['inscription_id'], 1)
+        self.assertIn('praenomen', first)
+        self.assertEqual(first['praenomen'], 'Gaius')
+        self.assertIn('nomen', first)
+        self.assertEqual(first['nomen'], 'Iulius')
+        self.assertIn('cognomen', first)
+        self.assertEqual(first['cognomen'], 'Caesar')
+
+        # Verify confidence scores are present
+        self.assertIn('praenomen_confidence', first)
+        self.assertIsInstance(first['praenomen_confidence'], float)
+        self.assertGreaterEqual(first['praenomen_confidence'], 0.0)
+        self.assertLessEqual(first['praenomen_confidence'], 1.0)
 
 
 if __name__ == "__main__":

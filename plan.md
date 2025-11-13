@@ -133,7 +133,7 @@ In `latinepi/parser.py`, implement functions to read a CSV or JSON file containi
   - Test with malformed CSV/JSON and confirm errors are raised.
 ```
 
-## Prompt 5: Single Record Parsing/NER Extraction Stub. Complete: [ ]
+## Prompt 5: Single Record Parsing/NER Extraction Stub. Complete: [x]
 
 ```
 In `parser.py`, add a function `extract_entities(text)` which takes inscription text and returns a hardcoded dict simulating entities (e.g., {'nomen': {'value': 'Iulius', 'confidence': 0.95}}):
@@ -150,7 +150,7 @@ In `parser.py`, add a function `extract_entities(text)` which takes inscription 
 - Write CLI test to check entire process: input file → entity extraction → correct output structure.
 ```
 
-## Prompt 6: Batch Processing Logic With Real File I/O. Complete: [ ]
+## Prompt 6: Batch Processing Logic With Real File I/O. Complete: [x]
 
 ```
 Update CLI and `parser.py` to:

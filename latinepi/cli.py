@@ -3,8 +3,16 @@
 Main CLI entry point for latinepi tool.
 """
 import argparse
+import json
 import sys
 from pathlib import Path
+
+# Support both running as script and as module
+try:
+    from latinepi.parser import read_inscriptions, extract_entities
+except ModuleNotFoundError:
+    # Running as script, use relative import
+    from parser import read_inscriptions, extract_entities
 
 
 def create_parser():
@@ -58,32 +66,74 @@ def main():
         # Re-raise to maintain expected behavior
         raise
 
-    # Check if input file exists
-    input_path = Path(args.input)
-    if not input_path.exists():
-        print(f"Error: Input file '{args.input}' does not exist", file=sys.stderr)
-        sys.exit(1)
-
-    # Try to read the input file to ensure it's accessible
+    # Read inscriptions from input file
     try:
-        with open(input_path, 'r') as f:
-            # Just verify we can read it; we'll process contents later
-            f.read()
+        inscriptions = read_inscriptions(args.input)
+    except FileNotFoundError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+    except ValueError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
     except Exception as e:
         print(f"Error: Could not read input file '{args.input}': {e}", file=sys.stderr)
         sys.exit(1)
 
-    # Write placeholder string to output file
+    # Process each inscription and extract entities
+    results = []
+    total = len(inscriptions)
+
+    print(f"Processing {total} inscription(s)...")
+
+    for i, inscription in enumerate(inscriptions, start=1):
+        # Get the text field from the inscription
+        text = inscription.get('text', inscription.get('Text', ''))
+
+        if not text:
+            print(f"Warning: Inscription {i} has no 'text' field, skipping", file=sys.stderr)
+            continue
+
+        # Extract entities from the text
+        entities = extract_entities(text)
+
+        # Create result record with original ID if available and extracted entities
+        result = {}
+        if 'id' in inscription:
+            result['inscription_id'] = inscription['id']
+        elif 'Id' in inscription:
+            result['inscription_id'] = inscription['Id']
+
+        # Flatten the entity structure for output
+        for entity_name, entity_data in entities.items():
+            result[entity_name] = entity_data['value']
+            result[f"{entity_name}_confidence"] = entity_data['confidence']
+
+        results.append(result)
+
+        # Print progress
+        print(f"Processed inscription {i}/{total}")
+
+    # Write results to output file
     output_path = Path(args.output)
     try:
-        with open(output_path, 'w') as f:
-            f.write("latinepi: output placeholder\n")
+        if args.output_format == 'json':
+            with open(output_path, 'w', encoding='utf-8') as f:
+                json.dump(results, f, indent=2, ensure_ascii=False)
+        else:  # csv
+            import csv
+            if results:
+                fieldnames = results[0].keys()
+                with open(output_path, 'w', encoding='utf-8', newline='') as f:
+                    writer = csv.DictWriter(f, fieldnames=fieldnames)
+                    writer.writeheader()
+                    writer.writerows(results)
+
     except Exception as e:
         print(f"Error: Could not write to output file '{args.output}': {e}", file=sys.stderr)
         sys.exit(1)
 
     # Print confirmation to stdout
-    print(f"Successfully processed '{args.input}' -> '{args.output}'")
+    print(f"Successfully processed {len(results)} inscription(s) -> '{args.output}'")
 
 
 if __name__ == "__main__":
