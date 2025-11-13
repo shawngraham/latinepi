@@ -11,7 +11,22 @@ requests>=2.28.0
 # torch>=2.0.0
 # transformers>=4.30.0
 #
-# To enable model mode, also set environment variable:
-#   export LATINEPI_USE_STUB=false
+# Optional: Classical Language Toolkit (for Latin tokenization)
+# cltk>=1.0.0
+#
+# To enable model mode:
+#   1. Install torch and transformers (uncomment above)
+#   2. Download the latin-bert model from https://github.com/dbmdz/latin-bert
+#      Run the download.sh script from that repo:
+#        git clone https://github.com/dbmdz/latin-bert
+#        cd latin-bert
+#        bash download.sh
+#   3. Set environment variables:
+#      export LATINEPI_USE_STUB=false
+#      export LATIN_BERT_PATH=/path/to/latin-bert/models/latin_bert
+#
+# Alternative for CLTK Latin models:
+#   python3 -c "from cltk.data.fetch import FetchCorpus; corpus_downloader = FetchCorpus(language='lat'); corpus_downloader.import_corpus('lat_models_cltk')"
 #
 # By default, the tool uses a fast pattern-based stub for entity extraction
+# If LATIN_BERT_PATH is not set, it falls back to a generic multilingual BERT model

@@ -142,9 +142,24 @@ def _load_ner_model():
         from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
         import torch
 
-        # Note: Using a multilingual NER model as latin-bert doesn't have a public NER version
-        # In production, this should be replaced with a fine-tuned Latin NER model
-        model_name = "dbmdz/bert-base-historic-multilingual-cased"
+        # Check for local latin-bert model path
+        # Users should download latin-bert from https://github.com/dbmdz/latin-bert
+        # using the download.sh script and set LATIN_BERT_PATH to the model directory
+        latin_bert_path = os.environ.get('LATIN_BERT_PATH')
+
+        if latin_bert_path and os.path.isdir(latin_bert_path):
+            # Load local latin-bert model
+            import sys
+            print(f"Loading latin-bert model from {latin_bert_path}...", file=sys.stderr)
+            model_name = latin_bert_path
+        else:
+            # Fall back to HuggingFace model (placeholder)
+            # Note: This is a generic multilingual model, not optimized for Latin NER
+            # For production use, download the actual latin-bert model and set LATIN_BERT_PATH
+            model_name = "dbmdz/bert-base-historic-multilingual-cased"
+            import sys
+            print(f"Warning: LATIN_BERT_PATH not set. Using generic multilingual model.", file=sys.stderr)
+            print(f"For better results, download latin-bert from https://github.com/dbmdz/latin-bert", file=sys.stderr)
 
         # Load tokenizer and model
         tokenizer = AutoTokenizer.from_pretrained(model_name)
