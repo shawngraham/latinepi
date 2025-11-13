@@ -230,7 +230,7 @@ Implement the EDH download utility in `latinepi/edh_utils.py`.
     - Test CLI invocation with EDH flags, and output file.
 ```
 
-## Prompt 11: CLI Argument Validation, User Guidance, and Error Handling. Complete: [ ]
+## Prompt 11: CLI Argument Validation, User Guidance, and Error Handling. Complete: [x]
 
 ```
 Enhance CLI UX and robustness in `cli.py`:
