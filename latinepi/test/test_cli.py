@@ -411,6 +411,47 @@ class TestCLI(unittest.TestCase):
         # Should only have inscription_id, no entity fields
         self.assertEqual(len(record), 1)
 
+    def test_edh_download_missing_download_dir(self):
+        """Test that --download-edh without --download-dir prints error."""
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--download-edh', 'HD000001'],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('--download-dir is required', result.stderr)
+
+    def test_missing_input_with_output(self):
+        """Test that --output without --input (and no --download-edh) prints error."""
+        output_path = self.temp_path / "output.json"
+
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--output', str(output_path)],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('--input is required', result.stderr)
+
+    def test_missing_output_with_input(self):
+        """Test that --input without --output prints error."""
+        input_path = self.temp_path / "input.json"
+        input_path.write_text(json.dumps([{"id": 1, "text": "test"}]))
+
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path)],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('--output is required', result.stderr)
+
 
 if __name__ == "__main__":
     unittest.main()

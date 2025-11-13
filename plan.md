@@ -195,7 +195,7 @@ Add confidence threshold logic to `extract_entities` and wire it up to CLI argum
 - CLI integration test: run with and without `--flag-ambiguous` and different thresholds, verify output.
 ```
 
-## Prompt 9: Output Formatting, JSON/CSV Choice. Complete: [ ]
+## Prompt 9: Output Formatting, JSON/CSV Choice. Complete: [x]
 
 ```
 Expand the CLI to write output as either flat JSON or CSV according to the `--output-format` flag.
@@ -209,7 +209,7 @@ Expand the CLI to write output as either flat JSON or CSV according to the `--ou
 - Given controlled input and entity extraction, produce JSON and CSV and check structure and values.
 ```
 
-## Prompt 10: EDH Download Utility (Basic Fetch and Save). Complete: [ ]
+## Prompt 10: EDH Download Utility (Basic Fetch and Save). Complete: [x]
 ```
 Implement the EDH download utility in `latinepi/edh_utils.py`.
 

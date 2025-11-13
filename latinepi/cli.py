@@ -10,9 +10,11 @@ from pathlib import Path
 # Support both running as script and as module
 try:
     from latinepi.parser import read_inscriptions, extract_entities
+    from latinepi.edh_utils import download_edh_inscription
 except ModuleNotFoundError:
     # Running as script, use relative import
     from parser import read_inscriptions, extract_entities
+    from edh_utils import download_edh_inscription
 
 
 def create_parser():
@@ -28,17 +30,15 @@ Example usage:
         """
     )
 
-    # Required arguments
+    # Input/output arguments
     parser.add_argument(
         '--input',
-        required=True,
         metavar='<input_file>',
         help='Path to input file (CSV or JSON)'
     )
 
     parser.add_argument(
         '--output',
-        required=True,
         metavar='<output_file>',
         help='Path to output file'
     )
@@ -66,6 +66,19 @@ Example usage:
         help='Include low-confidence entities with ambiguous flag instead of omitting them'
     )
 
+    # EDH download arguments
+    parser.add_argument(
+        '--download-edh',
+        metavar='<inscription_id>',
+        help='Download inscription from EDH API by ID (e.g., HD000001 or 123)'
+    )
+
+    parser.add_argument(
+        '--download-dir',
+        metavar='<directory>',
+        help='Directory to save downloaded EDH inscriptions (required with --download-edh)'
+    )
+
     return parser
 
 
@@ -79,6 +92,36 @@ def main():
         # argparse calls sys.exit() on error or --help
         # Re-raise to maintain expected behavior
         raise
+
+    # Handle EDH download if requested
+    if args.download_edh:
+        if not args.download_dir:
+            print("Error: --download-dir is required when using --download-edh", file=sys.stderr)
+            sys.exit(1)
+
+        try:
+            output_file = download_edh_inscription(args.download_edh, args.download_dir)
+            print(f"Successfully downloaded inscription {args.download_edh} to {output_file}")
+
+            # If no input file specified, we're done after download
+            if not args.input:
+                sys.exit(0)
+
+        except (ValueError, OSError) as e:
+            print(f"Error: {e}", file=sys.stderr)
+            sys.exit(1)
+        except Exception as e:
+            print(f"Error: Failed to download inscription: {e}", file=sys.stderr)
+            sys.exit(1)
+
+    # Validate required arguments for processing mode
+    if not args.input:
+        print("Error: --input is required (unless using --download-edh alone)", file=sys.stderr)
+        sys.exit(1)
+
+    if not args.output:
+        print("Error: --output is required when processing inscriptions", file=sys.stderr)
+        sys.exit(1)
 
     # Read inscriptions from input file
     try:
