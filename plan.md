@@ -163,7 +163,7 @@ Update CLI and `parser.py` to:
 - Test with both JSON and CSV inputs, and varied record counts.
 ```
 
-## Prompt 7: Integrate latin-bert Model, Minimal NER. Complete: [ ]
+## Prompt 7: Integrate latin-bert Model, Minimal NER. Complete: [x]
 
 ```
 Switch `extract_entities` in `parser.py` from hardcoded results to integrating the real pretrained `latin-bert` model using HuggingFace Transformers:

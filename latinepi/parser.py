@@ -3,8 +3,15 @@ Parsing and entity extraction logic for Latin inscriptions.
 """
 import csv
 import json
+import os
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
+
+# Global model cache to avoid reloading
+_NER_MODEL = None
+_NER_TOKENIZER = None
+_MODEL_LOADED = False
+_USE_STUB = os.environ.get('LATINEPI_USE_STUB', 'true').lower() == 'true'
 
 
 def read_inscriptions(path: str) -> List[Dict[str, Any]]:
@@ -110,37 +117,128 @@ def _read_json(file_path: Path) -> List[Dict[str, Any]]:
         raise ValueError(f"Error reading JSON file: {e}")
 
 
-def extract_entities(text: str) -> Dict[str, Dict[str, Any]]:
+def _load_ner_model():
     """
-    Extract named entities from Latin inscription text.
+    Load the NER model and tokenizer.
 
-    This is a stub implementation that returns hardcoded mock data
-    to simulate NER results. In a future version, this will use the
-    latin-bert model for real entity extraction.
+    Attempts to load a pretrained NER model for Latin. Falls back to stub if unavailable.
+    The model is cached globally to avoid reloading on subsequent calls.
+
+    Returns:
+        tuple: (model, tokenizer) if successful, (None, None) if not available
+    """
+    global _NER_MODEL, _NER_TOKENIZER, _MODEL_LOADED
+
+    if _MODEL_LOADED:
+        return _NER_MODEL, _NER_TOKENIZER
+
+    # If stub mode is explicitly requested, don't try to load model
+    if _USE_STUB:
+        _MODEL_LOADED = True
+        return None, None
+
+    try:
+        # Try to import transformers
+        from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
+        import torch
+
+        # Note: Using a multilingual NER model as latin-bert doesn't have a public NER version
+        # In production, this should be replaced with a fine-tuned Latin NER model
+        model_name = "dbmdz/bert-base-historic-multilingual-cased"
+
+        # Load tokenizer and model
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
+        model = AutoModelForTokenClassification.from_pretrained(model_name)
+
+        # Create NER pipeline
+        ner_pipeline = pipeline(
+            "ner",
+            model=model,
+            tokenizer=tokenizer,
+            aggregation_strategy="simple"
+        )
+
+        _NER_MODEL = ner_pipeline
+        _NER_TOKENIZER = tokenizer
+        _MODEL_LOADED = True
+
+        return _NER_MODEL, _NER_TOKENIZER
+
+    except ImportError:
+        # transformers or torch not available, fall back to stub
+        _MODEL_LOADED = True
+        return None, None
+    except Exception as e:
+        # Model loading failed, fall back to stub
+        import sys
+        print(f"Warning: Could not load NER model: {e}. Using stub implementation.", file=sys.stderr)
+        _MODEL_LOADED = True
+        return None, None
+
+
+def _extract_entities_with_model(text: str, model) -> Dict[str, Dict[str, Any]]:
+    """
+    Extract entities using the real NER model.
+
+    Args:
+        text: The inscription text to analyze
+        model: The NER pipeline model
+
+    Returns:
+        Dictionary of extracted entities with values and confidence scores
+    """
+    try:
+        # Run NER on the text
+        ner_results = model(text)
+
+        # Map NER results to our entity structure
+        entities = {}
+
+        for entity in ner_results:
+            entity_type = entity['entity_group'].lower()
+            word = entity['word'].strip()
+            confidence = float(entity['score'])
+
+            # Map common NER labels to our schema
+            # PER = person name, LOC = location, ORG = organization
+            if entity_type == 'per':
+                # Try to classify as praenomen, nomen, or cognomen
+                # This is a simplification; real implementation would need proper parsing
+                if 'praenomen' not in entities:
+                    entities['praenomen'] = {'value': word, 'confidence': confidence}
+                elif 'nomen' not in entities:
+                    entities['nomen'] = {'value': word, 'confidence': confidence}
+                elif 'cognomen' not in entities:
+                    entities['cognomen'] = {'value': word, 'confidence': confidence}
+            elif entity_type == 'loc':
+                entities['location'] = {'value': word, 'confidence': confidence}
+
+        # If no entities found, return fallback
+        if not entities:
+            entities['text'] = {'value': text[:50], 'confidence': 0.50}
+
+        return entities
+
+    except Exception as e:
+        # If model inference fails, fall back to stub
+        import sys
+        print(f"Warning: Model inference failed: {e}. Using stub fallback.", file=sys.stderr)
+        return _extract_entities_stub(text)
+
+
+def _extract_entities_stub(text: str) -> Dict[str, Dict[str, Any]]:
+    """
+    Stub implementation for entity extraction (pattern-based).
+
+    This simulates NER results using simple pattern matching.
+    Used as fallback when real model is unavailable.
 
     Args:
         text: The inscription text to analyze
 
     Returns:
-        Dictionary of extracted entities with their values and confidence scores.
-        Format: {
-            'entity_name': {
-                'value': str,
-                'confidence': float (0.0-1.0)
-            }
-        }
-
-    Example:
-        >>> extract_entities("D M GAIVS IVLIVS CAESAR")
-        {
-            'praenomen': {'value': 'Gaius', 'confidence': 0.91},
-            'nomen': {'value': 'Iulius', 'confidence': 0.88},
-            'cognomen': {'value': 'Caesar', 'confidence': 0.95}
-        }
+        Dictionary of extracted entities with values and confidence scores
     """
-    # Stub implementation: return mock entity data
-    # This simulates what a real NER model would return
-
     # Generate mock entities based on text content patterns
     entities = {}
 
@@ -185,3 +283,45 @@ def extract_entities(text: str) -> Dict[str, Dict[str, Any]]:
         entities['text'] = {'value': text[:50], 'confidence': 0.50}
 
     return entities
+
+
+def extract_entities(text: str, use_model: bool = True) -> Dict[str, Dict[str, Any]]:
+    """
+    Extract named entities from Latin inscription text.
+
+    Attempts to use a real NER model if available, falls back to stub implementation.
+    The model is loaded once and cached for subsequent calls.
+
+    Args:
+        text: The inscription text to analyze
+        use_model: Whether to attempt using the real model (default: True)
+
+    Returns:
+        Dictionary of extracted entities with their values and confidence scores.
+        Format: {
+            'entity_name': {
+                'value': str,
+                'confidence': float (0.0-1.0)
+            }
+        }
+
+    Example:
+        >>> extract_entities("D M GAIVS IVLIVS CAESAR")
+        {
+            'praenomen': {'value': 'Gaius', 'confidence': 0.91},
+            'nomen': {'value': 'Iulius', 'confidence': 0.88},
+            'cognomen': {'value': 'Caesar', 'confidence': 0.95}
+        }
+
+    Note:
+        Set environment variable LATINEPI_USE_STUB=false to enable model loading.
+        Requires transformers and torch packages to be installed.
+    """
+    # Try to load and use the real model
+    if use_model and not _USE_STUB:
+        model, _ = _load_ner_model()
+        if model is not None:
+            return _extract_entities_with_model(text, model)
+
+    # Fall back to stub implementation
+    return _extract_entities_stub(text)

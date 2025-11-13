@@ -1,0 +1,17 @@
+# Core dependencies for CSV/JSON processing
+pandas>=1.5.0
+
+# HTTP requests for EDH API downloads
+requests>=2.28.0
+
+# Optional: Real NER model support
+# Uncomment the lines below to enable ML-based entity extraction
+# Note: These packages are large (~2GB) and require significant memory
+#
+# torch>=2.0.0
+# transformers>=4.30.0
+#
+# To enable model mode, also set environment variable:
+#   export LATINEPI_USE_STUB=false
+#
+# By default, the tool uses a fast pattern-based stub for entity extraction

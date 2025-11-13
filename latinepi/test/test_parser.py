@@ -247,6 +247,57 @@ class TestParser(unittest.TestCase):
         self.assertGreater(len(result), 0)
         self.assertIn('text', result)
 
+    def test_extract_entities_with_stub_explicit(self):
+        """Test that extract_entities can be explicitly called in stub mode."""
+        text = "D M GAIVS IVLIVS CAESAR"
+
+        # Explicitly use stub (use_model=False)
+        result = extract_entities(text, use_model=False)
+
+        # Should work just like the default stub mode
+        self.assertIsInstance(result, dict)
+        self.assertIn('praenomen', result)
+        self.assertEqual(result['praenomen']['value'], 'Gaius')
+
+    def test_model_loading_mechanism(self):
+        """Test that model loading mechanism works correctly."""
+        import latinepi.parser as parser_module
+
+        # Save original state
+        original_model_loaded = parser_module._MODEL_LOADED
+        original_model = parser_module._NER_MODEL
+        original_use_stub = parser_module._USE_STUB
+
+        try:
+            # Test 1: With stub mode (default), model loading shouldn't be attempted
+            parser_module._MODEL_LOADED = False
+            parser_module._NER_MODEL = None
+            parser_module._USE_STUB = True
+
+            result_stub = extract_entities("TEST TEXT", use_model=True)
+            self.assertIsInstance(result_stub, dict)
+            # In stub mode, _MODEL_LOADED might not be set since we skip model loading
+
+            # Test 2: With use_model=False, should always use stub
+            result_no_model = extract_entities("TEST TEXT", use_model=False)
+            self.assertIsInstance(result_no_model, dict)
+
+            # Test 3: Direct call to _load_ner_model with stub mode
+            parser_module._MODEL_LOADED = False
+            parser_module._USE_STUB = True
+            model, tokenizer = parser_module._load_ner_model()
+
+            # In stub mode, should return None and set _MODEL_LOADED
+            self.assertIsNone(model)
+            self.assertIsNone(tokenizer)
+            self.assertTrue(parser_module._MODEL_LOADED)
+
+        finally:
+            # Restore original state
+            parser_module._MODEL_LOADED = original_model_loaded
+            parser_module._NER_MODEL = original_model
+            parser_module._USE_STUB = original_use_stub
+
 
 if __name__ == "__main__":
     unittest.main()
