@@ -84,7 +84,7 @@ You are to implement the initial scaffold for a Python project called `latinepi`
 - Implement a test in `test/test_cli.py` that runs `cli.py` as a script and asserts "Hello World" is in stdout.
 ```
 
-## Prompt 2: CLI Argument Parsing and Help. Complete: [ ]
+## Prompt 2: CLI Argument Parsing and Help. Complete: [x]
 ```
 Extend `latinepi/cli.py` to parse command-line arguments using `argparse`:
 
