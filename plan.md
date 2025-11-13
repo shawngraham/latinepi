@@ -178,7 +178,7 @@ Switch `extract_entities` in `parser.py` from hardcoded results to integrating t
 **Note:** Performance/memory to be kept in mind; avoid loading model more than once.
 ```
 
-## Prompt 8: Confidence/Threshold Logic. Complete: [ ]
+## Prompt 8: Confidence/Threshold Logic. Complete: [x]
 
 ```
 Add confidence threshold logic to `extract_entities` and wire it up to CLI arguments:

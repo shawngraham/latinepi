@@ -214,6 +214,203 @@ class TestCLI(unittest.TestCase):
         self.assertGreaterEqual(first['praenomen_confidence'], 0.0)
         self.assertLessEqual(first['praenomen_confidence'], 1.0)
 
+    def test_confidence_threshold_default(self):
+        """Test that default confidence threshold (0.5) filters entities correctly."""
+        # Create input with text that will produce mixed confidence entities
+        input_path = self.temp_path / "input.json"
+        input_data = [{"id": 1, "text": "UNKNOWN TEXT WITH NO NAMES"}]
+        input_path.write_text(json.dumps(input_data))
+
+        output_path = self.temp_path / "output.json"
+
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path),
+             '--output', str(output_path)],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertEqual(result.returncode, 0)
+
+        # Read output
+        output_data = json.loads(output_path.read_text())
+        self.assertEqual(len(output_data), 1)
+
+        # The stub returns 'text' entity with confidence 0.50 for unknown text
+        # With default threshold of 0.5, entities with exactly 0.5 should be included
+        record = output_data[0]
+        self.assertIn('text', record)
+        self.assertEqual(record['text_confidence'], 0.50)
+
+    def test_confidence_threshold_high(self):
+        """Test that high confidence threshold filters out more entities."""
+        # Create input with known inscription
+        input_path = self.temp_path / "input.json"
+        input_data = [{"id": 1, "text": "D M GAIVS IVLIVS CAESAR"}]
+        input_path.write_text(json.dumps(input_data))
+
+        output_path = self.temp_path / "output.json"
+
+        # Use a high threshold that will filter out some entities
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path),
+             '--output', str(output_path),
+             '--confidence-threshold', '0.90'],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertEqual(result.returncode, 0)
+
+        # Read output
+        output_data = json.loads(output_path.read_text())
+        self.assertEqual(len(output_data), 1)
+
+        record = output_data[0]
+        # cognomen (Caesar) has confidence 0.95, should be included
+        self.assertIn('cognomen', record)
+        self.assertEqual(record['cognomen'], 'Caesar')
+        self.assertEqual(record['cognomen_confidence'], 0.95)
+
+        # nomen (Iulius) has confidence 0.88, should be excluded (< 0.90)
+        self.assertNotIn('nomen', record)
+
+        # praenomen (Gaius) has confidence 0.91, should be included
+        self.assertIn('praenomen', record)
+
+    def test_confidence_threshold_low(self):
+        """Test that low confidence threshold includes more entities."""
+        # Create input with known inscription
+        input_path = self.temp_path / "input.json"
+        input_data = [{"id": 1, "text": "D M GAIVS IVLIVS CAESAR"}]
+        input_path.write_text(json.dumps(input_data))
+
+        output_path = self.temp_path / "output.json"
+
+        # Use a low threshold that includes all entities
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path),
+             '--output', str(output_path),
+             '--confidence-threshold', '0.10'],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertEqual(result.returncode, 0)
+
+        # Read output
+        output_data = json.loads(output_path.read_text())
+        record = output_data[0]
+
+        # All entities should be included
+        self.assertIn('praenomen', record)
+        self.assertIn('nomen', record)
+        self.assertIn('cognomen', record)
+        self.assertIn('status', record)
+
+    def test_flag_ambiguous(self):
+        """Test that --flag-ambiguous includes low-confidence entities with ambiguous flag."""
+        # Create input with known inscription
+        input_path = self.temp_path / "input.json"
+        input_data = [{"id": 1, "text": "D M GAIVS IVLIVS CAESAR"}]
+        input_path.write_text(json.dumps(input_data))
+
+        output_path = self.temp_path / "output.json"
+
+        # Use high threshold with flag-ambiguous
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path),
+             '--output', str(output_path),
+             '--confidence-threshold', '0.90',
+             '--flag-ambiguous'],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertEqual(result.returncode, 0)
+
+        # Read output
+        output_data = json.loads(output_path.read_text())
+        record = output_data[0]
+
+        # cognomen (Caesar) has confidence 0.95, should be included without ambiguous flag
+        self.assertIn('cognomen', record)
+        self.assertEqual(record['cognomen'], 'Caesar')
+        self.assertNotIn('cognomen_ambiguous', record)
+
+        # nomen (Iulius) has confidence 0.88 (< 0.90), should be included with ambiguous flag
+        self.assertIn('nomen', record)
+        self.assertEqual(record['nomen'], 'Iulius')
+        self.assertEqual(record['nomen_confidence'], 0.88)
+        self.assertIn('nomen_ambiguous', record)
+        self.assertTrue(record['nomen_ambiguous'])
+
+    def test_flag_ambiguous_with_csv(self):
+        """Test that --flag-ambiguous works correctly with CSV output."""
+        # Create input
+        input_path = self.temp_path / "input.json"
+        input_data = [{"id": 1, "text": "D M GAIVS IVLIVS CAESAR"}]
+        input_path.write_text(json.dumps(input_data))
+
+        output_path = self.temp_path / "output.csv"
+
+        # Use threshold with flag-ambiguous and CSV output
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path),
+             '--output', str(output_path),
+             '--output-format', 'csv',
+             '--confidence-threshold', '0.90',
+             '--flag-ambiguous'],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertEqual(result.returncode, 0)
+
+        # Read CSV output
+        output_content = output_path.read_text()
+        lines = output_content.strip().split('\n')
+        self.assertGreater(len(lines), 1)
+
+        # Check that ambiguous column exists in header
+        header = lines[0]
+        self.assertIn('_ambiguous', header)
+
+    def test_no_entities_meet_threshold(self):
+        """Test behavior when no entities meet the confidence threshold."""
+        # Create input with unknown text (low confidence)
+        input_path = self.temp_path / "input.json"
+        input_data = [{"id": 1, "text": "UNKNOWN TEXT"}]
+        input_path.write_text(json.dumps(input_data))
+
+        output_path = self.temp_path / "output.json"
+
+        # Use very high threshold
+        result = subprocess.run(
+            [sys.executable, str(self.cli_path),
+             '--input', str(input_path),
+             '--output', str(output_path),
+             '--confidence-threshold', '0.99'],
+            capture_output=True,
+            text=True
+        )
+
+        self.assertEqual(result.returncode, 0)
+
+        # Read output - should have record with only inscription_id (no entities)
+        output_data = json.loads(output_path.read_text())
+        self.assertEqual(len(output_data), 1)
+
+        record = output_data[0]
+        self.assertIn('inscription_id', record)
+        # Should only have inscription_id, no entity fields
+        self.assertEqual(len(record), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

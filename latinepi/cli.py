@@ -52,6 +52,20 @@ Example usage:
         help='Output format (default: json)'
     )
 
+    parser.add_argument(
+        '--confidence-threshold',
+        type=float,
+        default=0.5,
+        metavar='<threshold>',
+        help='Minimum confidence score for entity extraction (0.0-1.0, default: 0.5)'
+    )
+
+    parser.add_argument(
+        '--flag-ambiguous',
+        action='store_true',
+        help='Include low-confidence entities with ambiguous flag instead of omitting them'
+    )
+
     return parser
 
 
@@ -103,10 +117,24 @@ def main():
         elif 'Id' in inscription:
             result['inscription_id'] = inscription['Id']
 
-        # Flatten the entity structure for output
+        # Apply confidence threshold filtering and flatten the entity structure for output
         for entity_name, entity_data in entities.items():
-            result[entity_name] = entity_data['value']
-            result[f"{entity_name}_confidence"] = entity_data['confidence']
+            confidence = entity_data['confidence']
+
+            # Check if entity meets confidence threshold
+            if confidence < args.confidence_threshold:
+                if args.flag_ambiguous:
+                    # Include entity with ambiguous flag
+                    result[entity_name] = entity_data['value']
+                    result[f"{entity_name}_confidence"] = confidence
+                    result[f"{entity_name}_ambiguous"] = True
+                else:
+                    # Omit entity from results (skip to next entity)
+                    continue
+            else:
+                # Entity meets threshold, include it
+                result[entity_name] = entity_data['value']
+                result[f"{entity_name}_confidence"] = confidence
 
         results.append(result)
 
