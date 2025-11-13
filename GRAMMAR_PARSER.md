@@ -12,10 +12,10 @@ The hybrid grammar parser extends `latinepi` beyond simple pattern matching to u
 
 The original pattern-based parser is fast and accurate for **known names**, but struggles with:
 
-❌ **Unknown names** not in the pattern lists
-❌ **Grammatical relationships** (who is dedicating to whom?)
-❌ **Complex inscriptions** with multiple people
-❌ **Positional inference** (extracting names based on structure)
+- **Unknown names** not in the pattern lists
+- **Grammatical relationships** (who is dedicating to whom?)
+- **Complex inscriptions** with multiple people
+- **Positional inference** (extracting names based on structure)
 
 The hybrid parser solves these problems by understanding Latin grammar, not just matching names.
 
@@ -29,36 +29,36 @@ The hybrid parser solves these problems by understanding Latin grammar, not just
                  ▼
 ┌─────────────────────────────────────────────────────────┐
 │  Phase 0: Pattern Matching (existing)                  │
-│  ✓ Fast, high confidence for known names               │
-│  ✓ 111+ regex patterns                                 │
+│  - Fast, high confidence for known names               │
+│  - 111+ regex patterns                                 │
 └────────────────┬────────────────────────────────────────┘
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────┐
 │  Phase 1: Grammatical Templates (NEW)                  │
-│  ✓ Extracts unknown names by position                  │
-│  ✓ Genitive + dative → deceased person                 │
-│  ✓ Nominative + FECIT → dedicator                      │
-│  ✓ Patronymic patterns (X Y F.)                        │
-│  ✓ No dependencies required                            │
+│  - Extracts unknown names by position                  │
+│  - Genitive + dative to deceased person                │
+│  - Nominative + FECIT to dedicator                     │
+│  - Patronymic patterns (X Y F.)                        │
+│  - No dependencies required                            │
 └────────────────┬────────────────────────────────────────┘
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────┐
 │  Phase 2: Morphological Analysis (OPTIONAL)            │
-│  ✓ Uses CLTK for case/gender/number                    │
-│  ✓ Validates entities from earlier phases              │
-│  ✓ Extracts by grammatical features                    │
-│  ✓ Requires: pip install cltk                          │
+│  - Uses CLTK for case/gender/number                    │
+│  - Validates entities from earlier phases              │
+│  - Extracts by grammatical features                    │
+│  - Requires: pip install cltk                          │
 └────────────────┬────────────────────────────────────────┘
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────┐
 │  Phase 3: Dependency Parsing (OPTIONAL)                │
-│  ✓ Understands subject-verb-object relationships       │
-│  ✓ Handles complex multi-person inscriptions           │
-│  ✓ Extracts nested relationships                       │
-│  ✓ Requires: pip install cltk                          │
+│  - Understands subject-verb-object relationships       │
+│  - Handles complex multi-person inscriptions           │
+│  - Extracts nested relationships                       │
+│  - Requires: pip install cltk                          │
 └────────────────┬────────────────────────────────────────┘
                  │
                  ▼
@@ -142,21 +142,21 @@ entities = extract_entities_hybrid(
 
 Recognizes grammatical patterns common in Roman inscriptions:
 
-1. **Genitive + Relationship** → Deceased person
-   - `VIBIAE SABINAE FILIAE` → Vibia Sabina (daughter)
-   - `GAII IULII PATRI` → Gaius Iulius (father)
+1. **Genitive + Relationship** to Deceased person
+   - `VIBIAE SABINAE FILIAE` to Vibia Sabina (daughter)
+   - `GAII IULII PATRI` to Gaius Iulius (father)
 
-2. **Nominative + FECIT** → Dedicator
-   - `VIBIUS PAULUS FECIT` → Vibius Paulus (dedicator)
-   - `MARCUS ANTONIUS POSUIT` → Marcus Antonius (dedicator)
+2. **Nominative + FECIT** to Dedicator
+   - `VIBIUS PAULUS FECIT` to Vibius Paulus (dedicator)
+   - `MARCUS ANTONIUS POSUIT` to Marcus Antonius (dedicator)
 
-3. **Patronymic Patterns** → Filiation
-   - `MARCUS GAII F.` → Marcus, son of Gaius
-   - `CAESARIS FILIUS` → son of Caesar
+3. **Patronymic Patterns** to Filiation
+   - `MARCUS GAII F.` to Marcus, son of Gaius
+   - `CAESARIS FILIUS` to son of Caesar
 
 4. **Dedication Sentiments**
-   - `FILIAE CARISSIMAE` → "dearest daughter"
-   - `PATRI PIISSIMO` → "most devoted father"
+   - `FILIAE CARISSIMAE` to "dearest daughter"
+   - `PATRI PIISSIMO` to "most devoted father"
 
 ### Example
 
@@ -178,10 +178,10 @@ D M VIBIAE SABINAE FILIAE PIISSIMAE VIBIUS PAULUS PATER FECIT
 
 ### Advantages
 
-✅ **No dependencies** - pure regex
-✅ **Handles unknown names** - extracts by position
-✅ **Fast** - instant results
-✅ **Formulaic inscriptions** - 70%+ of inscriptions follow templates
+- **No dependencies** - pure regex
+- **Handles unknown names** - extracts by position
+- **Fast** - instant results
+- **Formulaic inscriptions** - 70%+ of inscriptions follow templates
 
 ## Phase 2: Morphological Analysis
 
@@ -232,14 +232,14 @@ VIBIAE SABINAE FILIAE
 ```
 
 **Extraction**:
-- Genitive proper nouns → `Vibia Sabina` (deceased)
-- Dative noun "filia" → `daughter` (relationship)
+- Genitive proper nouns to `Vibia Sabina` (deceased)
+- Dative noun "filia" to `daughter` (relationship)
 
 ### Advantages
 
-✅ **Validates patterns** - confirms grammatical correctness
-✅ **Higher confidence** - morphology boosts confidence scores
-✅ **Unknown words** - can identify case even for unknown names
+- **Validates patterns** - confirms grammatical correctness
+- **Higher confidence** - morphology boosts confidence scores
+- **Unknown words** - can identify case even for unknown names
 
 ### Requirements
 
@@ -276,8 +276,8 @@ FECIT (root)
 ```
 
 **Extraction**:
-- Subjects of FECIT → `Vibius Paulus` (dedicator)
-- Apposition to subject → `father` (relationship)
+- Subjects of FECIT to `Vibius Paulus` (dedicator)
+- Apposition to subject to `father` (relationship)
 
 ### Complex Example
 
@@ -304,9 +304,9 @@ VIBIUS PAULUS PATER ET VIBIA TERTULLA MATER FECERUNT
 
 ### Advantages
 
-✅ **Complex inscriptions** - handles multiple people
-✅ **Nested relationships** - understands hierarchical structure
-✅ **Grammatical correctness** - validates sentence structure
+- **Complex inscriptions** - handles multiple people
+- **Nested relationships** - understands hierarchical structure
+- **Grammatical correctness** - validates sentence structure
 
 ### Requirements
 
@@ -477,9 +477,9 @@ D M VIBIAE SABINAE FILIAE VIBIUS PAULUS PATER FECIT
   "text": {"value": "D M VIBIAE...", "confidence": 0.5}
 }
 ```
-❌ Missed "Vibia Sabina" (not in patterns)
-❌ Missed "Vibius Paulus" (not in patterns)
-❌ Didn't identify relationships
+- Missed "Vibia Sabina" (not in patterns)
+- Missed "Vibius Paulus" (not in patterns)
+- Didn't identify relationships
 
 ### After (Hybrid)
 
@@ -494,9 +494,9 @@ D M VIBIAE SABINAE FILIAE VIBIUS PAULUS PATER FECIT
   "dedication_sentiment": {"value": "dearest", "confidence": 0.75}
 }
 ```
-✅ Extracted all names (even unknown ones)
-✅ Identified all relationships
-✅ Extracted sentiment
+- Extracted all names (even unknown ones)
+- Identified all relationships
+- Extracted sentiment
 
 ## References
 
