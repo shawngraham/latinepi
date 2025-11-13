@@ -118,7 +118,7 @@ Expand `latinepi/cli.py` to open the input file specified by `--input` and write
   - Providing good input and output args results in the output file containing the placeholder string and a confirmation in stdout.
 ```
 
-## Prompt 4: Parsing CSV/JSON Input With Unit Tests. Complete: [ ]
+## Prompt 4: Parsing CSV/JSON Input With Unit Tests. Complete: [x]
 
 ```
 In `latinepi/parser.py`, implement functions to read a CSV or JSON file containing inscriptions.
@@ -133,7 +133,7 @@ In `latinepi/parser.py`, implement functions to read a CSV or JSON file containi
   - Test with malformed CSV/JSON and confirm errors are raised.
 ```
 
-## Prompt 5: Single Record Parsing/NER Extraction Stub. Complete: [ ]
+## Prompt 5: Single Record Parsing/NER Extraction Stub. Complete: [x]
 
 ```
 In `parser.py`, add a function `extract_entities(text)` which takes inscription text and returns a hardcoded dict simulating entities (e.g., {'nomen': {'value': 'Iulius', 'confidence': 0.95}}):
@@ -150,7 +150,7 @@ In `parser.py`, add a function `extract_entities(text)` which takes inscription 
 - Write CLI test to check entire process: input file → entity extraction → correct output structure.
 ```
 
-## Prompt 6: Batch Processing Logic With Real File I/O. Complete: [ ]
+## Prompt 6: Batch Processing Logic With Real File I/O. Complete: [x]
 
 ```
 Update CLI and `parser.py` to:
@@ -163,7 +163,7 @@ Update CLI and `parser.py` to:
 - Test with both JSON and CSV inputs, and varied record counts.
 ```
 
-## Prompt 7: Integrate latin-bert Model, Minimal NER. Complete: [ ]
+## Prompt 7: Integrate latin-bert Model, Minimal NER. Complete: [x]
 
 ```
 Switch `extract_entities` in `parser.py` from hardcoded results to integrating the real pretrained `latin-bert` model using HuggingFace Transformers:
@@ -178,7 +178,7 @@ Switch `extract_entities` in `parser.py` from hardcoded results to integrating t
 **Note:** Performance/memory to be kept in mind; avoid loading model more than once.
 ```
 
-## Prompt 8: Confidence/Threshold Logic. Complete: [ ]
+## Prompt 8: Confidence/Threshold Logic. Complete: [x]
 
 ```
 Add confidence threshold logic to `extract_entities` and wire it up to CLI arguments:
@@ -195,7 +195,7 @@ Add confidence threshold logic to `extract_entities` and wire it up to CLI argum
 - CLI integration test: run with and without `--flag-ambiguous` and different thresholds, verify output.
 ```
 
-## Prompt 9: Output Formatting, JSON/CSV Choice. Complete: [ ]
+## Prompt 9: Output Formatting, JSON/CSV Choice. Complete: [x]
 
 ```
 Expand the CLI to write output as either flat JSON or CSV according to the `--output-format` flag.
@@ -209,7 +209,7 @@ Expand the CLI to write output as either flat JSON or CSV according to the `--ou
 - Given controlled input and entity extraction, produce JSON and CSV and check structure and values.
 ```
 
-## Prompt 10: EDH Download Utility (Basic Fetch and Save). Complete: [ ]
+## Prompt 10: EDH Download Utility (Basic Fetch and Save). Complete: [x]
 ```
 Implement the EDH download utility in `latinepi/edh_utils.py`.
 
