@@ -4,7 +4,7 @@ A fast, lightweight command-line tool for extracting structured personal data fr
 
 **No ML dependencies required** - uses 111+ regex patterns for instant entity extraction!
 
-**NEW: Hybrid Grammar Parser** - Extract unknown names using Latin grammatical structure! See [GRAMMAR_PARSER.md](GRAMMAR_PARSER.md)
+**Hybrid Grammar Parser** - Extract unknown names using Latin grammatical structure! See [GRAMMAR_PARSER.md](GRAMMAR_PARSER.md)
 
 ## Features
 
@@ -22,16 +22,14 @@ A fast, lightweight command-line tool for extracting structured personal data fr
 ### Parsing Modes
 
 **Pattern-Based (Default)**
-- Ultra-fast (~1000 inscriptions/second)
+- Pretty fast, just a pile of regex
 - No dependencies beyond pandas + requests
-- 95% accuracy for common Roman names
 
-**Hybrid Grammar Parser (NEW)**
-- Understands Latin grammatical structure
+**Hybrid Grammar Parser**
+- Understands Latin grammatical structure. Well. Ideally.
 - Extracts unknown names by position
-- Handles complex multi-person inscriptions
-- 70-90% accuracy for unknown names
-- Optional morphology & dependency parsing with CLTK
+- Handles complex multi-person inscriptions. Ideally.
+- Optional morphology & dependency parsing with CLTK. Sometimes.
 
 ## Pattern Coverage
 
