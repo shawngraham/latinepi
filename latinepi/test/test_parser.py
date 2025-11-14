@@ -259,6 +259,72 @@ class TestParser(unittest.TestCase):
         self.assertIn('praenomen', result)
         self.assertEqual(result['praenomen']['value'], 'Gaius')
 
+    def test_extract_tribe_abbreviated(self):
+        """Test extraction of tribe in abbreviated form."""
+        text = "C. IVLIVS CAESAR FAB."
+        result = extract_entities(text)
+
+        self.assertIn('tribe', result)
+        self.assertEqual(result['tribe']['value'], 'Fabia')
+        self.assertEqual(result['tribe']['confidence'], 0.85)
+
+    def test_extract_tribe_full_form(self):
+        """Test extraction of tribe in full form."""
+        text = "C. IVLIVS CAESAR FABIA"
+        result = extract_entities(text)
+
+        self.assertIn('tribe', result)
+        self.assertEqual(result['tribe']['value'], 'Fabia')
+        self.assertEqual(result['tribe']['confidence'], 0.88)
+
+    def test_extract_urban_tribe_esquilina(self):
+        """Test extraction of urban tribe Esquilina."""
+        text = "M. ANTONIVS FELIX ESQ."
+        result = extract_entities(text)
+
+        self.assertIn('tribe', result)
+        self.assertEqual(result['tribe']['value'], 'Esquilina')
+
+    def test_extract_urban_tribe_suburana(self):
+        """Test extraction of urban tribe Suburana."""
+        text = "L. CORNELIVS SCIPIO SVBVRANA"
+        result = extract_entities(text)
+
+        self.assertIn('tribe', result)
+        self.assertEqual(result['tribe']['value'], 'Suburana')
+
+    def test_extract_rural_tribe_galeria(self):
+        """Test extraction of rural tribe Galeria."""
+        text = "T. FLAVIVS ALEXANDER GALERIA"
+        result = extract_entities(text)
+
+        self.assertIn('tribe', result)
+        self.assertEqual(result['tribe']['value'], 'Galeria')
+
+    def test_extract_rural_tribe_velina_abbreviated(self):
+        """Test extraction of rural tribe Velina in abbreviated form."""
+        text = "P. AELIVS MAXIMVS VEL."
+        result = extract_entities(text)
+
+        self.assertIn('tribe', result)
+        self.assertEqual(result['tribe']['value'], 'Velina')
+
+    def test_extract_rural_tribe_scaptia(self):
+        """Test extraction of rural tribe Scaptia."""
+        text = "Q. SEMPRONIVS RVFVS SCAPTIA"
+        result = extract_entities(text)
+
+        self.assertIn('tribe', result)
+        self.assertEqual(result['tribe']['value'], 'Scaptia')
+
+    def test_extract_rural_tribe_lemonia(self):
+        """Test extraction of rural tribe Lemonia."""
+        text = "D M SEX. IVLIVS CAESAR LEM."
+        result = extract_entities(text)
+
+        self.assertIn('tribe', result)
+        self.assertEqual(result['tribe']['value'], 'Lemonia')
+
 
 if __name__ == "__main__":
     unittest.main()

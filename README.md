@@ -45,7 +45,10 @@ The tool recognizes:
 - **45 cognomina (personal names)**: Caesar, Alexander, Felix, Maximus/Maxima, Primus/Prima, Secundus/Secunda, Tertius/Tertia, Quartus/Quarta, Quintus/Quinta, Rufus/Rufa, Severus/Severa, Sabinus/Sabina, Victor/Victoria, Marcellus/Marcella, Faustus/Faustina, Clemens, Crispus/Crispina, Fronto, Gallus, Longus/Longina, Niger, Paulus/Paula, Priscus/Prisca, Regina/Reginus, Saturninus, Tertulla, Restituta, Turpilia, and more
 
 ### Additional Entities (18 patterns)
-- **8 Roman tribes**: Fabia, Cornelia, Palatina, Quirina, Tromentina, Collina, Aniensis, Clustumina (abbreviated and full forms)
+- **All 35 Roman voting tribes**:
+  - 4 Urban tribes: Collina, Esquilina, Palatina, Suburana
+  - 31 Rural tribes: Aemilia, Aniensis, Arnensis, Camilia, Claudia, Clustumina, Cornelia, Fabia, Galeria, Horatia, Lemonia, Maecia, Menenia, Oufentina, Papiria, Pollia, Pomptina, Publilia, Pupinia, Quirina, Romilia, Sabatina, Scaptia, Sergia, Stellatina, Teretina, Tromentina, Velina, Veturia, Voltinia
+  - Both abbreviated (e.g., "FAB.", "PAL.") and full forms supported
 - **10+ major cities**: Rome, Pompeii, Ostia, Neapolis, Aquincum, Carthage, Lugdunum, Mediolanum, Ravenna, Tarraco
 - **Status markers**: D M, D M S (Dis Manibus Sacrum)
 - **Years lived**: Vix(it) an(nos) XX to "20 years"
@@ -255,7 +258,7 @@ The tool extracts the following entity types from inscriptions:
 | `years_lived` | Age at death (converted to Arabic) | 20, 42, 60 | 0.85 |
 | `military_service` | Military unit or rank | Miles, Legio VIII Augusta | 0.75-0.82 |
 | `relationships` | Family relationships | father, mother, daughter, son, wife, heir | 0.88-0.90 |
-| `tribe` | Roman voting tribe | Fabia, Cornelia, Palatina | 0.85-0.88 |
+| `tribe` | Roman voting tribe (all 35) | Fabia, Cornelia, Palatina, Quirina, Galeria, etc. | 0.85-0.88 |
 | `dedicator` | Person who commissioned inscription | Name before "fecit" | 0.75 |
 | `deceased_name` | Name of deceased (from grammar parser) | Extracted via genitive patterns | 0.80-0.85 |
 | `deceased_relationship` | Relationship to deceased | daughter, father, mother | 0.85-0.92 |
