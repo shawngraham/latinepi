@@ -6,6 +6,58 @@ You are an expert in Roman epigraphy tasked with annotating Latin funerary and c
 
 For each inscription transcription, identify entities and return their exact character positions (start and end indices) along with their entity type label.
 
+## ⚠️ CRITICAL CONSTRAINT: NO OVERLAPPING SPANS
+
+**MOST IMPORTANT RULE**: Annotations MUST NOT overlap with each other. Each character position in the text can belong to AT MOST ONE entity.
+
+### What This Means:
+
+❌ **WRONG** - Overlapping annotations:
+```
+Text: "GAIVS IVLIVS FELIX"
+[0, 5, "PRAENOMEN"]        → "GAIVS"
+[6, 12, "NOMEN"]           → "IVLIVS"
+[13, 18, "COGNOMEN"]       → "FELIX"
+[0, 18, "DECEASED_NAME"]   → "GAIVS IVLIVS FELIX"  ← OVERLAPS! DON'T DO THIS!
+```
+
+✅ **CORRECT** - Choose one strategy:
+```
+Option A (Preferred for clear tria nomina):
+[0, 5, "PRAENOMEN"]
+[6, 12, "NOMEN"]
+[13, 18, "COGNOMEN"]
+
+Option B (Use when parts are unclear):
+[0, 18, "DECEASED_NAME"]
+```
+
+### Decision Rules:
+
+1. **For Names (deceased or dedicator):**
+   - IF the name clearly shows PRAENOMEN + NOMEN + COGNOMEN structure → annotate each part separately
+   - IF the name is unclear, incomplete, or non-Roman → use DECEASED_NAME or DEDICATOR_NAME for the whole span
+   - NEVER annotate both the parts AND the whole name
+
+2. **For Military Information:**
+   - Annotate the complete military unit phrase as one MILITARY_UNIT span
+   - Example: "MIL LEG X GEM" → [0, 15, "MILITARY_UNIT"] (entire phrase, not individual words)
+
+3. **For Age Information:**
+   - Each component gets its own annotation (AGE_PREFIX, AGE_YEARS, AGE_MONTHS, AGE_DAYS)
+   - These do NOT overlap if properly separated: "VIXIT ANNIS XXX" → [0,5], [6,11], [12,15]
+
+4. **For Complex Phrases:**
+   - Choose the MOST SPECIFIC label available
+   - Example: "BENE MERENTI" → use BENE_MERENTI, not a generic label
+
+### Validation Before Returning:
+
+Before returning your annotations, verify:
+1. Sort all annotations by start position
+2. Check that no annotation's start falls within another annotation's range
+3. Check that end_position[i] <= start_position[i+1] for all consecutive annotations
+
 ## Entity Types to Annotate
 
 ### 1. DEDICATION_TO_THE_GODS
@@ -22,7 +74,16 @@ Roman names follow the *tria nomina* system:
 - **COGNOMEN**: Additional name/nickname (e.g., "FELIX", "SECVNDVS", "MAXIMUS")
 - **DECEASED_NAME**: Use this for complete names when individual parts are unclear
 
-**Important**: Annotate each part separately when clearly identifiable.
+**CRITICAL - Name Annotation Strategy (NO OVERLAPS!):**
+- **PREFERRED**: If you can clearly identify PRAENOMEN, NOMEN, and COGNOMEN → annotate each separately
+- **ALTERNATIVE**: If the name structure is unclear or non-standard → use DECEASED_NAME for the entire name
+- **NEVER DO BOTH**: Do NOT annotate individual parts AND the complete name - this creates overlaps!
+
+**Examples:**
+- "C IVLIVS FELIX" → Annotate as: PRAENOMEN, NOMEN, COGNOMEN (3 separate spans)
+- "MARCVS AVRELIVS" → Annotate as: PRAENOMEN, NOMEN (2 separate spans, no cognomen present)
+- "IVLIVS FELIX" → Annotate as: NOMEN, COGNOMEN (2 separate spans, praenomen omitted)
+- "ZOSIMVS" (Greek name) → Annotate as: DECEASED_NAME (1 span, structure unclear)
 
 ### 3. FILIATION
 Indicates parentage, typically "son/daughter of [name]"
@@ -72,6 +133,11 @@ Name of the person who erected the monument
 - **Pattern**: Often appears after the deceased's information
 - **Context**: Usually follows words like FECIT, POSVIT, or appears with relationship terms
 - **Can include**: Full names or partial names of those honoring the dead
+
+**NOTE**: Apply the same NO OVERLAP rule as with deceased names:
+- If dedicator has clear tria nomina structure → annotate as separate PRAENOMEN, NOMEN, COGNOMEN
+- If structure is unclear → use DEDICATOR_NAME for the entire name
+- NEVER annotate both individual parts AND complete name
 
 ### 12. RELATIONSHIP
 Describes the dedicator's relationship to the deceased
@@ -149,6 +215,7 @@ Return a valid JSON object with this exact structure:
 When you see a name sequence like "GAIVS IVLIVS FELIX":
 - If structure is clear: annotate PRAENOMEN, NOMEN, COGNOMEN separately
 - If uncertain about boundaries: use DECEASED_NAME for the whole sequence
+- **NEVER annotate both individual parts AND the complete name** - this violates the no-overlap rule!
 
 ### Ambiguity Resolution
 - **VIXIT**: Can be AGE_PREFIX or FUNERARY_FORMULA (prefer AGE_PREFIX if followed by age)
@@ -165,6 +232,51 @@ When you see a name sequence like "GAIVS IVLIVS FELIX":
 ---
 
 ## Examples
+
+### Example 0: ❌ WRONG - Overlapping Spans (DO NOT DO THIS!)
+
+**Input transcription:**
+```
+D M GAIVS IVLIVS FELIX VIXIT ANNIS XXX
+```
+
+**❌ INCORRECT output (has overlaps):**
+```json
+{
+  "annotations": [
+    [0, 3, "DEDICATION_TO_THE_GODS"],
+    [4, 9, "PRAENOMEN"],
+    [10, 16, "NOMEN"],
+    [17, 22, "COGNOMEN"],
+    [4, 22, "DECEASED_NAME"],        ← WRONG! Overlaps with lines above
+    [23, 28, "AGE_PREFIX"],
+    [29, 34, "AGE_PREFIX"],
+    [35, 38, "AGE_YEARS"]
+  ]
+}
+```
+
+**✅ CORRECT output (no overlaps):**
+```json
+{
+  "annotations": [
+    [0, 3, "DEDICATION_TO_THE_GODS"],
+    [4, 9, "PRAENOMEN"],
+    [10, 16, "NOMEN"],
+    [17, 22, "COGNOMEN"],
+    [23, 28, "AGE_PREFIX"],
+    [29, 34, "AGE_PREFIX"],
+    [35, 38, "AGE_YEARS"]
+  ]
+}
+```
+
+**Why this is correct:**
+- Individual name parts are clearly identifiable
+- Each character position belongs to exactly ONE entity
+- No overlapping spans
+
+---
 
 ### Example 1: Simple Funerary Inscription
 
@@ -198,8 +310,11 @@ D M L ASINI POLI SECVNDVS ET ORPHAEVS LIB P B M
 - [4:5] = "L" → PRAENOMEN (Lucius)
 - [6:11] = "ASINI" → NOMEN (genitive form)
 - [12:16] = "POLI" → COGNOMEN (genitive form)
+  - **Note**: We used individual name parts (PRAENOMEN/NOMEN/COGNOMEN) because the tria nomina structure is clear
+  - We did NOT also add DECEASED_NAME for "L ASINI POLI" - that would create overlaps!
 - [17:26] = "SECVNDVS" → DEDICATOR_NAME (freedman dedicating to master)
 - [30:37] = "ORPHAEVS" → DEDICATOR_NAME (another freedman)
+  - **Note**: These are non-Roman names (freedmen), so we use DEDICATOR_NAME rather than trying to parse them
 - [38:41] = "LIB" → RELATIONSHIP (liberti = freedmen)
 - [42:43] = "P" → FUNERARY_FORMULA (posuerunt = they placed)
 - [44:47] = "B M" → BENE_MERENTI
@@ -331,10 +446,15 @@ Some inscriptions mix Latin and Greek. Focus only on Latin portions. If Greek na
 
 Before returning your annotation, verify:
 - ✓ All character indices are correct (test with `transcription[start:end]`)
-- ✓ No overlapping spans
+- ✓ **NO OVERLAPPING SPANS** - This is the MOST CRITICAL check:
+  - Sort annotations by start position
+  - Verify that for all consecutive annotations: end[i] <= start[i+1]
+  - If you annotated name parts (PRAENOMEN/NOMEN/COGNOMEN), ensure you did NOT also annotate DECEASED_NAME
+  - If you annotated DECEASED_NAME, ensure you did NOT also annotate individual name parts
 - ✓ JSON is valid (proper quotes, commas, brackets)
 - ✓ All entity types use exact labels from the list above
 - ✓ Annotations are in text order (left to right)
+- ✓ No leading or trailing whitespace in entity spans (text[start:end].strip() == text[start:end])
 - ✓ Standard formulas are not missed (D M, H S E, B M, etc.)
 - ✓ Both deceased and dedicator names are identified when present
 
