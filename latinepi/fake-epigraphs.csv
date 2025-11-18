@@ -1,0 +1,801 @@
+id,text,transcription
+1,D M,Dis Manibus
+2,D M S,Dis Manibus Sacrum
+3,D M ANTONIAE GEMELLAE,Dis Manibus Antoniae Gemellae
+4,D M IVLIAE SECVNDAE,Dis Manibus Iuliae Secundae
+5,D M M FABIO RVFO,Dis Manibus Marco Fabio Rufo
+6,D M S L CORNELI FELICIS,Dis Manibus Sacrum Lucii Corneli Felicis
+7,D M AELIAE SABINAE,Dis Manibus Aeliae Sabinae
+8,D M C MARIO VITALI,Dis Manibus Gaio Mario Vitali
+9,D M FLAVIAE MAXIMAE,Dis Manibus Flaviae Maximae
+10,D M P AELIO RESTVTO,Dis Manibus Publio Aelio Restuto
+11,D M VIPSANIAE PRIMAE FILIAE KARISSIMAE,Dis Manibus Vipsaniae Primae filiae karissimae
+12,D M C IVLIO SECVNDO FILIO PIISSIMO,Dis Manibus Gaio Iulio Secundo filio piissimo
+13,D M VALERIAE PRISCAE MATRI DULCISSIMAE,Dis Manibus Valeriae Priscae matri dulcissimae
+14,D M L VOLVMNIO SEVERO PATRI OPTIMO,Dis Manibus Lucio Volumnio Severo patri optimo
+15,D M CLAVDIAE ATHENAE CONIVGI B M,Dis Manibus Claudiae Athenae coniugi bene merenti
+16,D M M VIBIO MARCELLINO AMICO CARO,Dis Manibus Marco Vibio Marcellino amico caro
+17,D M TERENTIAE FORTVNATAE SORORI OPTIMAE,Dis Manibus Terentiae Fortunatae sorori optimae
+18,D M SERGIO GEMINO FRATRI INCOMPARABILI,Dis Manibus Sergio Gemino fratri incomparabili
+19,D M IALLIAE BASSILLAE LIBERTAE PIENTISSIMAE,Dis Manibus Ialliae Bassillae libertae pientissimae
+20,D M T FLAVIO AVG LIB HERMETI,Dis Manibus Tito Flavio Augusti liberto Hermeti
+21,VIXIT ANNIS V,Vixit annis quinque
+22,VIX ANN X,Vixit annis decem
+23,V A XV,Vixit annis quindecim
+24,V ANN XX M II,Vixit annis viginti mensibus duobus
+25,VIX ANN II M V D X,Vixit annis duobus mensibus quinque diebus decem
+26,Q V A XXX,Qui vixit annis triginta
+27,QVAE VIX ANN XXIIII,Quae vixit annis viginti quattuor
+28,VIXIT ANNIS XXXV MENSIBVS VI,Vixit annis triginta quinque mensibus sex
+29,V A LII D III,Vixit annis quinquaginta duobus diebus tribus
+30,VIX ANN LX M I D XV,Vixit annis sexaginta mense uno diebus quindecim
+31,H S E,Hic situs est
+32,H S EST,Hic situs est
+33,HIC SITA EST,Hic sita est
+34,B M,Bene merenti
+35,BENE MERENTI,Bene merenti
+36,B M P,Bene merenti posuit
+37,B M FECIT,Bene merenti fecit
+38,F C,Faciendum curavit
+39,FECIT,Fecit
+40,POSVIT,Posuit
+41,D M IVLIAE PALMAE V A XXV M IVLIVS FELIX CONIVGI B M F C,Dis Manibus Iuliae Palmae. Vixit annis viginti quinque. Marcus Iulius Felix coniugi bene merenti faciendum curavit
+42,D M S M COCCEIVS HERMES FILIAE DULCISSIMAE AELIAE SABINAE V A II,Dis Manibus Sacrum. Marcus Cocceius Hermes filiae dulcissimae Aeliae Sabinae. Vixit annis duobus
+43,TI CLAVDIVS FAVSTVS VIXIT ANNIS XII H S E,Tiberius Claudius Faustus vixit annis duodecim. Hic situs est
+44,D M L VALERIO PVDENTI V A XXV VALERIA PROCVLA FRATRI PIISSIMO FECIT,Dis Manibus Lucio Valerio Pudenti. Vixit annis viginti quinque. Valeria Procula fratri piissimo fecit
+45,D M AEMILIAE SEVERAE CONIVGI INCOMPARABILI Q V A XXXII M VI,Dis Manibus Aemiliae Severae coniugi incomparabili quae vixit annis triginta duobus mensibus sex
+46,D M FLAVIAE PAVLinae VIX ANN XXXVI M VII D V M FLAVIVS OPTATVS COIVGI B M P,Dis Manibus Flaviae Paulinae. Vixit annis triginta sex mensibus septem diebus quinque. Marcus Flavius Optatus coniugi bene merenti posuit
+47,D M C MEMMIO IUSTO VETERANO LEG II AVG VIX ANN LX MILITAVIT ANN XXVI,Dis Manibus Gaio Memmio Iusto veterano Legionis II Augustae. Vixit annis sexaginta militavit annis viginti sex
+48,D M S VLPiae DOMESTICae VIXIT ANNOS XVIII MENSES IIII DIES X,Dis Manibus Sacrum Ulpiae Domesticae. Vixit annos decem et octo menses quattuor dies decem
+49,D M T CLAVDIO SECVNDO VIXIT ANNIS IIII M VI D XX,Dis Manibus Tito Claudio Secundo. Vixit annis quattuor mensibus sex diebus viginti
+50,C LVCCONIVS MAE F STELLA V A XXXV H S E,Gaius Lucconius Maeci filius Stella. Vixit annis triginta quinque. Hic situs est
+51,D M VALERIO MARINIANO Q V ANN XXI M IIII D V,Dis Manibus Valerio Mariniano qui vixit annis viginti uno mensibus quattuor diebus quinque
+52,D M CORNELIAE FRONTINAE VIXIT ANNIS XVI,Dis Manibus Corneliae Frontinae. Vixit annis sedecim
+53,D M HELVIAE PRIMAE MATRI PIISSIMAE M HELVIVS RESTITVTVS FILIVS F C,Dis Manibus Helviae Primae matri piissimae Marcus Helvius Restitutus filius faciendum curavit
+5t4,D M L HOSTILIO SERANO ANNORVM XXXII HOSTILIA FAVSTA FILIO OPTIMO P,Dis Manibus Lucio Hostilio Serano annorum triginta duorum. Hostilia Fausta filio optimo posuit
+55,D M M ULPIO AVG LIB RESTITUTO TABVLARIO A RATIONIBVS,Dis Manibus Marco Ulpio Augusti liberto Restituto tabulario a rationibus
+56,D M S ATTIAE SVCCESSAE COIVGI RARISSIMAE ATTIVS FORTVNATVS,Dis Manibus Sacrum Attiae Successae coniugi rarissimae. Attius Fortunatus
+57,D M IVLIAE VENERIAE FEMINAE OPTIMAE Q VIX ANN LXV,Dis Manibus Iuliae Veneriae feminae optimae quae vixit annis sexaginta quinque
+58,D M P ALLIO IASONI VIX ANN III D XXIIX ALLIA KALLISTE FIL DVLCISSIMO FEC,Dis Manibus Publio Allio Iasoni. Vixit annis tribus diebus viginti octo. Allia Kalliste filio dulcissimo fecit
+59,D M M ANTONI SABINI DEC ALAE I THRAC VIX ANN XL STIP XXIIX,Dis Manibus Marco Antonio Sabino decurioni alae primae Thracum. Vixit annis quadraginta stipendiorum viginti octo
+60,D M CLODIAE ARCHELAI V A XXVIII M IIII D V,Dis Manibus Clodiae Archelai. Vixit annis viginti octo mensibus quattuor diebus quinque
+61,D M S VERECVNDAE FILIAE KARISSIMAE VIXIT ANNIS TRIBVS,Dis Manibus Sacrum Verecundae filiae karissimae. Vixit annis tribus
+62,D M AVRELIAE CRESCENTINAE VIX ANN II M III D XIIII,Dis Manibus Aureliae Crescentinae. Vixit annis duobus mensibus tribus diebus quattuordecim
+63,D M GAVIAE SABINAE FILIAE DULCISSIMAE Q VIXIT ANNIS VII M XI,Dis Manibus Gaviae Sabinae filiae dulcissimae quae vixit annis septem mensibus undecim
+64,D M L AEMILIO L F POTITO V A XIII H S E,Dis Manibus Lucio Aemilio Luci filio Potito. Vixit annis tredecim. Hic situs est
+65,D M AVRELIAE MARCELLAE CONIVGI SANCTISSIMAE,Dis Manibus Aureliae Marcellae coniugi sanctissimae
+66,D M M VIPSANO PRIMO PATRI OPTIMO,Dis Manibus Marco Vipsano Primo patri optimo
+67,D M POMPEIAE SATVRNINAE FEMINAE INCOMPARABILI,Dis Manibus Pompeiae Saturninae feminae incomparabili
+68,D M Q PETRONIO MODESTO EQVITI ROMANO,Dis Manibus Quinto Petronio Modesto equiti Romano
+69,D M ACILIAE BASSAE V A XXXVIIII M VI D III,Dis Manibus Aciliae Bassae. Vixit annis triginta novem mensibus sex diebus tribus
+70,D M S ANNAEO CERIALI MEDICO V A LII,Dis Manibus Sacrum Annaeo Ceriali medico. Vixit annis quinquaginta duobus
+71,D M C IVLIVS C F VOLTINIA MAXIMVS VETERANVS LEG X GEM,Dis Manibus. Gaius Iulius Gaii filius Voltinia Maximus veteranus Legionis decimae Geminae
+72,D M S CLAVDIAE FORTVNATAE L ANTESTIVS HERMES COIVGI B M,Dis Manibus Sacrum Claudiae Fortunatae. Lucius Antestius Hermes coniugi bene merenti
+73,D M M LIVIO IVCVNDO V A XVIIII,Dis Manibus Marco Livio Iucundo. Vixit annis decem et novem
+74,D M FABRICIAE SP F QVARTae matri piissimae,Dis Manibus Fabriciae Spurii filiae Quartae matri piissimae
+75,D M S ALLIAE POTESTATIS LIBERTAE OPTIMAE ET CONIVGI,Dis Manibus Sacrum Alliae Potestatis libertae optimae et coniugi
+76,D M IVLIAE SATVRNINAE VIXIT ANNOS XXXIII,Dis Manibus Iuliae Saturninae. Vixit annos triginta tres
+77,D M VETTIAE SABINAE V A XVIII P VETTIVS FRATER FECIT,Dis Manibus Vettiae Sabinae. Vixit annis decem et octo. Publius Vettius frater fecit
+78,D M P CLODIO VERECVNDO VIXIT ANN VII M VIIII D V,Dis Manibus Publio Clodio Verecundo. Vixit annis septem mensibus novem diebus quinque
+79,D M COELIAE IULIANAE MATRI INFELICISSIMAE,Dis Manibus Coeliae Iulianae matri infelicissimae
+80,D M IVLIO VALENTI MIL COH I VIG V A XXVIII,Dis Manibus Iulio Valenti militi cohortis primae vigilum. Vixit annis viginti octo
+81,D M S VIBIAE GALLAE FEMINAE SANCTISSIMAE VIX ANN LIIII,Dis Manibus Sacrum Vibiae Gallae feminae sanctissimae. Vixit annis quinquaginta quattuor
+82,D M T POMPONIO VICTORE V A XV M V D VIII,Dis Manibus Tito Pomponio Victore. Vixit annis quindecim mensibus quinque diebus octo
+83,D M IVLIAE VICTORINAE VIXIT ANNIS XXXI M X,Dis Manibus Iuliae Victorinae. Vixit annis triginta uno mensibus decem
+84,D M MARCIAE VITALINAE CONIVGI CARISSIMAE C MARCIVS PROCULVS,Dis Manibus Marciae Vitalinae coniugi carissimae. Gaius Marcius Proculus
+85,D M C SALLVSTIO CRISPINO QVI VIXIT ANNIS IIII,Dis Manibus Gaio Sallustio Crispino qui vixit annis quattuor
+86,D M FLAVIAE IANUARIAE VIX ANN XXIII,Dis Manibus Flaviae Ianuariae. Vixit annis viginti tres
+87,D M S LICINIAE PRISCAE V A XI,Dis Manibus Sacrum Liciniae Priscae. Vixit annis undecim
+88,D M AEMILIO PATERNO V A LXIII,Dis Manibus Aemilio Paterno. Vixit annis sexaginta tribus
+89,D M VALERIO MAXIMO FRATRI DULCISSIMO,Dis Manibus Valerio Maximo fratri dulcissimo
+90,D M CAECILIAE METELLAE CRASSI F,Dis Manibus Caeciliae Metellae Crassi filiae
+91,D M IVNIO RVSTICO V A III M VI D XXI,Dis Manibus Iunio Rustico. Vixit annis tribus mensibus sex diebus viginti uno
+92,D M SERVILIO PRISCO V A V,Dis Manibus Servilio Prisco. Vixit annis quinque
+93,D M PORCIAE ANTHIDI BENE MERENTI,Dis Manibus Porciae Anthidi bene merenti
+94,D M M ANTONIO FLORO FILIO KARISSIMO,Dis Manibus Marco Antonio Floro filio karissimo
+95,D M CLAVDIAE IRENE VIX ANN XXI M V,Dis Manibus Claudiae Irene. Vixit annis viginti uno mensibus quinque
+96,D M S L CORNELIO SULLAE PATRONO OPTIMO,Dis Manibus Sacrum Lucio Cornelio Sullae patrono optimo
+97,D M PACCIAE PRIMAE CONIVGI SINE VLLA QUERELLA,Dis Manibus Pacciae Primae coniugi sine ulla querella
+98,D M S SEPTIMIAE ROMANAE VIX ANN XXXIIII,Dis Manibus Sacrum Septimiae Romanae. Vixit annis triginta quattuor
+99,D M T FLAVIO EVTYCHO AMICO OPTIMO,Dis Manibus Tito Flavio Eutycho amico optimo
+100,D M Q FABIO RVSTICO V A X M I D III,Dis Manibus Quinto Fabio Rustico. Vixit annis decem mense uno diebus tribus
+101,D M S,Dis Manibus Sacrum
+102,D M IVNIAE URBICAE VIX ANN XIII M II,Dis Manibus Iuniae Urbicae. Vixit annis tredecim mensibus duobus
+103,D M VALERIAE MAXIMILLAE FILIAE DVLCISSIMAE,Dis Manibus Valeriae Maximillae filiae dulcissimae
+104,D M L CORNELIO VALENTI FRATRI PIISSIMO,Dis Manibus Lucio Cornelio Valenti fratri piissimo
+105,D M AVRELIAE FORTUNATAE CONIVGI B M,Dis Manibus Aureliae Fortunatae coniugi bene merenti
+106,D M C IVLIO SECVNDO VETERANO LEG XXII P P F,Dis Manibus Gaio Iulio Secundo veterano Legionis XXII Primigeniae Piae Fidelis
+107,D M FLAVIAE PROCVLAE MATRI INCOMPARABILI,Dis Manibus Flaviae Proculae matri incomparabili
+108,D M M VIBIO PRISCO AMICO OPTIMO,Dis Manibus Marco Vibio Prisco amico optimo
+109,D M AELIAE SECVNDINAE V A IIII M VI D X,Dis Manibus Aeliae Secundinae. Vixit annis quattuor mensibus sex diebus decem
+110,D M P PETRONIO NIGRO VIXIT ANNIS LXII,Dis Manibus Publio Petronio Nigro. Vixit annis sexaginta duobus
+111,D M S CLAVDIAE SABINAE V A XXVIIII,Dis Manibus Sacrum Claudiae Sabinae. Vixit annis viginti novem
+112,D M T Aelio Macrino MIL COH I PR V A XXXII STIP XII,Dis Manibus Tito Aelio Macrino militi cohortis primae praetoriae. Vixit annis triginta duobus stipendiorum duodecim
+113,D M IVLIAE MARCELLAE FILIAE KARISSIMAE V A V,Dis Manibus Iuliae Marcellinae filiae karissimae. Vixit annis quinque
+114,D M L VOLVMNIO FELICI PATRI B M,Dis Manibus Lucio Volumnio Felici patri bene merenti
+115,D M ANNAEAE PRISCAE SORORI DULCISSIMAE,Dis Manibus Annaeae Priscae sorori dulcissimae
+116,D M Q FABIO RVFINO V A XLV,Dis Manibus Quinto Fabio Rufino. Vixit annis quadraginta quinque
+117,D M C Sulpicio Vrbano V A XVIII M V,Dis Manibus Gaio Sulpicio Urbano. Vixit annis decem et octo mensibus quinque
+118,D M S Vipsaniae Quartae CONIVGI SANCTISSIMAE,Dis Manibus Sacrum Vipsaniae Quartae coniugi sanctissimae
+119,D M P Aelio Aug Lib Celso,Dis Manibus Publio Aelio Augusti Liberto Celso
+120,D M TERENTIAE FLAVIAE VIX ANN XXXI,Dis Manibus Terentiae Flaviae. Vixit annis triginta uno
+121,D M M CATIO CELERI V A X M I D III,Dis Manibus Marco Catio Celeri. Vixit annis decem mense uno diebus tribus
+122,H S E S T T L,Hic situs est. Sit tibi terra levis
+123,D M IVLIAE TERTULLAE ANIMA INNOCENTISSIMA,Dis Manibus Iuliae Tertullae anima innocentissima
+124,D M L Calpurnio Frugi V A LIIII,Dis Manibus Lucio Calpurnio Frugi. Vixit annis quinquaginta quattuor
+125,D M S AEMILIAE SECUNDAE MATRI PIENTISSIMAE,Dis Manibus Sacrum Aemiliae Secundae matri pientissimae
+126,D M C IULIO LONGO VET LEG V MAC,Dis Manibus Gaio Iulio Longo veterano Legionis V Macedonicae
+127,D M PETRONIAE GRATILLAE VIX ANN II M XI D V,Dis Manibus Petroniae Gratillae. Vixit annis duobus mensibus undecim diebus quinque
+128,D M FANNIAE VOLVPTATI V A XXXVIII,Dis Manibus Fanniae Voluptati. Vixit annis triginta octo
+129,D M T FLAVIO INGENUO DECVRIONI ALAE PANN,Dis Manibus Tito Flavio Ingenuo decurioni alae Pannoniorum
+130,D M S VIBIAE PROBATAE FEMINAE OPTIMAE,Dis Manibus Sacrum Vibiae Probatae feminae optimae
+131,D M A Atilio Forti V A LX,Dis Manibus Aulo Atilio Forti. Vixit annis sexaginta
+132,D M IVLIAE VICTORIAE VIX ANN XXIII,Dis Manibus Iuliae Victoriae. Vixit annis viginti tribus
+133,D M L Afranio Celso FILIO B M,Dis Manibus Lucio Afranio Celso filio bene merenti
+134,D M S Atiliae Crescentinae CONIUGI CASTISSIMAE,Dis Manibus Sacrum Atiliae Crescentinae coniugi castissimae
+135,D M M ULPIO TRAIANO PATRI OPTIMO,Dis Manibus Marco Ulpio Traiano patri optimo
+136,D M Sossiae Iulianae V A XVI M X,Dis Manibus Sossiae Iulianae. Vixit annis sedecim mensibus decem
+137,D M M Cornelio Frontoni EQ R,Dis Manibus Marco Cornelio Frontoni equiti Romano
+138,D M CLODIAE PEREGRINAE AN XIII M II,Dis Manibus Clodiae Peregrinae annorum tredecim mensium duorum
+139,D M L VETVRIO VITALI MILITI LEG III AVG,Dis Manibus Lucio Veturio Vitali militi Legionis III Augustae
+140,D M PORCIAE CAELIANAE V A XXXV,Dis Manibus Porciae Caelianae. Vixit annis triginta quinque
+141,D M S C IVLIO PATERNO V A XXXIX,Dis Manibus Sacrum Gaio Iulio Paterno. Vixit annis triginta novem
+142,D M FLAVIAE APHRODITI LIBERTAE OPTIMAE,Dis Manibus Flaviae Aphroditi libertae optimae
+143,D M M VALERIO HONORATO V A XXIIII,Dis Manibus Marco Valerio Honorato. Vixit annis viginti quattuor
+144,D M IVLIAE SATURNINAE MATRI KARISSIMAE,Dis Manibus Iuliae Saturninae matri karissimae
+145,D M L Papirio sereno V A IX M III D II,Dis Manibus Lucio Papirio Sereno. Vixit annis novem mensibus tribus diebus duobus
+146,D M TITIAE QUINTILLAE SACERDOTI MATRIS DEVM,Dis Manibus Titiae Quintillae sacerdoti Matris Deum
+147,D M C IULIO MARTIALI VET LEG XI CL,Dis Manibus Gaio Iulio Martiali veterano Legionis XI Claudiae
+148,D M PLOTIAE PRISCAE V A VI M VIII,Dis Manibus Plotiae Priscae. Vixit annis sex mensibus octo
+149,D M M AVRELIO SECVNDO VIX ANN XL,Dis Manibus Marco Aurelio Secundo. Vixit annis quadraginta
+150,D M S POMPONIAE VENERIAE CONIVGI B M,Dis Manibus Sacrum Pomponiae Veneriae coniugi bene merenti
+151,D M C MVTIO FELICI V A LVII,Dis Manibus Gaio Mutio Felici. Vixit annis quinquaginta septem
+152,D M DECIMIAE FLACCILLAE V A XXX,Dis Manibus Decimiae Flaccillae. Vixit annis triginta
+153,D M S T STATILIO MAXIMO V A XII,Dis Manibus Sacrum Tito Statilio Maximo. Vixit annis duodecim
+154,D M IVNIAE BASSILLAE V A XLII,Dis Manibus Iuniae Bassillae. Vixit annis quadraginta duobus
+155,D M L VERATIO VERO V A XXXIIII,Dis Manibus Lucio Veratio Vero. Vixit annis triginta quattuor
+156,D M MANILIAE CHRYSIDE V A XXII,Dis Manibus Maniliae Chryside. Vixit annis viginti duobus
+157,D M P SCAPVLIO CRESCENTI V A VIII M I,Dis Manibus Publio Scapulio Crescenti. Vixit annis octo mense uno
+158,D M S ANNONIAE MARCELLAE CONIVGI PIENTISSIMAE,Dis Manibus Sacrum Annoniae Marcellinae coniugi pientissimae
+159,D M T CLAVDIO HERMETI V A LXV,Dis Manibus Tito Claudio Hermeti. Vixit annis sexaginta quinque
+160,D M VETTIAE RESTITVTAE V A II M IIII,Dis Manibus Vettiae Restitutae. Vixit annis duobus mensibus quattuor
+161,D M M ULPIO AVG LIB AMANDO,Dis Manibus Marco Ulpio Augusti liberto Amando
+162,D M S ATILIAE SATURNINAE V A XVI,Dis Manibus Sacrum Atiliae Saturninae. Vixit annis sedecim
+163,D M C VIBIO MARINO MILITI FRVMENTARIO,Dis Manibus Gaio Vibio Marino militi frumentario
+164,D M IVLIAE PRISCAE V A XLVIII,Dis Manibus Iuliae Priscae. Vixit annis quadraginta octo
+165,D M S L CORNELIO RVSTICO V A XXXVI,Dis Manibus Sacrum Lucio Cornelio Rustico. Vixit annis triginta sex
+166,D M AVRELIAE MAXIMAE V A VII M V D XI,Dis Manibus Aureliae Maximae. Vixit annis septem mensibus quinque diebus undecim
+167,D M P CLODIO THRASEA V A XXXVII,Dis Manibus Publio Clodio Thrasea. Vixit annis triginta septem
+168,D M FLAVIAE TERTIAE CONIVGI B M F C,Dis Manibus Flaviae Tertiae coniugi bene merenti faciendum curavit
+169,D M L VALERIO PROPINQVO V A XXIX,Dis Manibus Lucio Valerio Propinquo. Vixit annis viginti novem
+170,D M S IVNIAE VENERIAE V A XVIII,Dis Manibus Sacrum Iuniae Veneriae. Vixit annis decem et octo
+171,D M Q LOLLIO CERIALI V A LIII,Dis Manibus Quinto Lollio Ceriali. Vixit annis quinquaginta tribus
+172,D M AEMILIAE IANVARIAE V A VIII,Dis Manibus Aemiliae Ianuariae. Vixit annis octo
+173,D M C MEMMIO PIO V A II M I D XII,Dis Manibus Gaio Memmio Pio. Vixit annis duobus mense uno diebus duodecim
+174,D M VOLVSIAE PRIMIGENIAE V A XXXI,Dis Manibus Volusiae Primigeniae. Vixit annis triginta uno
+175,D M S P AELIO VENERIANO V A LXIIII,Dis Manibus Sacrum Publio Aelio Veneriano. Vixit annis sexaginta quattuor
+176,D M S VETTIAE PROCULAE V A XLVI,Dis Manibus Sacrum Vettiae Proculae. Vixit annis quadraginta sex
+177,D M T FLAVIO FRONTINO V A LVI,Dis Manibus Tito Flavio Frontino. Vixit annis quinquaginta sex
+178,D M L SENTIO FELICI V A III M VIII D V,Dis Manibus Lucio Sentio Felici. Vixit annis tribus mensibus octo diebus quinque
+179,D M S CORNELIAE FAUSTINAE V A XXXIII,Dis Manibus Sacrum Corneliae Faustinae. Vixit annis triginta tribus
+180,D M M FABIO AGRICOLAE V A XLIV,Dis Manibus Marco Fabio Agricolae. Vixit annis quadraginta quattuor
+181,D M IVLIAE SECVNDILLAE V A VII,Dis Manibus Iuliae Secundillae. Vixit annis septem
+182,D M C LAECANIO BASSO V A LIX,Dis Manibus Gaio Laecanio Basso. Vixit annis quinquaginta novem
+183,D M S PLAVTIAE DONATAE V A XXIIII,Dis Manibus Sacrum Plautiae Donatae. Vixit annis viginti quattuor
+184,D M P SVLPICIO QUIRINALI V A XXXI,Dis Manibus Publio Sulpicio Quirinali. Vixit annis triginta uno
+185,D M ANTONIAE SABINAE V A XVIII,Dis Manibus Antoniae Sabinae. Vixit annis decem et octo
+186,D M L ANTONIO PRVDENTI V A XXI,Dis Manibus Lucio Antonio Prudenti. Vixit annis viginti uno
+187,D M S CAECILIAE IVSTINAE V A XXVI,Dis Manibus Sacrum Caeciliae Iustinae. Vixit annis viginti sex
+188,D M Q VITELLIO FLAVIANO V A II M VII,Dis Manibus Quinto Vitellio Flaviano. Vixit annis duobus mensibus septem
+189,D M VALERIAE HILARIAE V A XXXV,Dis Manibus Valeriae Hilariae. Vixit annis triginta quinque
+190,D M M MINVCIO THERMO V A LI,Dis Manibus Marco Minucio Thermo. Vixit annis quinquaginta uno
+191,D M S IVLIAE CALLISTE V A XL,Dis Manibus Sacrum Iuliae Calliste. Vixit annis quadraginta
+192,D M P HORDEONIO HILARO V A VI M IV D IX,Dis Manibus Publio Hordeonio Hilaro. Vixit annis sex mensibus quattuor diebus novem
+193,D M AVRELIAE MELITINAE V A XIV,Dis Manibus Aureliae Melitinae. Vixit annis quattuordecim
+194,D M L CASSIO CELERINO V A XXX,Dis Manibus Lucio Cassio Celerino. Vixit annis triginta
+195,D M S FABIAE FELICVLAE V A L,Dis Manibus Sacrum Fabiae Feculae. Vixit annis quinquaginta
+196,D M C IVLIO FELICISSIMO V A XXXII,Dis Manibus Gaio Iulio Felicissimo. Vixit annis triginta duobus
+197,D M S STERTINIAE BASSAE V A XX,Dis Manibus Sacrum Stertiniae Bassae. Vixit annis viginti
+198,D M T POMPEIO SEVERO V A LXVI,Dis Manibus Tito Pompeio Severo. Vixit annis sexaginta sex
+199,D M CLAVDIAE VICTORINAE V A IIII M X D I,Dis Manibus Claudiae Victorinae. Vixit annis quattuor mensibus decem die uno
+200,D M S P NONIO MACRO V A XLI,Dis Manibus Sacrum Publio Nonio Macro. Vixit annis quadraginta uno
+201,D M IVLIAE TYNDARIDI V A XXI,Dis Manibus Iuliae Tyndaridi. Vixit annis viginti uno
+202,D M L ARRVNTIO CAMILLO V A XLIII,Dis Manibus Lucio Arruntio Camillo. Vixit annis quadraginta tribus
+203,D M S ACILIAE TERTULLAE V A XV,Dis Manibus Sacrum Aciliae Tertullae. Vixit annis quindecim
+204,D M M SERVILIO GEMINO V A XXVIII,Dis Manibus Marco Servilio Gemino. Vixit annis viginti octo
+205,D M HELVIAE PAVLinae V A XXXVI,Dis Manibus Helviae Paulinae. Vixit annis triginta sex
+206,D M Q HATERIO CELERI V A X,Dis Manibus Quinto Haterio Celeri. Vixit annis decem
+207,D M S OPPIAE SABINAE V A XXXIIII,Dis Manibus Sacrum Oppiae Sabinae. Vixit annis triginta quattuor
+208,D M L SCRIBONIO CVRAZ V A V M I D XX,Dis Manibus Lucio Scribonio Curazi. Vixit annis quinque mense uno diebus viginti
+209,D M VERGINIAE MAXIMAE V A XLVII,Dis Manibus Verginiae Maximae. Vixit annis quadraginta septem
+210,D M P CRITONIO SECVNDO V A LVIII,Dis Manibus Publio Critonio Secundo. Vixit annis quinquaginta octo
+211,D M S IVLIAE FORTVNATAE V A LX,Dis Manibus Sacrum Iuliae Fortunatae. Vixit annis sexaginta
+212,D M C NAEVIO SVRAE V A XIX,Dis Manibus Gaio Naevio Surae. Vixit annis undeviginti
+213,D M PETRONIAE MARCELLAE V A XXII,Dis Manibus Petroniae Marcellinae. Vixit annis viginti duobus
+214,D M S M ANTVISTIO IVCVNDO V A III,Dis Manibus Sacrum Marco Antuistio Iucundo. Vixit annis tribus
+215,D M AVFIDIAE RESTITVTAE V A XXXIX,Dis Manibus Aufidiae Restitutae. Vixit annis triginta novem
+216,D M L VOLVSENO CLEMENTI V A LII,Dis Manibus Lucio Voluseno Clementi. Vixit annis quinquaginta duobus
+217,D M S LABERIAE FELICVLAE V A XIII,Dis Manibus Sacrum Laberiae Feculae. Vixit annis tredecim
+218,D M T STATILIO CORVINO V A V M VI,Dis Manibus Tito Statilio Corvino. Vixit annis quinque mensibus sex
+219,D M ANINIAE PROCULAE V A XLV,Dis Manibus Aniniae Proculae. Vixit annis quadraginta quinque
+220,D M M ROSCIO COELIANO V A LX,Dis Manibus Marco Roscio Coeliano. Vixit annis sexaginta
+221,D M S LVCRETIAE VALENTINAE V A XVII,Dis Manibus Sacrum Lucretiae Valentinae. Vixit annis septemdecim
+222,D M Q FABRICIO VETERANO V A LV,Dis Manibus Quinto Fabricio Veterano. Vixit annis quinquaginta quinque
+223,D M IVLIAE APOLLONIAE V A XXVII,Dis Manibus Iuliae Apolloniae. Vixit annis viginti septem
+224,D M C PLINIO SECVNDO V A LVI,Dis Manibus Gaio Plinio Secundo. Vixit annis quinquaginta sex
+225,D M S SEIAE HERENIAE V A L,Dis Manibus Sacrum Seiae Hereniae. Vixit annis quinquaginta
+226,D M P VALERIO PATRVINO V A XLVIII,Dis Manibus Publio Valerio Patruino. Vixit annis quadraginta octo
+227,D M CORNELIAE GALLITTAE V A XLII,Dis Manibus Corneliae Gallittae. Vixit annis quadraginta duobus
+228,D M M GAVIO MAXIMO V A V M II D III,Dis Manibus Marco Gavio Maximo. Vixit annis quinque mensibus duobus diebus tribus
+229,D M S HOSTILIAE CRISPINAE V A XXXI,Dis Manibus Sacrum Hostiliae Crispinae. Vixit annis triginta uno
+230,D M L IUNIO SILANO V A XXXIII,Dis Manibus Lucio Iunio Silano. Vixit annis triginta tribus
+231,D M MARCIAE PHILOMENAE V A XII,Dis Manibus Marciae Philomenae. Vixit annis duodecim
+232,D M S C SENTIO SATVRNINO V A LXII,Dis Manibus Sacrum Gaio Sentio Saturnino. Vixit annis sexaginta duobus
+233,D M EGNATIAE LVPERCILLAE V A XVIII,Dis Manibus Egnatiae Lupercillae. Vixit annis decem et octo
+234,D M M APPRONIO CERIALI V A XLIX,Dis Manibus Marco Appronio Ceriali. Vixit annis quadraginta novem
+235,D M S AVRELIAE SABINAE V A XXII,Dis Manibus Sacrum Aureliae Sabinae. Vixit annis viginti duobus
+236,D M P Sulpicio Rufo V A XXXVIII,Dis Manibus Publio Sulpicio Rufo. Vixit annis triginta octo
+237,D M DOMITIAE LONGINAE V A LX,Dis Manibus Domitiae Longinae. Vixit annis sexaginta
+238,D M T Vettio Iucundo V A I M XI D XV,Dis Manibus Tito Vettio Iucundo. Vixit anno uno mensibus undecim diebus quindecim
+239,D M S CAECINAE LARGHI V A XXXV,Dis Manibus Sacrum Caecinae Larghi. Vixit annis triginta quinque
+240,D M L Fulcinio Trioni V A LIII,Dis Manibus Lucio Fulcinio Trioni. Vixit annis quinquaginta tribus
+241,D M S Rutiliae Bassae V A XXIX,Dis Manibus Sacrum Rutiliae Bassae. Vixit annis viginti novem
+242,D M C Asinio Gallo V A LXI,Dis Manibus Gaio Asinio Gallo. Vixit annis sexaginta uno
+243,D M Vipsaniae Agrippinae V A XLVII,Dis Manibus Vipsaniae Agrippinae. Vixit annis quadraginta septem
+244,D M S M Valerio Messallae V A LXX,Dis Manibus Sacrum Marco Valerio Messallae. Vixit annis septuaginta
+245,D M Claudia Octavia V A XX,Dis Manibus Claudiae Octaviae. Vixit annis viginti
+246,D M P Cornelius Lentulus V A LI,Dis Manibus Publio Cornelio Lentulo. Vixit annis quinquaginta uno
+247,D M S Iunia Silana V A XXXVI,Dis Manibus Sacrum Iuniae Silanae. Vixit annis triginta sex
+248,D M T Statilio Tauro V A LIIII,Dis Manibus Tito Statilio Tauro. Vixit annis quinquaginta quattuor
+249,D M Messalinae V A XXIV,Dis Manibus Messalinae. Vixit annis viginti quattuor
+250,D M M Licinio Crasso V A XLV,Dis Manibus Marco Licinio Crasso. Vixit annis quadraginta quinque
+251,D M S Poppaeae Sabinae V A XXXII,Dis Manibus Sacrum Poppaeae Sabinae. Vixit annis triginta duobus
+252,D M C Calpurnio Pisoni V A L,Dis Manibus Gaio Calpurnio Pisoni. Vixit annis quinquaginta
+253,D M Scriboniae V A LXX,Dis Manibus Scriboniae. Vixit annis septuaginta
+254,D M L Aelio Seiano V A XLVI,Dis Manibus Lucio Aelio Seiano. Vixit annis quadraginta sex
+255,D M S Antoniae Minoris V A LVI,Dis Manibus Sacrum Antoniae Minoris. Vixit annis quinquaginta sex
+256,D M Germanico Iulio Caesari V A XXXIII,Dis Manibus Germanico Iulio Caesari. Vixit annis triginta tribus
+257,D M Agrippinae Maioris V A XLVII,Dis Manibus Agrippinae Maioris. Vixit annis quadraginta septem
+258,D M Ti Iulio Caesari V A LXXVII,Dis Manibus Tiberio Iulio Caesari. Vixit annis septuaginta septem
+259,D M S Liviae Drusillae V A LXXXVI,Dis Manibus Sacrum Liviae Drusillae. Vixit annis octoginta sex
+260,D M C Iulio Caesari V A LVI,Dis Manibus Gaio Iulio Caesari. Vixit annis quinquaginta sex
+261,D M Pompeiae Plotinae V A LV,Dis Manibus Pompeiae Plotinae. Vixit annis quinquaginta quinque
+262,D M L Aelio Caesari V A XXXVI,Dis Manibus Lucio Aelio Caesari. Vixit annis triginta sex
+263,D M S Anniae Faustinae V A XL,Dis Manibus Sacrum Anniae Faustinae. Vixit annis quadraginta
+264,D M M Aurelio Antonino V A LVIII,Dis Manibus Marco Aurelio Antonino. Vixit annis quinquaginta octo
+265,D M Lucillae V A XXXVI,Dis Manibus Lucillae. Vixit annis triginta sex
+266,D M S Commodo Antonino V A XXXI,Dis Manibus Sacrum Commodo Antonino. Vixit annis triginta uno
+267,D M Crispinae V A XXII,Dis Manibus Crispinae. Vixit annis viginti duobus
+268,D M P Helvio Pertinaci V A LXVI,Dis Manibus Publio Helvio Pertinaci. Vixit annis sexaginta sex
+269,D M S Flaviae Titianae V A L,Dis Manibus Sacrum Flaviae Titianae. Vixit annis quinquaginta
+270,D M M Didio Iuliano V A LVI,Dis Manibus Marco Didio Iuliano. Vixit annis quinquaginta sex
+271,D M Manliae Scantillae V A LI,Dis Manibus Manliae Scantillae. Vixit annis quinquaginta uno
+272,D M Didiae Clarae V A XXX,Dis Manibus Didiae Clarae. Vixit annis triginta
+273,D M S L Septimio Severo V A LXV,Dis Manibus Sacrum Lucio Septimio Severo. Vixit annis sexaginta quinque
+274,D M Iuliae Domnae V A XLIX,Dis Manibus Iuliae Domnae. Vixit annis quadraginta novem
+275,D M M Aurelio Antonino Caracallae V A XXIX,Dis Manibus Marco Aurelio Antonino Caracallae. Vixit annis viginti novem
+276,D M Fulviae Plautillae V A XX,Dis Manibus Fulviae Plautillae. Vixit annis viginti
+277,D M S P Septimio Getae V A XXII,Dis Manibus Sacrum Publio Septimio Getae. Vixit annis viginti duobus
+278,D M M Opellio Macrino V A LIII,Dis Manibus Marco Opellio Macrino. Vixit annis quinquaginta tribus
+279,D M Diadumeniano V A X,Dis Manibus Diadumeniano. Vixit annis decem
+280,D M S Iuliae Maesae V A LX,Dis Manibus Sacrum Iuliae Maesae. Vixit annis sexaginta
+281,D M Iuliae Soaemiadis V A XXXV,Dis Manibus Iuliae Soaemiadis. Vixit annis triginta quinque
+282,D M Varii Aviti Bassiani Elagabali V A XVIII,Dis Manibus Varii Aviti Bassiani Elagabali. Vixit annis decem et octo
+283,D M Anniae Faustinae V A XXV,Dis Manibus Anniae Faustinae. Vixit annis viginti quinque
+284,D M S Iuliae Mamaeae V A XLV,Dis Manibus Sacrum Iuliae Mamaeae. Vixit annis quadraginta quinque
+285,D M M Aurelio Severo Alexandro V A XXVI,Dis Manibus Marco Aurelio Severo Alexandro. Vixit annis viginti sex
+286,D M Sallustiae Barbiae Orbianae V A XXII,Dis Manibus Sallustiae Barbiae Orbianae. Vixit annis viginti duobus
+287,D M C Iulio Vero Maximino V A LXIII,Dis Manibus Gaio Iulio Vero Maximino. Vixit annis sexaginta tribus
+288,D M S M Antonio Gordiano V A LXXXI,Dis Manibus Sacrum Marco Antonio Gordiano. Vixit annis octoginta uno
+289,D M M Antonio Gordiano II V A XLVI,Dis Manibus Marco Antonio Gordiano Secundo. Vixit annis quadraginta sex
+290,D M M Clodio Pupieno Maximo V A LXXIV,Dis Manibus Marco Clodio Pupieno Maximo. Vixit annis septuaginta quattuor
+291,D M D Caelio Calvino Balbino V A LX,Dis Manibus Decimo Caelio Calvino Balbino. Vixit annis sexaginta
+292,D M M Antonio Gordiano III V A XIX,Dis Manibus Marco Antonio Gordiano Tertio. Vixit annis undeviginti
+293,D M Furiae Sabiniae Tranquillinae V A XXIII,Dis Manibus Furiae Sabiniae Tranquillinae. Vixit annis viginti tribus
+294,D M S M Iulio Philippo V A XLV,Dis Manibus Sacrum Marco Iulio Philippo. Vixit annis quadraginta quinque
+295,D M Marciae Otaciliae Severae V A XXX,Dis Manibus Marciae Otaciliae Severae. Vixit annis triginta
+296,D M M Iulio Philippo II V A XII,Dis Manibus Marco Iulio Philippo Secundo. Vixit annis duodecim
+297,D M C Messio Quinto Traiano Decio V A L,Dis Manibus Gaio Messio Quinto Traiano Decio. Vixit annis quinquaginta
+298,D M Herenniae Etruscillae V A XL,Dis Manibus Herenniae Etruscillae. Vixit annis quadraginta
+299,D M Q Herennio Etrusco Messio Decio V A XXV,Dis Manibus Quinto Herennio Etrusco Messio Decio. Vixit annis viginti quinque
+300,D M C Valenti Hostiliano Messio Quinto V A XVIII,Dis Manibus Gaio Valenti Hostiliano Messio Quinto. Vixit annis decem et octo
+301,D M C Vibio Treboniano Gallo V A XLV,Dis Manibus Gaio Vibio Treboniano Gallo. Vixit annis quadraginta quinque
+302,D M C Vibio Afinio Gallo V A XX,Dis Manibus Gaio Vibio Afinio Gallo. Vixit annis viginti
+303,D M S M Aemilio Aemiliano V A L,Dis Manibus Sacrum Marco Aemilio Aemiliano. Vixit annis quinquaginta
+304,D M Corneliae Superae V A XL,Dis Manibus Corneliae Superae. Vixit annis quadraginta
+305,D M P Licinio Valeriano V A LX,Dis Manibus Publio Licinio Valeriano. Vixit annis sexaginta
+306,D M P Licinio Egnatio Gallieno V A L,Dis Manibus Publio Licinio Egnatio Gallieno. Vixit annis quinquaginta
+307,D M Corneliae Saloninae V A XL,Dis Manibus Corneliae Saloninae. Vixit annis quadraginta
+308,D M P Licinio Cornelio Valeriano V A XV,Dis Manibus Publio Licinio Cornelio Valeriano. Vixit annis quindecim
+309,D M Licinio Cornelio Salonino Valeriano V A XVIII,Dis Manibus Licinio Cornelio Salonino Valeriano. Vixit annis decem et octo
+310,D M M Aurelio Claudio Gothico V A LVI,Dis Manibus Marco Aurelio Claudio Gothico. Vixit annis quinquaginta sex
+311,D M L Domitio Aureliano V A LX,Dis Manibus Lucio Domitio Aureliano. Vixit annis sexaginta
+312,D M S Ulpiae Severinae V A L,Dis Manibus Sacrum Ulpiae Severinae. Vixit annis quinquaginta
+313,D M M Claudio Tacito V A LXXV,Dis Manibus Marco Claudio Tacito. Vixit annis septuaginta quinque
+314,D M M Annio Floriano V A XLV,Dis Manibus Marco Annio Floriano. Vixit annis quadraginta quinque
+315,D M M Aurelio Probo V A LI,Dis Manibus Marco Aurelio Probo. Vixit annis quinquaginta uno
+316,D M M Aurelio Caro V A LX,Dis Manibus Marco Aurelio Caro. Vixit annis sexaginta
+317,D M M Aurelio Carino V A XXX,Dis Manibus Marco Aurelio Carino. Vixit annis triginta
+318,D M M Aurelio Numeriano V A XXV,Dis Manibus Marco Aurelio Numeriano. Vixit annis viginti quinque
+319,D M C Aurelio Valerio Diocletiano V A LXVI,Dis Manibus Gaio Aurelio Valerio Diocletiano. Vixit annis sexaginta sex
+320,D M M Aurelio Valerio Maximiano V A LX,Dis Manibus Marco Aurelio Valerio Maximiano. Vixit annis sexaginta
+321,D M Valerio Romulo V A XIV,Dis Manibus Valerio Romulo. Vixit annis quattuordecim
+322,D M Flavio Valerio Severo V A XL,Dis Manibus Flavio Valerio Severo. Vixit annis quadraginta
+323,D M Galerio Valerio Maximino V A L,Dis Manibus Galerio Valerio Maximino. Vixit annis quinquaginta
+324,D M Valeriae V A XLV,Dis Manibus Valeriae. Vixit annis quadraginta quinque
+325,D M Candidiano V A XX,Dis Manibus Candidiano. Vixit annis viginti
+326,D M Flavio Valerio Constantino V A LX,Dis Manibus Flavio Valerio Constantino. Vixit annis sexaginta
+327,D M Flaviae Maximae Faustae V A XXXV,Dis Manibus Flaviae Maximae Faustae. Vixit annis triginta quinque
+328,D M Crispo V A XXIII,Dis Manibus Crispo. Vixit annis viginti tribus
+329,D M Constantino II V A XXIV,Dis Manibus Constantino Secundo. Vixit annis viginti quattuor
+330,D M Constante V A XXVII,Dis Manibus Constante. Vixit annis viginti septem
+331,D M Constantio II V A XLIV,Dis Manibus Constantio Secundo. Vixit annis quadraginta quattuor
+332,D M Dalmatius V A XXI,Dis Manibus Dalmatius. Vixit annis viginti uno
+333,D M Hannibaliano V A XXII,Dis Manibus Hannibaliano. Vixit annis viginti duobus
+3ax34,D M Flavio Claudio Iuliano V A XXXI,Dis Manibus Flavio Claudio Iuliano. Vixit annis triginta uno
+335,D M Flavio Ioviano V A XXXII,Dis Manibus Flavio Ioviano. Vixit annis triginta duobus
+336,D M Flavio Valentiniano V A LIV,Dis Manibus Flavio Valentiniano. Vixit annis quinquaginta quattuor
+337,D M Flavio Valente V A L,Dis Manibus Flavio Valente. Vixit annis quinquaginta
+338,D M Flavio Gratiano V A XXIV,Dis Manibus Flavio Gratiano. Vixit annis viginti quattuor
+339,D M Flavio Valentiniano II V A XX,Dis Manibus Flavio Valentiniano Secundo. Vixit annis viginti
+340,D M Flavio Theodosio V A XLVIII,Dis Manibus Flavio Theodosio. Vixit annis quadraginta octo
+341,D M Magno Maximo V A XLVIII,Dis Manibus Magno Maximo. Vixit annis quadraginta octo
+342,D M Flavio Victore V A XII,Dis Manibus Flavio Victore. Vixit annis duodecim
+343,D M Flavio Eugenio V A XLVII,Dis Manibus Flavio Eugenio. Vixit annis quadraginta septem
+344,D M Flavio Honorio V A XXXVIII,Dis Manibus Flavio Honorio. Vixit annis triginta octo
+345,D M Flavio Arcadio V A XXXI,Dis Manibus Flavio Arcadio. Vixit annis triginta uno
+346,D M Flavio Theodosio II V A XLIX,Dis Manibus Flavio Theodosio Secundo. Vixit annis quadraginta novem
+347,D M Flavio Marciano V A LXV,Dis Manibus Flavio Marciano. Vixit annis sexaginta quinque
+348,D M Petronio Maximo V A LX,Dis Manibus Petronio Maximo. Vixit annis sexaginta
+349,D M Avito V A LX,Dis Manibus Avito. Vixit annis sexaginta
+350,D M Iulio Maioriano V A XL,Dis Manibus Iulio Maioriano. Vixit annis quadraginta
+351,D M Libio Severo V A XLV,Dis Manibus Libio Severo. Vixit annis quadraginta quinque
+352,D M Anthemio V A L,Dis Manibus Anthemio. Vixit annis quinquaginta
+353,D M Olybrio V A XL,Dis Manibus Olybrio. Vixit annis quadraginta
+354,D M Glycerio V A XL,Dis Manibus Glycerio. Vixit annis quadraginta
+355,D M Iulio Nepote V A XL,Dis Manibus Iulio Nepote. Vixit annis quadraginta
+356,D M Romulo Augusto V A XVI,Dis Manibus Romulo Augusto. Vixit annis sedecim
+357,D M S VLP VALERIAE V A IIII,Dis Manibus Sacrum Ulpiae Valeriae. Vixit annis quattuor
+358,D M C ATTIO CELERI V A X M VIII,Dis Manibus Gaio Attio Celeri. Vixit annis decem mensibus octo
+359,D M FLAVIAE FLORAE V A XV,Dis Manibus Flaviae Florae. Vixit annis quindecim
+360,D M L SVLPICIO LONGO V A XXXV,Dis Manibus Lucio Sulpicio Longo. Vixit annis triginta quinque
+361,D M AVRELIAE VENERIAE V A XXXIIII,Dis Manibus Aureliae Veneriae. Vixit annis triginta quattuor
+362,D M P AELIO SABINO V A XVIII,Dis Manibus Publio Aelio Sabino. Vixit annis decem et octo
+363,D M S VETTIAE VALERIAE V A XXVII,Dis Manibus Sacrum Vettiae Valeriae. Vixit annis viginti septem
+364,D M T CLAVDIO MAXIMO V A LXI,Dis Manibus Tito Claudio Maximo. Vixit annis sexaginta uno
+365,D M CORNELIAE SVCCESSAE V A XXXI,Dis Manibus Corneliae Successae. Vixit annis triginta uno
+366,D M Q FABIO PIO V A VII,Dis Manibus Quinto Fabio Pio. Vixit annis septem
+367,D M S IVNIAE PRIMAE V A XIIII,Dis Manibus Sacrum Iuniae Primae. Vixit annis quattuordecim
+368,D M C IVLIO VICTORE V A LI,Dis Manibus Gaio Iulio Victore. Vixit annis quinquaginta uno
+369,D M VALERIAE HILARAE V A XXVI,Dis Manibus Valeriae Hilarae. Vixit annis viginti sex
+370,D M L VIBIO FESTO V A XL,Dis Manibus Lucio Vibio Festo. Vixit annis quadraginta
+371,D M S AEMILIAE IANVARIAE V A XXXIII,Dis Manibus Sacrum Aemiliae Ianuariae. Vixit annis triginta tribus
+372,D M M ANTONIO LVPO V A LV,Dis Manibus Marco Antonio Lupo. Vixit annis quinquaginta quinque
+373,D M CLAVDIAE FORTVNATAE V A XXII,Dis Manibus Claudiae Fortunatae. Vixit annis viginti duobus
+374,D M T POMPONIO GRATO V A XLVII,Dis Manibus Tito Pomponio Grato. Vixit annis quadraginta septem
+375,D M S LVCCIAE PRISCAE V A XXXVIII,Dis Manibus Sacrum Lucciae Priscae. Vixit annis triginta octo
+376,D M C MARCIO CENSORINO V A LXII,Dis Manibus Gaio Marcio Censorino. Vixit annis sexaginta duobus
+377,D M TERENTIAE SECVNDAE V A XXI,Dis Manibus Terentiae Secundae. Vixit annis viginti uno
+378,D M P MANLIO CAPITONI V A XLIII,Dis Manibus Publio Manlio Capitoni. Vixit annis quadraginta tribus
+379,D M S FANNIAE SABINAE V A XXX,Dis Manibus Sacrum Fanniae Sabinae. Vixit annis triginta
+380,D M L CAECILIO METELLO V A LXVIII,Dis Manibus Lucio Caecilio Metello. Vixit annis sexaginta octo
+381,D M PLAVTIAE TERTIAE V A XXXVI,Dis Manibus Plautiae Tertiae. Vixit annis triginta sex
+382,D M Q SERTORIO FELICI V A I M II D XV,Dis Manibus Quinto Sertorio Felici. Vixit anno uno mensibus duobus diebus quindecim
+383,D M S LVCRETIAE PVdentis V A XX,Dis Manibus Sacrum Lucretiae Pudentis. Vixit annis viginti
+384,D M M TVLLIO CICERONI V A LXIII,Dis Manibus Marco Tullio Ciceroni. Vixit annis sexaginta tribus
+385,D M HORTENSIAE V A XXXIIII,Dis Manibus Hortensiae. Vixit annis triginta quattuor
+386,D M D Iunio Bruto V A XLII,Dis Manibus Decimo Iunio Bruto. Vixit annis quadraginta duobus
+387,D M S Fulviae V A XLI,Dis Manibus Sacrum Fulviae. Vixit annis quadraginta uno
+388,D M M Antonio V A LIII,Dis Manibus Marco Antonio. Vixit annis quinquaginta tribus
+389,D M Cleopatrae V A XXXIX,Dis Manibus Cleopatrae. Vixit annis triginta novem
+390,D M M Vipsanio Agrippae V A LI,Dis Manibus Marco Vipsanio Agrippae. Vixit annis quinquaginta uno
+391,D M Iuliae V A LII,Dis Manibus Iuliae. Vixit annis quinquaginta duobus
+392,D M Druso Maiori V A XXX,Dis Manibus Druso Maiori. Vixit annis triginta
+393,D M Antoniae Maioris V A LX,Dis Manibus Antoniae Maioris. Vixit annis sexaginta
+394,D M Druso Minori V A XXXIII,Dis Manibus Druso Minori. Vixit annis triginta tribus
+395,D M Livillae V A XLII,Dis Manibus Livillae. Vixit annis quadraginta duobus
+396,D M Neroni Caesari V A XXII,Dis Manibus Neroni Caesari. Vixit annis viginti duobus
+397,D M Druso Caesari V A XXV,Dis Manibus Druso Caesari. Vixit annis viginti quinque
+398,D M Gaio Caesari V A IIII,Dis Manibus Gaio Caesari. Vixit annis quattuor
+399,D M Lucio Caesari V A XIX,Dis Manibus Lucio Caesari. Vixit annis undeviginti
+400,D M Agrippae Postumo V A XXVI,Dis Manibus Agrippae Postumo. Vixit annis viginti sex
+401,D M Iuliae Drusillae V A XXIII,Dis Manibus Iuliae Drusillae. Vixit annis viginti tribus
+402,D M Tiberio Gemello V A XIX,Dis Manibus Tiberio Gemello. Vixit annis undeviginti
+403,D M Iuliae Livillae V A XXIV,Dis Manibus Iuliae Livillae. Vixit annis viginti quattuor
+404,D M Claudio Druso V A X,Dis Manibus Claudio Druso. Vixit annis decem
+405,D M Britannico V A XIII,Dis Manibus Britannico. Vixit annis tredecim
+406,D M Claudia Antonia V A XXXVI,Dis Manibus Claudia Antonia. Vixit annis triginta sex
+407,D M Claudia Augusta V A M IIII,Dis Manibus Claudia Augusta. Vixit annis mensibus quattuor
+408,D M Statiliae Messalinae V A LX,Dis Manibus Statiliae Messalinae. Vixit annis sexaginta
+409,D M Galbae V A LXXII,Dis Manibus Galbae. Vixit annis septuaginta duobus
+410,D M Othoni V A XXXVI,Dis Manibus Othoni. Vixit annis triginta sex
+411,D M Vitellio V A LIV,Dis Manibus Vitellio. Vixit annis quinquaginta quattuor
+412,D M Vespasiano V A LXIX,Dis Manibus Vespasiano. Vixit annis sexaginta novem
+413,D M Tito V A XLI,Dis Manibus Tito. Vixit annis quadraginta uno
+414,D M Domitiano V A XLIV,Dis Manibus Domitiano. Vixit annis quadraginta quattuor
+415,D M Nervae V A LXVII,Dis Manibus Nervae. Vixit annis sexaginta septem
+416,D M Traiano V A LXIII,Dis Manibus Traiano. Vixit annis sexaginta tribus
+417,D M Hadriano V A LXI,Dis Manibus Hadriano. Vixit annis sexaginta uno
+418,D M Sabinae V A L,Dis Manibus Sabinae. Vixit annis quinquaginta
+419,D M Antinoo V A XX,Dis Manibus Antinoo. Vixit annis viginti
+420,D M Antonino Pio V A LXXIV,Dis Manibus Antonino Pio. Vixit annis septuaginta quattuor
+421,D M Faustinae Maiori V A XXXVI,Dis Manibus Faustinae Maiori. Vixit annis triginta sex
+422,D M Lucio Vero V A XXXVIII,Dis Manibus Lucio Vero. Vixit annis triginta octo
+423,D M Faustinae Minori V A XLV,Dis Manibus Faustinae Minori. Vixit annis quadraginta quinque
+424,D M S AVRELIAE ROMANAE V A XXIX,Dis Manibus Sacrum Aureliae Romanae. Vixit annis viginti novem
+425,D M C IVLIO RVSTICO V A XLII,Dis Manibus Gaio Iulio Rustico. Vixit annis quadraginta duobus
+426,D M VALERIAE PRIMAE V A VI,Dis Manibus Valeriae Primae. Vixit annis sex
+427,D M L CORNELIO LENTo V A LV,Dis Manibus Lucio Cornelio Lento. Vixit annis quinquaginta quinque
+428,D M S VIBIAE FELICITATI V A XXIII,Dis Manibus Sacrum Vibiae Felicitati. Vixit annis viginti tribus
+429,D M P AELIO MARCELLINO V A L,Dis Manibus Publio Aelio Marcellino. Vixit annis quinquaginta
+430,D M FLAVIAE CRESCENTIAE V A IIII M V,Dis Manibus Flaviae Crescentiae. Vixit annis quattuor mensibus quinque
+431,D M T CLAVDIO ATTICO V A LX,Dis Manibus Tito Claudio Attico. Vixit annis sexaginta
+432,D M S IUNIAE HONORATAE V A XVIII,Dis Manibus Sacrum Iuniae Honoratae. Vixit annis decem et octo
+433,D M M FABIO MAXIMO V A XLVIII,Dis Manibus Marco Fabio Maximo. Vixit annis quadraginta octo
+434,D M AEMILIAE TERTIAE V A XXXV,Dis Manibus Aemiliae Tertiae. Vixit annis triginta quinque
+435,D M C POMPEIO LONGO V A LXV,Dis Manibus Gaio Pompeio Longo. Vixit annis sexaginta quinque
+436,D M S PLAVTIAE PAVLinae V A XLII,Dis Manibus Sacrum Plautiae Paulinae. Vixit annis quadraginta duobus
+437,D M Q MARCIO BASSO V A V M I,Dis Manibus Quinto Marcio Basso. Vixit annis quinque mense uno
+438,D M LVCCIAE MODESTAE V A XXIIII,Dis Manibus Lucciae Modestae. Vixit annis viginti quattuor
+439,D M L Calpurnio Frugi V A XXXIX,Dis Manibus Lucio Calpurnio Frugi. Vixit annis triginta novem
+440,D M S ANNAEAE SECVNDAE V A XXVII,Dis Manibus Sacrum Annaeae Secundae. Vixit annis viginti septem
+441,D M C ANTHISTIO VETERI V A LVIII,Dis Manibus Gaio Anthistio Veteri. Vixit annis quinquaginta octo
+442,D M IVNIAE LEPIDAE V A XLVI,Dis Manibus Iuniae Lepidae. Vixit annis quadraginta sex
+443,D M M SALVIO OTHONI V A XXXVI,Dis Manibus Marco Salvio Othoni. Vixit annis triginta sex
+444,D M S CORNELIAE SILLAE V A L,Dis Manibus Sacrum Corneliae Sillae. Vixit annis quinquaginta
+445,D M A VITELIO GERMANICO V A LIV,Dis Manibus Aulo Vitelio Germanico. Vixit annis quinquaginta quattuor
+446,D M FLAVIAE DOMITILLAE V A XL,Dis Manibus Flaviae Domitillae. Vixit annis quadraginta
+447,D M S T FLAVIO SABINO V A LX,Dis Manibus Sacrum Tito Flavio Sabino. Vixit annis sexaginta
+448,D M CAENIDI V A LXX,Dis Manibus Caenidi. Vixit annis septuaginta
+449,D M IULIAE TITI V A XXV,Dis Manibus Iuliae Titi. Vixit annis viginti quinque
+450,D M M COCCEIO NERVAE V A LXVII,Dis Manibus Marco Cocceio Nervae. Vixit annis sexaginta septem
+451,D M ULPIO TRAIANO V A LXIII,Dis Manibus Ulpio Traiano. Vixit annis sexaginta tribus
+452,D M P AELIO HADRIANO V A LXI,Dis Manibus Publio Aelio Hadriano. Vixit annis sexaginta uno
+453,D M T AURELIO FULVO ANTONINO V A LXXIV,Dis Manibus Tito Aurelio Fulvo Antonino. Vixit annis septuaginta quattuor
+454,D M ANNIAE GALERIAE FAUSTINAE V A XXXVI,Dis Manibus Anniae Galeriae Faustinae. Vixit annis triginta sex
+455,D M L AELIO VERO V A XXXVIII,Dis Manibus Lucio Aelio Vero. Vixit annis triginta octo
+456,D M MARCO AURELIO V A LVIII,Dis Manibus Marco Aurelio. Vixit annis quinquaginta octo
+457,D M ANNIAE LUCILLAE V A XXXVI,Dis Manibus Anniae Lucillae. Vixit annis triginta sex
+458,D M FAUSTINAE MINORI V A XLV,Dis Manibus Faustinae Minori. Vixit annis quadraginta quinque
+459,D M L AURELIO COMMODO V A XXXI,Dis Manibus Lucio Aurelio Commodo. Vixit annis triginta uno
+460,D M BRUTTIAE CRISPINAE V A XXII,Dis Manibus Bruttiae Crispinae. Vixit annis viginti duobus
+461,D M PERTINACI V A LXVI,Dis Manibus Pertinaci. Vixit annis sexaginta sex
+462,D M FLAVIAE TITIANAE V A L,Dis Manibus Flaviae Titianae. Vixit annis quinquaginta
+463,D M DIDIO IULIANO V A LVI,Dis Manibus Didio Iuliano. Vixit annis quinquaginta sex
+464,D M L SEPTIMIO SEVERO V A LXV,Dis Manibus Lucio Septimio Severo. Vixit annis sexaginta quinque
+465,D M IULIAE DOMNAE V A XLIX,Dis Manibus Iuliae Domnae. Vixit annis quadraginta novem
+466,D M CARACALLAE V A XXIX,Dis Manibus Caracallae. Vixit annis viginti novem
+467,D M FULVIAE PLAUTILLAE V A XX,Dis Manibus Fulviae Plautillae. Vixit annis viginti
+468,D M GETAE V A XXII,Dis Manibus Getae. Vixit annis viginti duobus
+469,D M MACRINO V A LIII,Dis Manibus Macrino. Vixit annis quinquaginta tribus
+470,D M DIADUMENIANO V A X,Dis Manibus Diadumeniano. Vixit annis decem
+471,D M ELAGABALO V A XVIII,Dis Manibus Elagabalo. Vixit annis decem et octo
+4t72,D M IULIAE SOAEMIADI V A XXXV,Dis Manibus Iuliae Soaemiadi. Vixit annis triginta quinque
+473,D M IULIAE MAESAE V A LX,Dis Manibus Iuliae Maesae. Vixit annis sexaginta
+474,D M SEVERO ALEXANDRO V A XXVI,Dis Manibus Severo Alexandro. Vixit annis viginti sex
+475,D M IULIAE MAMAEAE V A XLV,Dis Manibus Iuliae Mamaeae. Vixit annis quadraginta quinque
+476,D M ORBIANAE V A XXII,Dis Manibus Orbianae. Vixit annis viginti duobus
+477,D M MAXIMINO THRAX V A LXIII,Dis Manibus Maximino Thraeci. Vixit annis sexaginta tribus
+478,D M GORDIANO I V A LXXXI,Dis Manibus Gordiano Primo. Vixit annis octoginta uno
+479,D M GORDIANO II V A XLVI,Dis Manibus Gordiano Secundo. Vixit annis quadraginta sex
+480,D M PUPIENO V A LXXIV,Dis Manibus Pupieno. Vixit annis septuaginta quattuor
+481,D M BALBINO V A LX,Dis Manibus Balbino. Vixit annis sexaginta
+482,D M GORDIANO III V A XIX,Dis Manibus Gordiano Tertio. Vixit annis undeviginti
+483,D M TRANQUILLINAE V A XXIII,Dis Manibus Tranquillinae. Vixit annis viginti tribus
+484,D M PHILIPPO ARABI V A XLV,Dis Manibus Philippo Arabi. Vixit annis quadraginta quinque
+485,D M OTACILIAE SEVERAE V A XXX,Dis Manibus Otaciliae Severae. Vixit annis triginta
+486,D M PHILIPPO II V A XII,Dis Manibus Philippo Secundo. Vixit annis duodecim
+487,D M DECIO V A L,Dis Manibus Decio. Vixit annis quinquaginta
+488,D M HERENNIAE ETRUSCILLAE V A XL,Dis Manibus Herenniae Etruscillae. Vixit annis quadraginta
+489,D M HERENNIO ETRUSCO V A XXV,Dis Manibus Herennio Etrusco. Vixit annis viginti quinque
+490,D M HOSTILIANO V A XVIII,Dis Manibus Hostiliano. Vixit annis decem et octo
+491,D M TREBONIANO GALLO V A XLV,Dis Manibus Treboniano Gallo. Vixit annis quadraginta quinque
+492,D M VOLUSIANO V A XX,Dis Manibus Volusiano. Vixit annis viginti
+493,D M AEMILIANO V A L,Dis Manibus Aemiliano. Vixit annis quinquaginta
+494,D M VALERIANO V A LX,Dis Manibus Valeriano. Vixit annis sexaginta
+495,D M GALLIENO V A L,Dis Manibus Gallieno. Vixit annis quinquaginta
+496,D M SALONINAE V A XL,Dis Manibus Saloninae. Vixit annis quadraginta
+497,D M SALONINO V A XVIII,Dis Manibus Salonino. Vixit annis decem et octo
+498,D M CLAUDIO GOTHICO V A LVI,Dis Manibus Claudio Gothico. Vixit annis quinquaginta sex
+499,D M QUINTILLO V A XL,Dis Manibus Quintillo. Vixit annis quadraginta
+500,D M AURELIANO V A LX,Dis Manibus Aureliano. Vixit annis sexaginta
+501,D M SEVERINAE V A L,Dis Manibus Severinae. Vixit annis quinquaginta
+502,D M TACITO V A LXXV,Dis Manibus Tacito. Vixit annis septuaginta quinque
+503,D M FLORIANO V A XLV,Dis Manibus Floriano. Vixit annis quadraginta quinque
+504,D M PROBO V A LI,Dis Manibus Probo. Vixit annis quinquaginta uno
+505,D M CARO V A LX,Dis Manibus Caro. Vixit annis sexaginta
+506,D M CARINO V A XXX,Dis Manibus Carino. Vixit annis triginta
+507,D M NUMERIANO V A XXV,Dis Manibus Numeriano. Vixit annis viginti quinque
+508,D M DIOCLETIANO V A LXVI,Dis Manibus Diocletiano. Vixit annis sexaginta sex
+509,D M MAXIMIANO V A LX,Dis Manibus Maximiano. Vixit annis sexaginta
+510,D M CONSTANTIO CHLORO V A LV,Dis Manibus Constantio Chloro. Vixit annis quinquaginta quinque
+511,D M GALERIO V A LI,Dis Manibus Galerio. Vixit annis quinquaginta uno
+512,D M SEVERO II V A XL,Dis Manibus Severo Secundo. Vixit annis quadraginta
+513,D M MAXENTIO V A XXXIV,Dis Manibus Maxentio. Vixit annis triginta quattuor
+514,D M MAXIMINO DAIAE V A XLIII,Dis Manibus Maximino Daiae. Vixit annis quadraginta tribus
+515,D M LICINIO V A LV,Dis Manibus Licinio. Vixit annis quinquaginta quinque
+516,D M CONSTANTINO MAGNO V A LXIII,Dis Manibus Constantino Magno. Vixit annis sexaginta tribus
+517,D M CRISPO V A XXIII,Dis Manibus Crispo. Vixit annis viginti tribus
+518,D M CONSTANTINO II V A XXIV,Dis Manibus Constantino Secundo. Vixit annis viginti quattuor
+519,D M CONSTANTE V A XXVII,Dis Manibus Constante. Vixit annis viginti septem
+520,D M CONSTANTIO II V A XLIV,Dis Manibus Constantio Secundo. Vixit annis quadraginta quattuor
+521,D M S T FLAVIO PRIMO V A LIIII,Dis Manibus Sacrum Tito Flavio Primo. Vixit annis quinquaginta quattuor
+522,D M AVRELIAE SECVNDINAE V A XXXVII,Dis Manibus Aureliae Secundinae. Vixit annis triginta septem
+523,D M C IVLIO CAPITONI V A III M VI,Dis Manibus Gaio Iulio Capitoni. Vixit annis tribus mensibus sex
+524,D M VALERIAE MAXIMAE V A XXVIII,Dis Manibus Valeriae Maximae. Vixit annis viginti octo
+525,D M L CORNELIO FRONTONI V A LIX,Dis Manibus Lucio Cornelio Frontoni. Vixit annis quinquaginta novem
+526,D M S VIBIAE PVDENTI V A XL,Dis Manibus Sacrum Vibiae Pudenti. Vixit annis quadraginta
+527,D M P AELIO IVSTO V A XV,Dis Manibus Publio Aelio Iusto. Vixit annis quindecim
+528,D M FLAVIAE VITALI V A XLIX,Dis Manibus Flaviae Vitali. Vixit annis quadraginta novem
+529,D M T CLAVDIO CELSO V A LXIII,Dis Manibus Tito Claudio Celso. Vixit annis sexaginta tribus
+530,D M S IUNIAE GALLAE V A XXXI,Dis Manibus Sacrum Iuniae Gallae. Vixit annis triginta uno
+531,D M M FABIO RVFO V A XLV,Dis Manibus Marco Fabio Rufo. Vixit annis quadraginta quinque
+532,D M AEMILIAE PRISCILLAE V A XXIIII,Dis Manibus Aemiliae Priscillae. Vixit annis viginti quattuor
+533,D M C POMPEIO SEVERO V A LVII,Dis Manibus Gaio Pompeio Severo. Vixit annis quinquaginta septem
+534,D M S PLAVTIAE VENERIAE V A XXXIX,Dis Manibus Sacrum Plautiae Veneriae. Vixit annis triginta novem
+535,D M Q MARCIO TVRBO V A LX,Dis Manibus Quinto Marcio Turbo. Vixit annis sexaginta
+536,D M LVCCIAE TERTULLAE V A XVII,Dis Manibus Lucciae Tertullae. Vixit annis septemdecim
+537,D M L Calpurnio Pisoni V A XLVII,Dis Manibus Lucio Calpurnio Pisoni. Vixit annis quadraginta septem
+538,D M S ANNAEAE PROCVLAE V A LV,Dis Manibus Sacrum Annaeae Proculae. Vixit annis quinquaginta quinque
+539,D M C ANTHISTIO RESTITVTO V A LII,Dis Manibus Gaio Anthistio Restituto. Vixit annis quinquaginta duobus
+540,D M IVNIAE TORQUATAE V A LIII,Dis Manibus Iuniae Torquatae. Vixit annis quinquaginta tribus
+541,D M S M SALVIO IVLIANO V A LXI,Dis Manibus Sacrum Marco Salvio Iuliano. Vixit annis sexaginta uno
+542,D M CORNELIAE FAUSTAE V A XXXIII,Dis Manibus Corneliae Faustae. Vixit annis triginta tribus
+543,D M A VITELIO HONORATO V A III,Dis Manibus Aulo Vitelio Honorato. Vixit annis tribus
+544,D M FLAVIAE SABINAE V A LXII,Dis Manibus Flaviae Sabinae. Vixit annis sexaginta duobus
+545,D M S T FLAVIO CLEMENTI V A XLIII,Dis Manibus Sacrum Tito Flavio Clementi. Vixit annis quadraginta tribus
+546,D M DOMITIAE PAULINAE V A XXX,Dis Manibus Domitiae Paulinae. Vixit annis triginta
+547,D M M COCCEIO FRONTINO V A LXVI,Dis Manibus Marco Cocceio Frontino. Vixit annis sexaginta sex
+548,D M ULPIAE MARCELLINAE V A XXIX,Dis Manibus Ulpiae Marcellinae. Vixit annis viginti novem
+549,D M S P AELIO ATTICO V A LIV,Dis Manibus Sacrum Publio Aelio Attico. Vixit annis quinquaginta quattuor
+550,D M VIBIAE MATIDIAE V A LII,Dis Manibus Vibiae Matidiae. Vixit annis quinquaginta duobus
+551,D M L AELIO HELVIO V A XXXVIII,Dis Manibus Lucio Aelio Helvio. Vixit annis triginta octo
+552,D M ANNIAE FUNDANIAE V A XXXV,Dis Manibus Anniae Fundaniae. Vixit annis triginta quinque
+553,D M S M GAVIO CORNELIO V A LX,Dis Manibus Sacrum Marco Gavio Cornelio. Vixit annis sexaginta
+554,D M CEIONIAE FABIAE V A XXXI,Dis Manibus Ceioniae Fabiae. Vixit annis triginta uno
+555,D M T AELIO AVRELIO V A LVIII,Dis Manibus Tito Aelio Aurelio. Vixit annis quinquaginta octo
+556,D M ANNIAE CORNIFICIAE V A L,Dis Manibus Anniae Cornificiae. Vixit annis quinquaginta
+557,D M S P SVLPICIO CRASSO V A LXIII,Dis Manibus Sacrum Publio Sulpicio Crasso. Vixit annis sexaginta tribus
+558,D M UMMIDIAE QUADRATILLAE V A LXXVIII,Dis Manibus Ummidiae Quadratillae. Vixit annis septuaginta octo
+559,D M C AVFIDIO VICTORINO V A LIX,Dis Manibus Gaio Aufidio Victorino. Vixit annis quinquaginta novem
+560,D M CORNELIAE OPPIAE V A LII,Dis Manibus Corneliae Oppiae. Vixit annis quinquaginta duobus
+561,D M M PEDUCAEO PLAUTIO V A LXII,Dis Manibus Marco Peducaeo Plautio. Vixit annis sexaginta duobus
+562,D M S VETTIAE GALERIAE V A XLVIII,Dis Manibus Sacrum Vettiae Galeriae. Vixit annis quadraginta octo
+563,D M L DASVMIO TULLIO V A LVI,Dis Manibus Lucio Dasumio Tullio. Vixit annis quinquaginta sex
+564,D M ACILIAE CLARAE V A XXXVII,Dis Manibus Aciliae Clarae. Vixit annis triginta septem
+565,D M M VALERIO BRADVA V A LXV,Dis Manibus Marco Valerio Bradua. Vixit annis sexaginta quinque
+566,D M S MANILIAE LVCILLAE V A XXXIV,Dis Manibus Sacrum Maniliae Lucillae. Vixit annis triginta quattuor
+567,D M Q SOSIO PRISCO V A LXVIII,Dis Manibus Quinto Sosio Prisco. Vixit annis sexaginta octo
+568,D M FABIAE ORESTILLAE V A XL,Dis Manibus Fabiae Orestillae. Vixit annis quadraginta
+569,D M S M NONIO MACRINO V A LXXII,Dis Manibus Sacrum Marco Nonio Macrino. Vixit annis septuaginta duobus
+570,D M ARRIAE FADILLAE V A L,Dis Manibus Arriae Fadillae. Vixit annis quinquaginta
+571,D M T POMPONIO PROCVLO V A LX,Dis Manibus Tito Pomponio Proculo. Vixit annis sexaginta
+572,D M FLAVIAE NERATIAE V A XLIV,Dis Manibus Flaviae Neratiae. Vixit annis quadraginta quattuor
+573,D M S C BRUTTIO PRAESENTE V A LXX,Dis Manibus Sacrum Gaio Bruttio Praesente. Vixit annis septuaginta
+574,D M LABERIAE HOSTILIAE V A LX,Dis Manibus Laberiae Hostiliae. Vixit annis sexaginta
+575,D M L Fulvio RUSTICO V A LXV,Dis Manibus Lucio Fulvio Rustico. Vixit annis sexaginta quinque
+576,D M EGGIAE AMBIBULAE V A XLV,Dis Manibus Eggiae Ambibulae. Vixit annis quadraginta quinque
+577,D M S M CLAUDIO FRONTONI V A LIII,Dis Manibus Sacrum Marco Claudio Frontoni. Vixit annis quinquaginta tribus
+578,D M VIBIAE SALVIAE V A XL,Dis Manibus Vibiae Salviae. Vixit annis quadraginta
+579,D M T SEXTIO LATERANO V A LXIX,Dis Manibus Tito Sextio Laterano. Vixit annis sexaginta novem
+580,D M VOLVSIAE CORNELIAE V A LVI,Dis Manibus Volusiae Corneliae. Vixit annis quinquaginta sex
+581,D M S L HEDIO RUFO V A LXII,Dis Manibus Sacrum Lucio Hedio Rufo. Vixit annis sexaginta duobus
+582,D M PLAUTIAE SERVIANAE V A L,Dis Manibus Plautiae Servianae. Vixit annis quinquaginta
+583,D M Q Aemilio Laeto V A LIV,Dis Manibus Quinto Aemilio Laeto. Vixit annis quinquaginta quattuor
+584,D M S C IULIO ASPRO V A LXVIII,Dis Manibus Sacrum Gaio Iulio Aspro. Vixit annis sexaginta octo
+585,D M MARCIAE CESTIAE V A XLVII,Dis Manibus Marciae Cestiae. Vixit annis quadraginta septem
+586,D M L MARIO MAXIMO V A LXX,Dis Manibus Lucio Mario Maximo. Vixit annis septuaginta
+587,D M SULPICIAE DRYANTILLAE V A L,Dis Manibus Sulpiciae Dryantillae. Vixit annis quinquaginta
+588,D M S CASSio DIONI V A LXX,Dis Manibus Sacrum Cassio Dioni. Vixit annis septuaginta
+589,D M VALERIAE AEMILIANAE V A XLII,Dis Manibus Valeriae Aemilianae. Vixit annis quadraginta duobus
+590,D M M CLODIO PUPIENO V A LXXIV,Dis Manibus Marco Clodio Pupieno. Vixit annis septuaginta quattuor
+591,D M SEXTIAE CESTIANAE V A LX,Dis Manibus Sextiae Cestianae. Vixit annis sexaginta
+592,D M S D CAELIO BALBINO V A LX,Dis Manibus Sacrum Decimo Caelio Balbino. Vixit annis sexaginta
+593,D M CAELIAE PETRONIANAE V A L,Dis Manibus Caeliae Petronianae. Vixit annis quinquaginta
+594,D M C IULIO PRISCO V A L,Dis Manibus Gaio Iulio Prisco. Vixit annis quinquaginta
+595,D M HATERIAE SUPERBAE V A XXX,Dis Manibus Hateriae Superbae. Vixit annis triginta
+596,D M M ASINIO SABINIANO V A XL,Dis Manibus Marco Asinio Sabiniano. Vixit annis quadraginta
+597,D M PINARIAE MAXIMILLAE V A XXV,Dis Manibus Pinariae Maximillae. Vixit annis viginti quinque
+598,D M Q DECIO VALERINO V A XXXV,Dis Manibus Quinto Decio Valerino. Vixit annis triginta quinque
+599,D M S ETRUSCILLAE V A XL,Dis Manibus Sacrum Etruscillae. Vixit annis quadraginta
+600,D M C VALENTI HOSTILIANO V A XVIII,Dis Manibus Gaio Valenti Hostiliano. Vixit annis decem et octo
+601,I O M,Iovi Optimo Maximo
+602,DEO INVICTO MITHRAE,Deo Invicto Mithrae
+603,MARTI AVG SACRVM,Marti Augusto Sacrum
+604,MINERVAE S D,Minervae Sanctae Donum
+605,APOLLINI ET SANCTAE SIRI,Apollini et Sanctae Siri
+606,HERCVLI INVICTO,Herculi Invicto
+607,FORTVNAE REDVCI,Fortunae Reduci
+608,GENIO LOCI,Genio Loci
+609,SILVANO SANCTO,Silvano Sancto
+610,MATRIBVS SVIS,Matribus Suis
+611,PRO SALVTE IMP,Pro Salute Imperatoris
+612,V S L M,Votum Solvit Libens Merito
+613,I O M DOLICHENO,Iovi Optimo Maximo Dolicheno
+614,L VALERIVS PRISCVS DEO MERCVRIO D D,Lucius Valerius Priscus deo Mercurio donum dedit
+615,C IVLIVS SECVNDVS EX VOTO POSVIT,Gaius Iulius Secundus ex voto posuit
+616,IMP CAESAR DIVI F AVGVSTVS,Imperator Caesar Divi Filius Augustus
+617,SENATVS POPVLVSQVE ROMANVS,Senatus Populusque Romanus
+618,IMP CAES M AVRELIO ANTONINO AVG,Imperatori Caesari Marco Aurelio Antonino Augusto
+619,P F,Pius Felix
+620,P P,Pater Patriae
+621,PONT MAX TRIB POT,Pontifex Maximus Tribunicia Potestate
+622,COS IIII,Consul Quartum
+623,LEG AVG PR PR,Legatus Augusti Pro Praetore
+624,PROC AVG,Procurator Augusti
+625,C VALERIO PVDENTI PONTIF MAXIMO,Gaio Valerio Pudenti Pontifici Maximo
+626,L SEPTIMIO SEVERO PIO PERTINACI AVG,Lucio Septimio Severo Pio Pertinaci Augusto
+627,PATRONO COLONIAE,Patrono Coloniae
+628,CVRATORI REI PVBLICAE,Curatori Rei Publicae
+629,VIRO EGREGIO,Viro Egregio
+630,ORDO ET POPVLVS,Ordo et Populus
+631,HONORIS CAVSA,Honoris Causa
+632,LOCVS DATVS DECRETO DECVRIONVM,Locus Datus Decreto Decurionum
+633,IMP NERVA TRAIANO AVG GER DAC,Imperatori Nervae Traiano Augusto Germanico Dacico
+634,M NONIO MACRINO COS,Marco Nonio Macrino Consuli
+635,C IVLIVS VERVS LEG AVG LEG X GEM,Gaius Iulius Verus Legatus Augusti Legionis X Geminae
+636,AQVAM IN COLONIAM SVAM INDVXIT,Aquam in coloniam suam induxit
+637,M AGRIPPA L F COS TERTIVM FECIT,Marcus Agrippa Lucii Filius Consul Tertium Fecit
+638,BALINEVM CVM PORTICIBVS,Balineum cum porticibus
+639,D S P F,De Sua Pecunia Fecit
+640,F C,Faciendum Curavit
+641,REFECIT ET AD PRISTINAM FORMAM REDEGIT,Refecit et ad pristinam formam redegit
+6-42,OPVS AMPLIATVM,Opus Ampliatum
+643,IMP CAES TRAIANVS PONTEM FECIT,Imperator Caesar Traianus pontem fecit
+644,MVRVM ET TVRRES DEDIT,Murum et turres dedit
+645,TEMPLVM A SOLO RESTITVIT,Templum a solo restituit
+646,IMP CAES VESPASIANVS AVG VIAM FECIT,Imperator Caesar Vespasianus Augustus viam fecit
+647,A MILIARIO I,A Miliario I
+648,M P CXXIII,Milia Passuum Centum Viginti Tria
+649,IMP T CAESAR DIVI VESP F AVG,Imperator Titus Caesar Divi Vespasiani Filius Augustus
+6-50,RESTITVIT PER,Restituit per
+651,A COL,A Colonia
+652,MP II,Milia Passuum Duo
+653,IMP CAESAR HADRIANVS AVG VIAM MUNIT,Imperator Caesar Hadrianus Augustus viam munit
+654,A GADIBVS,A Gadibus
+655,C VALERIVS C F VOL FIRMVS,Gaius Valerius Gaii filius Voltinia Firmus
+656,LEG II AVG,Legio II Augusta
+657,COH I HISP,Cohors I Hispanorum
+658,EQVES ALAE I THR,Eques Alae I Thracum
+659,CENTVRIO LEG XX V V,Centurio Legionis XX Valeriae Victricis
+660,SIGNIFER COH IIII PR,Signifer Cohortis IIII Praetoriae
+661,VETERANVS LEG VI VIC,Veteranus Legionis VI Victricis
+662,BENEFICIARIVS COS,Beneficiarius Consularis
+663,MILITAVIT ANNOS XX,Militavit Annos Viginti
+664,MISSIO HONESTA,Missio Honesta
+665,STIPENDIORVM XXII,Stipendiorum Viginti Duorum
+666,LEX DE IMPERIO VESPASIANI,Lex de Imperio Vespasiani
+667,TABVLA BANASITANA,Tabula Banasitana
+668,EPISTVLA IMP,Epistula Imperatoris
+669,DECVRIONES ET COLLEGIATI,Decuriones et Collegiati
+670,NEQVIS VIOLATO,Nequis Violato
+671,H M H N S,Hoc Monumentum Heredem Non Sequitur
+672,IN FR P C,In Fronte Pedes Centum
+673,IN AGR P C,In Agro Pedes Centum
+674,SENTENTIA EX CONSILIO,Sententia ex Consilio
+675,RESCRIPTUM IMP ANTONINI,Rescriptum Imperatoris Antonini
+676,FELICITER,Feliciter
+677,SECVNDVS HIC FVIT,Secundus hic fuit
+678,LVCILLA MEA VALE,Lucilla mea vale
+679,AMO TE FILIA,Amo te filia
+680,VIBIVS RESTITVTVS HIC DORMIT,Vibius Restitutus hic dormit
+-681,OPVS FIGLINVM,Opus Figlinum
+682,EX OFICINA,Ex Oficina
+683,A POMPEIS,A Pompeis
+684,SALVE LVCRV,Salve Lucru(m)
+685,HIC HABITAT FELICITAS,Hic habitat felicitas
+686,CAVE CANEM,Cave Canem
+687,LEG XXX V V PIA FIDELIS,Legio XXX Ulpia Victrix Pia Fidelis
+688,Q ASINIVS MARCELLVS PONTIF,Quintus Asinius Marcellus Pontifex
+689,COLLEGIUM FABRORUM,Collegium Fabrorum
+690,NVMINIBVS AVGVSTORVM,Numinibus Augustorum
+691,S C,Senatus Consulto
+692,THERMAE SIVE BALNEAE,Thermae sive Balneae
+693,MACRINO AVG ET DIADVMENIANO NOB CAES,Macrino Augusto et Diadumeniano Nobilissimo Caesari
+694,HORREVM PVBLICVM,Horreum Publicum
+695,CURA AGENTE,Cura Agente
+696,I O M ET GENIO PRAETORI,Iovi Optimo Maximo et Genio Praetori
+697,SOLI INVICTO,Soli Invicto
+698,DIS PATRIIS,Dis Patriis
+699,FINES POSVIT,Fines Posuit
+700,Limes Tripolitanus,Limes Tripolitanus
+701,D M C IVLIO VALENTI MIL LEG X GEM V A XXXV STIP XV IVLIA SECVNDINA CONIVNX B M F,Dis Manibus Gaio Iulio Valenti militi Legionis X Geminae. Vixit annis triginta quinque stipendiorum quindecim. Iulia Secundina coniunx bene merenti fecit
+702,D M M PETRONIO C F QVIR LONGO VETERANO LEG II AVG FLAVIA PROCVLA VXOR ET M PETRONIVS FILIVS F C,Dis Manibus Marco Petronio Gaii filio Quirina Longo veterano Legionis II Augustae. Flavia Procula uxor et Marcus Petronius filius faciendum curaverunt
+703,D M S L CORNELIO MACRO CENT LEG I MIN V A LII CORNELIA SABINA FILIA PATRI PIISSIMO POSVIT,Dis Manibus Sacrum Lucio Cornelio Macro centurioni Legionis I Minerviae. Vixit annis quinquaginta duobus. Cornelia Sabina filia patri piissimo posuit
+704,T FLAVIVS T F VOLT BASSVS EQVES ALAE NORICORVM VIX ANN XXXII MIL ANN XIII H S E,Titus Flavius Titi filius Voltinia Bassus eques alae Noricorum. Vixit annis triginta duobus militavit annis tredecim. Hic situs est
+705,D M C VALERIO CRISPO BENEFICIARIO TRIBVNI LATICLAVII LEG XIII GEM V A XXVIII H F C,Dis Manibus Gaio Valerio Crispo beneficiario tribuni laticlavii Legionis XIII Geminae. Vixit annis viginti octo. Heres faciendum curavit
+706,D M IVLIAE VICTORINAE VIX ANN XXV M ANTONIVS PRIMVS SIGNIFER COH V PR CONIVGI CARISSIMAE,Dis Manibus Iuliae Victorinae. Vixit annis viginti quinque. Marcus Antonius Primus signifer Cohortis V Praetoriae coniugi carissimae
+707,D M Q HOSTILIO Q F PAP MARCELLO NEGOTIATORI VINIARIO V A LX HOSTILIA FILIA PATRI OPTIMO,Dis Manibus Quinto Hostilio Quinti filio Papiria Marcello negotiatori vinario. Vixit annis sexaginta. Hostilia filia patri optimo
+708,L VIBIVS L LIB PHILOMVSVS MEDICVS VIXIT ANNIS XLVIII VIBIA PRIMA PATRONA LIBERTO B M P,Lucius Vibius Lucii libertus Philomusus medicus. Vixit annis quadraginta octo. Vibia Prima patrona liberto bene merenti posuit
+709,D M S AELIAE DAPHNE ORNATRICI VIX ANN XXIIII AELIVS HERMES CONIVGI INCOMPARABILI,Dis Manibus Sacrum Aeliae Daphne ornatrici. Vixit annis viginti quattuor. Aelius Hermes coniugi incomparabili
+710,D M M COMINIO SECVNDO FABRO TIGNVARIO V A LII COMINIA MAXIMA FILIA PATRI DULCISSIMO FECIT,Dis Manibus Marco Cominio Secundo fabro tignuario. Vixit annis quinquaginta duobus. Cominia Maxima filia patri dulcissimo fecit
+711,D M P CLODIO ATHENODORO GRAMMATICO GRAECO VIX ANN LXV DISCIPVLI B M POSVERVNT,Dis Manibus Publio Clodio Athenodoro grammatico Graeco. Vixit annis sexaginta quinque. Discipuli bene merenti posuerunt
+712,D M S VALERIAE AMMIAE SACERDOTI MATRIS DEVM V A LXXII COLLEGIVM DENDROPHORVM HONORE VSVM EST,Dis Manibus Sacrum Valeriae Ammiae sacerdoti Matris Deum. Vixit annis septuaginta duobus. Collegium Dendrophorum honore usum est
+713,D M IVLIAE FORTVNATAE FILIAE PIENTISSIMAE VIX ANN XVI M VII D X C IVLIVS FELIX PATER INFELICISSIMVS,Dis Manibus Iuliae Fortunatae filiae pientissimae. Vixit annis sedecim mensibus septem diebus decem. Gaius Iulius Felix pater infelicissimus
+714,D M FLAVIAE DOMITILLAE SORORI KARISSIMAE V A XXIX T FLAVIVS SABINVS FRATER POSVIT,Dis Manibus Flaviae Domitillae sorori karissimae. Vixit annis viginti novem. Titus Flavius Sabinus frater posuit
+-715,D M M ULPIO AVG LIB AMANDO TABVLARIO VIX ANN XLIII ULPIA APHRODITE CONIVGI BENE MERENTI,Dis Manibus Marco Ulpio Augusti liberto Amando tabulario. Vixit annis quadraginta tres. Ulpia Aphrodite coniugi bene merenti
+716,D M S CORNELIAE PRIMAE VIXIT ANNOS XXXII L CORNELIVS PRISCVS CONIVGI SANCTISSIMAE SINE VLLA QUERELLA,Dis Manibus Sacrum Corneliae Primae. Vixit annos triginta duos. Lucius Cornelius Priscus coniugi sanctissimae sine ulla querella
+717,C MVNATIVS C F PAL PLANCVS VETERANVS LEG V ALAVDAE VIXIT ANNIS LVIII HIC CREMATVS EST,Gaius Munatius Gaii filius Palatina Plancus veteranus Legionis V Alaudae. Vixit annis quinquaginta octo. Hic crematus est
+718,D M AEMILIO DECENTIO DECVRIONI ALAE I THRACVM MILITAVIT ANNIS XXII VIXIT ANNIS XLII AEMILIA FILIA ET HERES F C,Dis Manibus Aemilio Decentio decurioni alae primae Thracum. Militavit annis viginti duobus. Vixit annis quadraginta duobus. Aemilia filia et heres faciendum curavit
+719,D M VALERIO VITALI PICTORI VIX ANN XXXVIIII VALERIA MAXIMINA CONIVX MARITO OPTIMO,Dis Manibus Valerio Vitali pictori. Vixit annis triginta novem. Valeria Maximina coniunx marito optimo
+720,D M S SERGIAE POLLAE V A XV M II D V SERGIVS PATER ET LIVIA MATER FILIAE VNICAE,Dis Manibus Sacrum Sergiae Pollae. Vixit annis quindecim mensibus duobus diebus quinque. Sergius pater et Livia mater filiae unicae
+721,D M T VETTVRIO T F QVIR BARRVLO MIL COH IX PR VIX ANN XXIIII MIL ANN V H S E,Dis Manibus Tito Vetturio Titi filio Quirina Barrulo militi cohortis IX Praetoriae. Vixit annis viginti quattuor militavit annis quinque. Hic situs est
+722,D M L CASSIO APRO CENT LEG XXII PR P F V A XLVII CASSIANVS FILIVS PATRI INCOMPARABILI,Dis Manibus Lucio Cassio Apro centurioni Legionis XXII Primigeniae Piae Fidelis. Vixit annis quadraginta septem. Cassianus filius patri incomparabili
+723,D M CLODIAE ARTEMISAE V A XXXIIII LVCIVS CLODIVS HERMES LIBERTAE ET CONTVBERNALI CARISSIMAE,Dis Manibus Clodiae Artemisae. Vixit annis triginta quattuor. Lucius Clodius Hermes libertae et contubernali carissimae
+7ax24,D M S Q SERVILIO PVDENTI ARGENTARIO V A LVI SERVILIA PRISCA FILIA PATRI B M,Dis Manibus Sacrum Quinto Servilio Pudenti argentario. Vixit annis quinquaginta sex. Servilia Prisca filia patri bene merenti
+725,D M M AVRELIO HERCVLANO VETERANO EX CLASSE PRAETORIA MISENENSI V A LXII AVRELIA FILIA ET HERES,Dis Manibus Marco Aurelio Herculano veterano ex classe praetoria Misenensi. Vixit annis sexaginta duobus. Aurelia filia et heres
+726,D M IVLIAE SECVNDAE V A XXVIII M IIII D X MATRI PIENTISSIMAE IVLIVS SECVNDINVS FILIVS,Dis Manibus Iuliae Secundae. Vixit annis viginti octo mensibus quattuor diebus decem. Matri pientissimae Iulius Secundinus filius
+727,D M L SATTIO L F COL PATRONO V A XLV SATTIA CONIVNX MARITO OPTIMO ET SIBI,Dis Manibus Lucio Sattio Lucii filio Collina Patrono. Vixit annis quadraginta quinque. Sattia coniunx marito optimo et sibi
+728,D M C ATTIO SEVERO MEDICO CHIRVRGO VIX ANNIS LXXI ATTIA MAXIMA FILIA PATRI B M POSVIT,Dis Manibus Gaio Attio Severo medico chirurgo. Vixit annis septuaginta uno. Attia Maxima filia patri bene merenti posuit
+729,D M T FLAVIO AVG LIB ALEXANDRO A RATIONIBVS V A LX T FLAVIVS HERMES PATRONO OPTIMO,Dis Manibus Tito Flavio Augusti liberto Alexandro a rationibus. Vixit annis sexaginta. Titus Flavius Hermes patrono optimo
+730,D M VALERIAE SATVRNINAE VIX ANN XXXIII QVIETEM AETERNAM,Dis Manibus Valeriae Saturninae. Vixit annis triginta tribus. Quietem aeternam
+731,D M M ANTONI LONGI VETERANI LEG VII GEM VIXIT ANNOS LIX AEMILIA TERTIA VXOR MARITO CARISSIMO,Dis Manibus Marco Antonio Longo veterano Legionis VII Geminae. Vixit annos quinquaginta novem. Aemilia Tertia uxor marito carissimo
+732,D M S PONTIAE GLYCERAE VIX ANNOS III MENSES II DIES VIII PARENTES INFELICISSIMI FILIAE DULCISSIMAE,Dis Manibus Sacrum Pontiae Glycerae. Vixit annos tres menses duos dies octo. Parentes infelicissimi filiae dulcissimae
+733,D M C SENTIO FELICI ARCHITECTO V A XLVIII SENTIA PRISCA CONIVNX ET FILII F C,Dis Manibus Gaio Sentio Felici architecto. Vixit annis quadraginta octo. Sentia Prisca coniunx et filii faciendum curaverunt
+734,D M L VOLVSIO L F ANIENSI FIRMO V A LXXII IIII VIR I D,Dis Manibus Lucio Volusio Lucii filio Aniensis Firmo. Vixit annis septuaginta duobus. Quattuorvir iure dicundo
+735,D M AVRELIAE MELISSAE V A XXXVIII AVRELIVS VERECVNDVS CONIVGI CASTISSIMAE FECIT,Dis Manibus Aureliae Melissae. Vixit annis triginta octo. Aurelius Verecundus coniugi castissimae fecit
+736,D M S M ULPIO FRONTONI IMAGINIFERO LEG I ADIVTRICIS V A XXXI STIP X HERES POSVIT,Dis Manibus Sacrum Marco Ulpio Frontoni imaginifero Legionis I Adiutricis. Vixit annis triginta uno stipendiorum decem. Heres posuit
+737,D M IVLIO SECVNDO PVERO INNO CENTISSIMO Q VIX ANN VIII M VI D III,Dis Manibus Iulio Secundo puero innocentissimo qui vixit annis octo mensibus sex diebus tribus
+738,D M TERENTIAE MAXIMAE V A XLVI MARITO ET FILIIS BENE FECIT H S E S T T L,Dis Manibus Terentiae Maximae. Vixit annis quadraginta sex. Marito et filiis bene fecit. Hic sita est. Sit tibi terra levis
+739,D M S VIBIAE GALLAE V A XXX VIBIVS PATER FILIAE DVLCISSIMAE ET SIBI VIVVS FECIT,Dis Manibus Sacrum Vibiae Gallae. Vixit annis triginta. Vibius pater filiae dulcissimae et sibi vivus fecit
+740,D M T CLAVDIO APOLLINARI VETERANO CLASSIS RAVENNatis V A LV CLAVDIA FILIA ET HERES,Dis Manibus Tito Claudio Apollinari veterano classis Ravennatis. Vixit annis quinquaginta quinque. Claudia filia et heres
+741,D M MARCIAE SABINAE V A LXII C MARCIVS SABINVS FILIVS MATRI PIISSIMAE,Dis Manibus Marciae Sabinae. Vixit annis sexaginta duobus. Gaius Marcius Sabinus filius matri piissimae
+742,D M Q PETRONIO MODESTO FRATRI OPTIMO V A XXI PETRONIA SOROR,Dis Manibus Quinto Petronio Modesto fratri optimo. Vixit annis viginti uno. Petronia soror
+743,D M L AEMILII L F POL CELERIS CENT LEG III CYR V A LIII MIL ANN XXXII H F C,Dis Manibus Lucii Aemilii Lucii filii Pollia Celeris centurionis Legionis III Cyrenaicae. Vixit annis quinquaginta tribus militavit annis triginta duobus. Heres faciendum curavit
+744,D M S AVRELIAE VENERIAE LIBERTAE ET CONIVGI OPTIMAE VIXIT ANNIS XXXX M AVRELIVS HERMES,Dis Manibus Sacrum Aureliae Veneriae libertae et coniugi optimae. Vixit annis quadraginta. Marcus Aurelius Hermes
+745,D M C SULPICIO CLEMENTI NEGOTIANTI LUGDUNI V A XLIX FILII PATRI BENE MERENTI,Dis Manibus Gaio Sulpicio Clementi negotianti Lugduni. Vixit annis quadraginta novem. Filii patri bene merenti
+746,D M S FLAVIAE IANUARIAE VIXIT ANNOS XXII MENSES V DIES III PATER ET MATER FILIAE CARISSIMAE,Dis Manibus Sacrum Flaviae Ianuariae. Vixit annos viginti duos menses quinque dies tres. Pater et mater filiae carissimae
+747,D M T STATILIO T F VEL VOLV MNIANO V A XL STIP XXII CENT LEG XI CL P F,Dis Manibus Tito Statilio Titi filio Velina Volumniano. Vixit annis quadraginta stipendiorum viginti duorum centurioni Legionis XI Claudiae Piae Fidelis
+748,D M ACILIAE PVDENTI FEMINAE SANCTISSIMAE VIX ANN XXXVII M ACILIVS GLABRIO MARITVS,Dis Manibus Aciliae Pudenti feminae sanctissimae. Vixit annis triginta septem. Manius Acilius Glabrio maritus
+749,D M L VALERIO L F QVIR VERECVNDO VETERANO LEG IIII FLAVIAE V A LXI VALERIA VERECVNDA FILIA,Dis Manibus Lucio Valerio Lucii filio Quirina Verecundo veterano Legionis IIII Flaviae. Vixit annis sexaginta uno. Valeria Verecunda filia
+750,D M S M ATILIO RVFO MILITI COH VII VIGILVM VIXIT ANNOS XXVI MILITAVIT ANNOS VII,Dis Manibus Sacrum Marco Atilio Rufo militi Cohortis VII Vigilum. Vixit annos viginti sex militavit annos septem
+751,D M C IULIO PROCVLO OPTIONE LEG VI VIC VIX ANN XXXVI IULIA VICTORINA CONIUX MARITO B M,Dis Manibus Gaio Iulio Proculo optione Legionis VI Victricis. Vixit annis triginta sex. Iulia Victorina coniux marito bene merenti
+752,D M S Paccia Marciana feminae incomparabili C Paccius Clemens coniugi faciendum curavit,Dis Manibus Sacrum Pacciae Marcianae feminae incomparabili. Gaius Paccius Clemens coniugi faciendum curavit
+753,D M M ULPIO FORTUNATO VESTIARIO DE VIA SACRA VIX ANNOS LIIII ULPIA FILIA PATRI OPTIMO,Dis Manibus Marco Ulpio Fortunato vestiario de Via Sacra. Vixit annos quinquaginta quattuor. Ulpia filia patri optimo
+754,D M TITIAE SABINAE V A LXXXIIII TITIUS SABINUS FILIUS MATRI PIENTISSIMAE VIVUS SIBI ET SUIS POSUIT,Dis Manibus Titiae Sabinae. Vixit annis octoginta quattuor. Titius Sabinus filius matri pientissimae vivus sibi et suis posuit
+755,D M AVRELIO NEMESIO ALVMNO DULCISSIMO QVI VIXIT ANNOS VI MENSES III DIES V,Dis Manibus Aurelio Nemesio alumno dulcissimo qui vixit annos sex menses tres dies quinque
+756,D M Q CORNELIO PAL PRISCO V A LXIIII SACERDOTI LAURENTI LAVINATI CORNELIA UXOR,Dis Manibus Quinto Cornelio Palatina Prisco. Vixit annis sexaginta quattuor sacerdoti Laurenti Lavinati. Cornelia uxor
+757,D M S VMBRICIAE MAXIMAE V A XXIX SINE VLLA MENTIS OFFENSA C VMBRICIVS MARITVS,Dis Manibus Sacrum Umbriciae Maximae. Vixit annis viginti novem sine ulla mentis offensa. Gaius Umbricius maritus
+758,D M L FABRICIO LONGO MEDIC VVLNERARIO LEG XXII PR VIX ANN XXXVIIII STIP XVIII HEREDES F C,Dis Manibus Lucio Fabricio Longo medico vulnerario Legionis XXII Primigeniae. Vixit annis triginta novem stipendiorum duodeviginti. Heredes faciendum curaverunt
+759,D M GAVIAE AMABILI VERNACLAE NOSTRAE DULCISSIMAE VIX ANN IIII M V D X,Dis Manibus Gaviae Amabili vernaclae nostrae dulcissimae. Vixit annis quattuor mensibus quinque diebus decem
+760,D M IVLIAE SECUNDILLAE MATRI KARISSIMAE VIX ANN LXI IVLIVS SECVNDVS FILIVS ET SIBI V P,Dis Manibus Iuliae Secundillae matri karissimae. Vixit annis sexaginta uno. Iulius Secundus filius et sibi vivus posuit
+761,D M C VIBIO MARCELLO PVERO OPTIMO VIXIT ANNIS X MENSE I DIEBVS XIIII PARENTES,Dis Manibus Gaio Vibio Marcello puero optimo. Vixit annis decem mense uno diebus quattuordecim. Parentes
+762,D M S L Afranio L f Pal Celeri centurioni cohortis urbanae decimae vix ann LII,Dis Manibus Sacrum Lucio Afranio Lucii filio Palatina Celeri centurioni cohortis urbanae decimae. Vixit annis quinquaginta duobus
+763,D M CLAUDIAE AGUSTILLAE VIX ANN XVIII MEN III DIES XXI CLAVDIVS PATER FILIAE SANCTISSIMAE,Dis Manibus Claudiae Agustillae. Vixit annis decem et octo mensibus tribus diebus viginti uno. Claudius pater filiae sanctissimae
+764,D M M LIVIO MARCELLINO NEGOTIATORI FRUMENTARIO VIX ANNOS LV LIVIA VITALIS CONIUGI B M,Dis Manibus Marco Livio Marcellino negotiatori frumentario. Vixit annos quinquaginta quinque. Livia Vitalis coniugi bene merenti
+765,D M P AELIO P F QVIR PLACIDO EQVITI ROMANO V A LX P AELIVS FILIVS PATRI,Dis Manibus Publio Aelio Publii filio Quirina Placido equiti Romano. Vixit annis sexaginta. Publius Aelius filius patri
+766,D M ATILIAE POMPEIANAE PVELLAE INCOMPARABILI V A XII M ATILIVS POMPEIANVS PATER,Dis Manibus Atiliae Pompeianae puellae incomparabili. Vixit annis duodecim. Marcus Atilius Pompeianus pater
+767,D M T FLAVIO ZOSIMO ACTORI VIX ANN XXXVI FLAVIA PRECIOSA CONIUGI OPTIMO,Dis Manibus Tito Flavio Zosimo actori. Vixit annis triginta sex. Flavia Preciosa coniugi optimo
+768,D M C IULIO MAGNO VETERANO LEGIO III GALLICAE VIX ANN LXVII IULIA MAGNA FILIA,Dis Manibus Gaio Iulio Magno veterano Legionis III Gallicae. Vixit annis sexaginta septem. Iulia Magna filia
+769,D M VALERIAE TROPHIMAE LIBERTAE PIISSIMAE ET OPTIMAE VIXIT ANNOS XXX VALERIVS PATRONVS,Dis Manibus Valeriae Trophimae libertae piissimae et optimae. Vixit annos triginta. Valerius patronus
+770,D M L ANTESTIO L F SERGIA RVFO TRIB MILITVM LEG XIIII GEM V A XXXVIIII,Dis Manibus Lucio Antestio Lucii filio Sergia Rufo tribuno militum Legionis XIIII Geminae. Vixit annis triginta novem
+771,D M S HELVIAE PRISCAE V A XLVII M HELVIVS PRISCVS CONIVGI ET SIBI V F,Dis Manibus Sacrum Helviae Priscae. Vixit annis quadraginta septem. Marcus Helvius Priscus coniugi et sibi vivus fecit
+772,D M CAECILIAE SECUNDINAE MATRI SANCTISSIMAE VIX ANN LVIII Q CAECILIVS FILIVS,Dis Manibus Caeciliae Secundinae matri sanctissimae. Vixit annis quinquaginta octo. Quintus Caecilius filius
+773,D M M VIPSANO PRIMO PATRI PIISSIMO VIX ANN LXV VIPSANIA PRIMA FILIA,Dis Manibus Marco Vipsano Primo patri piissimo. Vixit annis sexaginta quinque. Vipsania Prima filia
+774,D M C CORNELIO SERENO VETERANO EX CLAS PRAET V A LXIIII CORNELIA FILIA HERES EX TEST,Dis Manibus Gaio Cornelio Sereno veterano ex classe praetoria. Vixit annis sexaginta quattuor. Cornelia filia heres ex testamento
+775,D M S FLAVIAE PROCVLAE V A XXXIX M FLAVIVS PROCVLVS CONIVGI B M ET DESIDERANTISSIMAE,Dis Manibus Sacrum Flaviae Proculae. Vixit annis triginta novem. Marcus Flavius Proculus coniugi bene merenti et desiderantissimae
+776,D M T VIBI T F GAL BENVOLI MILITIS LEG II PART SEV VIXIT ANNIS XXXIX STIPENDIORVM XX,Dis Manibus Tito Vibio Titi filio Galeria Benvoli militis Legionis II Parthicae Severianae. Vixit annis triginta novem stipendiorum viginti
+777,D M IVLIAE CALLISTAE V A LIIII C IVLIVS HERMES CONIVGI CARISSIMAE CVM QVA VIXIT ANNIS XX SINE VLLA DISCORDIA,Dis Manibus Iuliae Callistae. Vixit annis quinquaginta quattuor. Gaius Iulius Hermes coniugi carissimae cum qua vixit annis viginti sine ulla discordia
+778,D M M CLODIO PVLCHRO MAGISTRO COLLEGII FABRORVM VIX ANN XLVI COLLEGAE ET AMICI POSVERVNT,Dis Manibus Marco Clodio Pulchro magistro collegii fabrorum. Vixit annis quadraginta sex. Collegae et amici posuerunt
+779,D M S GAVINIAE IANUARIAE VIX ANNIS VI MENS VIII DIES X PARENTES FILIAE DVRISSIMAE,Dis Manibus Sacrum Gaviniae Ianuariae. Vixit annis sex mensibus octo diebus decem. Parentes filiae durissimae
+780,D M L POSTVMIO L F TRO FESTO VETERANO LEG VIII AVG VIX ANNIS LV POSTVMIA FESTA FILIA,Dis Manibus Lucio Postumio Lucii filio Tromentina Festo veterano Legionis VIII Augustae. Vixit annis quinquaginta quinque. Postumia Festa filia
+781,D M S STATIAE MYRINE NUTRICI PIENTISSIMAE VIX ANN LXVII L STATIVS QUADRATUS ALUMNUS,Dis Manibus Sacrum Statiae Myrine nutricii pientissimae. Vixit annis sexaginta septem. Lucius Statius Quadratus alumnus
+782,D M C IULIO VALERIANO DECURIONI MUNICIPII SUI V A LXXII FILII HONORE CONTENTI IMPENSAM REMISERUNT,Dis Manibus Gaio Iulio Valeriano decurioni municipii sui. Vixit annis septuaginta duobus. Filii honore contenti impensam remiserunt
+783,D M AURELIAE PHILEMATIO VIX ANN XVI HOC MONUMENTUM HEREDEM EXTERNVM NON SEQVETVR,Dis Manibus Aureliae Philematio. Vixit annis sedecim. Hoc monumentum heredem externum non sequetur
+784,D M L CASSIO IVSTO VEXILLARIO LEG XXX V V VIXIT ANNIS XXXI STIPENDIIS XI,Dis Manibus Lucio Cassio Iusto vexillario Legionis XXX Ulpiae Victricis. Vixit annis triginta uno stipendiis undecim
+785,D M ANNAEAE PAVLinae FEMINAE OPTIMAE V A XLII ANNAEVS MARCELLVS CONIVGI SANCTAE,Dis Manibus Annaeae Paulinae feminae optimae. Vixit annis quadraginta duobus. Annaeus Marcellus coniugi sanctae
+786,D M S T FLAVIO VICTORI REDEMPTORI MARMORARIO V A LII FLAVIA VICTORINA PATRI,Dis Manibus Sacrum Tito Flavio Victori redemptori marmorario. Vixit annis quinquaginta duobus. Flavia Victorina patri
+787,D M PALLIAE VENERIAE V A XLV M PALLIVS HERMES CONIVGI CVM QVA VIXIT ANNIS XXV B M,Dis Manibus Palliae Veneriae. Vixit annis quadraginta quinque. Marcus Pallius Hermes coniugi cum qua vixit annis viginti quinque bene merenti
+788,D M Q VITELLIO Q F OVFENTINA FELICI DOMO ROMA V A XXI MATER FILIO PIISSIMO,Dis Manibus Quinto Vitellio Quinti filio Oufentina Felici domo Roma. Vixit annis viginti uno. Mater filio piissimo
+789,D M C ATTILIO EVTYCHO PISTORI V A LXVIIII ATTILIA SECVNDA FILIA PATRI CARO,Dis Manibus Gaio Attilio Eutycho pistori. Vixit annis sexaginta novem. Attilia Secunda filia patri caro
+790,D M S M CLODIO SECVNDINO VETERANO LEG I ITALICAE V A LXII CLODIA FILIA ET HERES,Dis Manibus Sacrum Marco Clodio Secundino veterano Legionis I Italicae. Vixit annis sexaginta duobus. Clodia filia et heres
+791,D M VALERIAE MAXIMILLAE V A I M II D V ANIMA INNOCENS PARENTES FECERVNT,Dis Manibus Valeriae Maximillae. Vixit anno uno mensibus duobus diebus quinque. Anima innocens. Parentes fecerunt
+792,D M L CALPVRNIO RVFO SCRIBae LIBRARIO V A XXXVII CALPVRNIA PRIMA SOROR,Dis Manibus Lucio Calpurnio Rufo scribae librario. Vixit annis triginta septem. Calpurnia Prima soror
+793,D M S FLAVIAE APOLLONIAE V A XXXVIII VIXIT MECVM ANNIS XVIII SINE QUERELLA,Dis Manibus Sacrum Flaviae Apolloniae. Vixit annis triginta octo. Vixit mecum annis decem et octo sine querella
+794,D M L VOLVSIO SATVRNINO QUAESTORI URBANO V A XXXII PATER FILIO B M,Dis Manibus Lucio Volusio Saturnino quaestori urbano. Vixit annis triginta duobus. Pater filio bene merenti
+795,D M A GRATTIO A F CLAVDIA CELERI VETERANO LEG XI CLAVDIAE VIXIT ANNIS LVIII,Dis Manibus Aulo Grattio Auli filio Claudia Celeri veterano Legionis XI Claudiae. Vixit annis quinquaginta octo
+796,D M ULPIAE AGATHAE VIX ANN XXVIII ULPIUS IANUARIUS CONIUGI AMANTISSIMAE,Dis Manibus Ulpiae Agathae. Vixit annis viginti octo. Ulpius Ianuarius coniugi amantissimae
+797,D M Q LOLLIO RVFIONI CENT LEG II TRA FOR V A LIII LOLLIA RVFINA FILIA ET HERES,Dis Manibus Quinto Lollio Rufioni centurioni Legionis II Traianae Fortis. Vixit annis quinquaginta tribus. Lollia Rufina filia et heres
+798,D M S PETRONIAE URBICAE V A XVIIII PARENTES AD SPEM FRVSTRATAM,Dis Manibus Sacrum Petroniae Urbicae. Vixit annis undeviginti. Parentes ad spem frustratam
+799,D M C IULIO FELICI VETERANO CLASSIS GERMANICAE P F VIX ANNOS LXV IULIA FELICULA FILIA,Dis Manibus Gaio Iulio Felici veterano classis Germanicae Piae Fidelis. Vixit annos sexaginta quinque. Iulia Felicula filia
+800,D M SEXTO POMPEIO SEXTI FILIO VOLTINIA MAXIMO DOMO VIENNA V A LVII POMPEIA UXOR,Dis Manibus Sexto Pompeio Sexti filio Voltinia Maximo domo Vienna. Vixit annis quinquaginta septem. Pompeia uxor
