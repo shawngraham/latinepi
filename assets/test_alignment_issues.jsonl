@@ -1,0 +1,5 @@
+{"id": "test_001", "transcription": "D M C IVLIO VALENTI MIL LEG II AVG", "annotations": [[0, 3, "DEDICATION_TO_THE_GODS"], [4, 5, "PRAENOMEN"], [6, 11, "NOMEN"], [12, 19, "COGNOMEN"], [20, 34, "MILITARY_UNIT"]]}
+{"id": "test_002", "transcription": "DIS MANIBVS MARCIAE PRIMAE", "annotations": [[0, 11, "DEDICATION_TO_THE_GODS"], [12, 19, "NOMEN"], [20, 26, "COGNOMEN"]]}
+{"id": "test_003_whitespace_issue", "transcription": "D M GAIVS FELIX FECIT", "annotations": [[0, 4, "DEDICATION_TO_THE_GODS"], [4, 9, "PRAENOMEN"], [10, 15, "COGNOMEN"], [16, 21, "FUNERARY_FORMULA"]]}
+{"id": "test_004_mid_token", "transcription": "VIXIT ANNIS XXX", "annotations": [[0, 5, "AGE_PREFIX"], [6, 11, "AGE_PREFIX"], [12, 15, "AGE_YEARS"]]}
+{"id": "test_005_boundary", "transcription": "BENE MERENTI", "annotations": [[0, 12, "BENE_MERENTI"]]}
