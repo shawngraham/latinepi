@@ -1,3 +1,13 @@
+
+**HI!**
+
+This doesn't work! Total waste of time _except_ for the download feature for searching the EDH databank and retrieving inscriptions. The jupyter notebook for training a model on a combination of real and synthetic data works not too badly, and the jupyter notebook for deploying such a trained model onto other inscription data is nifty too. But the rest of this, ignore.
+
+
+---
+
+But, as a statement of _aspiration_.... ->
+
 # latinepi
 
 A fast, lightweight command-line tool for extracting structured personal data from Roman Latin epigraphic inscriptions using comprehensive pattern matching and grammatical analysis.
